@@ -37,6 +37,80 @@ $star: #E28800
   right: 0
   bottom: 0
 
+@mixin button()
+  padding: .7rem 2rem
+  background-color: $main
+  color: $light
+  border-radius: 15px
+  cursor: pointer
+  box-shadow: 0 0 0 0em $light inset
+  transition: .4s ease-in-out
+
+  &:hover
+    box-shadow: 0 0 0 3em $light inset
+    color: $main
+
+@mixin rating()
+  @include flex($justify: flex-start)
+
+  .group
+    margin-right: 10px
+    cursor: pointer
+    width: 13px
+    height: 30px
+
+    input
+      display: none
+
+    label
+      position: relative
+
+      &:before
+        content: '\2605'
+        position: absolute
+        left: 0
+        top: 0
+        font-size: 24px
+        color: #adadad
+        display: inline-block
+
+      &:after
+        content: '\2605'
+        position: absolute
+        left: 0
+        top: 0
+        font-size: 24px
+        color: $star
+        display: inline-block
+        opacity: 0
+
+      &:hover::after
+        opacity: 1
+
+      &:hover ~ &:after
+        opacity: 1
+
+@mixin price()
+  @include flex($justify: flex-start)
+
+  .new
+    font-size: 16px
+    color: $red
+    margin-right: 10px
+
+  .old
+    color: #8D8D8D
+    position: relative
+
+    del
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      height: 1px
+      width: 100%
+      background-color: #000000
+
 .wrapper
   max-width: 1300px
   margin: 0 auto
@@ -51,19 +125,6 @@ section
 
   &.bg
     background-color: $bg
-
-@mixin button()
-  padding: .7rem 2rem
-  background-color: $main
-  color: $light
-  border-radius: 15px
-  cursor: pointer
-  box-shadow: 0 0 0 0em $light inset
-  transition: .4s ease-in-out
-
-  &:hover
-    box-shadow: 0 0 0 3em $light inset
-    color: $main
 
 /*************    header     **************/
 
@@ -105,7 +166,80 @@ header
 
       .cart
         position: relative
-        cursor: pointer
+
+        .bag-image
+          cursor: pointer
+
+        .shopping-cart-dropdown
+          position: absolute
+          top: 100px
+          right: -20px
+          width: 300px
+          background-color: $light
+          border-radius: 15px
+          z-index: 10
+          padding: 1rem
+          box-shadow: 0px 1px 15px rgba($dark, 0.19)
+          opacity: 0
+          pointer-events: none
+          transition: .4s
+
+          &.show-cart-dropdown
+            pointer-events: auto
+            top: 40px
+            opacity: 1
+
+          ::-webkit-scrollbar
+            width: 5px
+
+          ::-webkit-scrollbar-track
+            border: none
+            background-color: #e2e2e2
+
+          ::-webkit-scrollbar-thumb
+            background-color: #5e5e5e
+            border-radius: 10px
+
+          button
+            @include button()
+            width: 100%
+            text-transform: uppercase
+            margin-top: 1rem
+            border: 1.6px solid $main
+
+          .list
+            height: 300px
+            overflow-y: scroll
+
+            .item
+              @include flex($justify: center)
+
+              display: grid
+              grid-template-columns: 1fr 1fr
+              grid-gap: 10px
+              border-bottom: 1px solid #D0D0D0
+              padding: .6rem 0
+
+              &:nth-last-child(1)
+                border-bottom: none
+
+              .image
+                width: 115px
+                overflow: hidden
+
+                img
+                  width: 100%
+
+              .details
+                h6
+                  margin: .5rem 0
+                  font-size: 14px
+
+                  span
+                    color: $sec
+
+                h5
+                  color: $red
 
         .count
           position: absolute
@@ -114,6 +248,7 @@ header
           transform: translate(-50%, -50%)
           font-size: 10px
           font-weight: 600
+          cursor: pointer
 
       .login-signup
         @include flex($justify: flex-start)
@@ -351,65 +486,10 @@ header
       margin-top: .6rem
 
     .rating
-      @include flex($justify: flex-start)
-
-      .group
-        margin-right: 10px
-        cursor: pointer
-        width: 13px
-        height: 30px
-
-        input
-          display: none
-
-        label
-          position: relative
-
-          &:before
-            content: '\2605'
-            position: absolute
-            left: 0
-            top: 0
-            font-size: 24px
-            color: #adadad
-            display: inline-block
-
-          &:after
-            content: '\2605'
-            position: absolute
-            left: 0
-            top: 0
-            font-size: 24px
-            color: $star
-            display: inline-block
-            opacity: 0
-
-          &:hover::after
-            opacity: 1
-
-          &:hover ~ &:after
-            opacity: 1
+      @include rating()
 
     .price
-      @include flex($justify: flex-start)
-
-      .new
-        font-size: 16px
-        color: $red
-        margin-right: 10px
-
-      .old
-        color: #8D8D8D
-        position: relative
-
-        del
-          position: absolute
-          top: 50%
-          left: 50%
-          transform: translate(-50%, -50%)
-          height: 1px
-          width: 100%
-          background-color: #000000
+      @include price()
 
     button
       @include button()
@@ -451,6 +531,8 @@ header
             color: $dark
             margin-bottom: .7rem
             font-weight: 600
+
+/*************    collections     *************/
 
 .collections
   .sections
@@ -515,3 +597,247 @@ header
             font-size: 15px
             margin-top: .7rem
             color: $sec
+
+/*************    footer     *************/
+
+footer
+  .subscribe
+    text-align: center
+    margin-bottom: 5rem
+
+    h1
+      font-size: 30px
+      font-weight: 700
+
+    .group
+      background-color: $light
+      border-radius: 15px
+      max-width: 600px
+      margin: 2rem auto
+      position: relative
+
+      input
+        padding: .8rem 1rem
+        text-align: left
+        width: 100%
+
+      .send-btn
+        position: absolute
+        right: 0
+        top: 0
+        height: 100%
+        width: 50px
+        @include flex($justify: center)
+        background-color: $main
+        border-radius: 0 15px 15px 0
+        cursor: pointer
+
+        img
+          width: 50%
+
+  .list
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 20px
+
+    .item
+      ul
+        li
+          font-size: 18px
+          font-weight: 400
+          color: $sec
+          line-height: 2.5rem
+
+          &.heading
+            font-size: 22px
+            color: $dark
+            margin-bottom: .5rem
+            font-weight: 700
+
+    .footer-contact
+      .logo
+        margin-bottom: 1rem
+        h1
+          font-size: 40px
+
+      h4
+        font-size: 16px
+        color: $sec
+        margin-bottom: 1rem
+        @include flex($justify: flex-start)
+
+        i
+          margin-right: 8px
+
+.quick-view-pop
+
+  &.show-quick-view
+    .pop-bg
+      pointer-events: auto
+      opacity: 1
+
+    .details
+      top: 50%
+      opacity: 1
+      pointer-events: auto
+
+    .quick-view-close
+      transform: rotate(0)
+      pointer-events: auto
+
+  .pop-bg
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba($dark, .8)
+    z-index: 5
+    opacity: 0
+    pointer-events: none
+    transition: .4s
+
+  .quick-view-close
+    height: 40px
+    width: 40px
+    background-color: rgba($light, .5 )
+    position: absolute
+    right: 0
+    top: -45px
+    border-radius: 50%
+    color: $dark
+    @include flex($justify: center)
+    z-index: 11
+    cursor: pointer
+    transition: .4s
+    transform: rotate(180deg) scale(.04)
+    pointer-events: none
+
+    &:hover
+      transform: rotate(180deg)
+      background-color: rgba($light, .9 )
+
+  .details
+    position: fixed
+    left: 50%
+    top: 30%
+    transform: translate(-50%, -50%)
+    background-color: $light
+    border-radius: 15px
+    max-width: 1000px
+    width: 100%
+    margin: 0 auto
+    padding: 2rem 20px
+    z-index: 10
+    opacity: 0
+    pointer-events: none
+    transition: .4s
+
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 20px
+
+    h4
+      margin-bottom: .5rem
+      font-size: 18px
+
+    .images
+      overflow-x: hidden
+
+      .swiper-slide
+        height: 380px
+        width: 100%
+        @include image()
+
+        img
+          width: 100%
+          cursor: pointer
+
+    .item-details
+      h3
+        font-size: 22px
+
+      .rating
+        @include rating()
+
+      .price
+        @include price()
+
+      .profuct-desc
+        margin-top: 2rem
+
+        p
+          font-size: 16px
+          color: $sec
+          line-height: 1.5rem
+
+      .others
+        margin-top: 2rem
+        @include flex($justify: space-between)
+
+        .quantity
+          .group
+            @include flex($justify: flex-start)
+
+            .add-button, .sub-button
+              height: 20px
+              width: 20px
+              @include flex($justify: center)
+              border: 1px solid $sec
+              border-radius: 3px
+              background-color: $light
+              cursor: pointer
+
+              i
+                font-size: 12px
+                text-align: center
+
+            .quantity-number
+              margin: 0 10px
+
+        .size
+          ul
+            @include flex($justify: space-between)
+
+            li
+              text-transform: uppercase
+              padding: .3rem .5rem
+              font-size: 12px
+              background-color: $light
+              border: 1px solid #C2C2C2
+              border-radius: 4px
+              margin-right: 5px
+              cursor: pointer
+              transition: .2s
+
+              &:hover
+                background-color: rgba($dark, .03)
+                transform: translateY(-1px)
+
+              &.active
+                background-color: $dark
+                color: $light
+
+              &.not
+                background-color: #DFDFDF
+                color: #A5A5A5
+                position: relative
+                border: 1px solid #dfdfdf
+                cursor: not-allowed
+
+                &:after
+                  content: ''
+                  position: absolute
+                  top: 50%
+                  left: 50%
+                  transform: translate(-50%, -50%) rotate(45deg)
+                  height: 100%
+                  width: 2px
+                  background-color: $sec
+
+      .button
+        @include button()
+        width: 100%
+        margin-top: 2rem
+        border: 1.6px solid $main
+        text-transform: uppercase
