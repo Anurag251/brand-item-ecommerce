@@ -25,9 +25,11 @@
     <!-- header-start -->
     <header>
       <div class="menubar wrapper">
-        <div class="logo">
-          <h1>LOGO</h1>
-        </div>
+        <a href="index.html">
+          <div class="logo">
+            <h1>LOGO</h1>
+          </div>
+        </a>
 
         <div class="search">
           <form action="">
@@ -136,7 +138,7 @@
                 </div>
               </div>
 
-              <a href="#">
+              <a href="checkout.html">
                 <button>Check Out</button>
               </a>
             </div>
@@ -162,21 +164,135 @@
     <div class="nav-bar">
       <ul class="wrapper">
         <li>
-          <a href="#">Home</a>
+          <a href="index.html">Home</a>
         </li>
 
         <li>
-          <a href="#">Shop</a>
+          <a href="shop.html">Shop</a>
+        </li>
+
+        <li class="drop-down-brand">
+          Brands <i class="fas fa-chevron-down"></i>
         </li>
 
         <li>
-          <a href="#">Brands</a>
-        </li>
-
-        <li>
-          <a href="#">Contact</a>
+          <a href="contact.html">Contact</a>
         </li>
       </ul>
+
+      <div class="drop-brand">
+        <div class="list">
+          <h3>Puma</h3>
+          <a href="#">
+            <div class="item">
+              <div
+                class="image"
+                style="
+                  background-image: url(./images/clothing/shoes/NMD_R1_Shoes_White_GX0999_01_standard.jpg);
+                "
+              ></div>
+              <div class="details">
+                <div class="product-name">Sneakers</div>
+                <div class="product-price">$28.31</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item">
+              <div
+                class="image"
+                style="
+                  background-image: url(./images/clothing/shoes/OZWEEGO_Shoes_Grey_GY1346_01_standard.jpg);
+                "
+              ></div>
+              <div class="details">
+                <div class="product-name">Sport</div>
+                <div class="product-price">$28.31</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item">
+              <div
+                class="image"
+                style="
+                  background-image: url(./images/clothing/shoes/shoe19.jpg);
+                "
+              ></div>
+              <div class="details">
+                <div class="product-name">Boot</div>
+                <div class="product-price">$28.31</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="list">
+          <h3>Adidas</h3>
+          <a href="#">
+            <div class="item">
+              <div
+                class="image"
+                style="
+                  background-image: url(./images/clothing/shoes/Ultraboost_DNA_Shoes_Black_GZ3292_01_standard.jpg);
+                "
+              ></div>
+              <div class="details">
+                <div class="product-name">Sneakers</div>
+                <div class="product-price">$28.31</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="list">
+          <h3>Sony</h3>
+          <a href="#">
+            <div class="item">
+              <div
+                class="image"
+                style="background-image: url(./images/electronic/device/tv.jpg)"
+              ></div>
+              <div class="details">
+                <div class="product-name">UHD 4K Tv</div>
+                <div class="product-price">$28.31</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item">
+              <div
+                class="image"
+                style="
+                  background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
+                "
+              ></div>
+              <div class="details">
+                <div class="product-name">High Quality Wireless HeadSet</div>
+                <div class="product-price">$28.31</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item">
+              <div
+                class="image"
+                style="
+                  background-image: url(./images/electronic/bn-cate1-2.jpg);
+                "
+              ></div>
+              <div class="details">
+                <div class="product-name">Home Threater</div>
+                <div class="product-price">$28.31</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
     <!-- nav-bar-end -->
 
@@ -343,7 +459,9 @@
                   </div>
 
                   <!-- porduct-name -->
-                  <div class="product-name">Bluetooth Headphone</div>
+                  <a href="product-details.html">
+                    <div class="product-name">Bluetooth Headphone</div>
+                  </a>
 
                   <!-- porduct-rating -->
                   <div class="rating">
@@ -1092,7 +1210,7 @@
           </div>
 
           <div class="price">
-            <div class="new">$114.00</div>
+            <div class="new">$<span id="total-price">110</span></div>
             <div class="old"><del></del>$120.32</div>
           </div>
 
@@ -1142,6 +1260,8 @@
 
     <!-- js -->
     <script src="./js/script.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/quantity.js"></script>
     <!-- swiper-js -->
     <script src="./js/swiper.min.js"></script>
 
@@ -1191,20 +1311,20 @@
       var swiper = new Swiper('.quick-view-pop .mySwiper', {
         slidesPerView: 1,
         spaceBetween: 10,
-        // autoplay: {
-        //   delay: 2000,
-        //   disableOnInteraction: false,
-        // },
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: true,
+        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-          640: {
-            slidesPerView: 2,
+          740: {
+            slidesPerView: 1,
             spaceBetween: 10,
           },
-          768: {
+          840: {
             slidesPerView: 2,
             spaceBetween: 10,
           },
