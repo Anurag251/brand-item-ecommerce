@@ -14,3 +14,11 @@ const brandDropdownBtn = document.querySelector('.drop-down-brand');
 brandDropdownBtn.addEventListener('click', () => {
   brandDropdown.classList.toggle('active');
 });
+
+// drop-down
+const dropDown = document.querySelector('.drop-down');
+const drop = document.querySelector('.drop');
+
+dropDown.addEventListener('click', () => {
+  drop.classList.toggle('active');
+});
