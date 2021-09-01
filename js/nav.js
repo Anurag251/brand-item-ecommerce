@@ -22,3 +22,8 @@ const drop = document.querySelector('.drop');
 dropDown.addEventListener('click', () => {
   drop.classList.toggle('active');
 });
+
+// loading
+$(window).on('load', function () {
+  $('.loading').fadeOut('slow');
+});
