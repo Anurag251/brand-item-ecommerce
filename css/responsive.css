@@ -25,6 +25,7 @@
     z-index: 24;
     opacity: 0;
     cursor: none;
+    display: block;
   }
   .side-nav-bg .cursor-close {
     position: absolute;
@@ -228,6 +229,7 @@
     background-color: #ffffff;
     z-index: 25;
     pointer-events: none;
+    display: block;
     -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
     transition: 0.45s cubic-bezier(0, 0, 0, 1);
     -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

@@ -73,7 +73,7 @@ section.bg {
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
 }
 
-.mobile-nav, .mobile-logo, .side-nav {
+.mobile-nav, .mobile-logo, .side-nav, .search-pop, .side-nav-bg {
   display: none;
 }
 
