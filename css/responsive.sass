@@ -1,0 +1,249 @@
+$main: #000000
+$pri: #ffffff
+$sec: #666666
+$bg: #F1F1F1
+$dark: #000000
+$light: #ffffff
+$red: #AF0000
+$star: #E28800
+
+@mixin trans()
+  transition: 0.45s cubic-bezier(0, 0, 0, 1),
+
+@mixin flex($justify)
+  display: flex
+  justify-content: $justify
+  align-items: center
+
+@mixin image()
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+@mixin dark()
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+@mixin button()
+  padding: .7rem 2rem
+  background-color: $main
+  color: $light
+  border-radius: 1px
+  cursor: pointer
+  box-shadow: 0 0 0 0em $light inset
+  @include trans()
+  &:hover
+    box-shadow: 0 0 0 3em $light inset
+    color: $main
+
+@media only screen and(max-width: 1000px)
+  .desktop-nav
+    display: none
+
+  .mobile-logo
+    @include flex($justify: center)
+    padding: 1rem 0
+
+  .side-nav-bg
+    position: fixed
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    background-color: rgba($light, .01)
+    pointer-events: none
+    z-index: 24
+    opacity: 0
+    cursor: none
+
+    .cursor-close
+      position: absolute
+      color: #000
+      pointer-events: none
+      height: 50px
+      width: 50px
+
+      img
+        width: 100%
+
+    &.active
+      opacity: 1
+      pointer-events: auto
+
+  .side-nav
+    position: fixed
+    left: -400px
+    top: 0
+    background-color: $dark
+    height: 100%
+    width: 300px
+    z-index: 25
+    overflow-y: auto
+    display: block
+    @include trans()
+    pointer-events: none
+
+    &.active
+      left: 0
+      pointer-events: auto
+
+    ul
+      margin-top: 2rem
+      li
+        border-bottom: 1px solid rgba($light, .4)
+        padding: 0 1rem
+        cursor: pointer
+
+        .side_nav_drop
+          background-color: rgba($light, .2)
+          margin: 0
+          margin-bottom: 15px
+          border-radius: 15px
+          display: none
+
+          &.show
+            display: block
+
+          li
+            border-bottom: 1px solid $dark
+
+        i
+          color: $light
+          font-size: 14px
+          @include trans()
+
+          &.rotate
+            transform: rotateX(180deg)
+
+        span
+          @include flex($justify: space-between)
+
+        a, span
+          color: $light
+          font-size: 20px
+          line-height: 4rem
+
+  .mobile-nav
+    display: block
+    position: sticky
+    bottom: 0
+    left: 0
+    width: 100%
+    z-index: 20
+    background-color: rgba($light, .9)
+    backdrop-filter: blur(5px)
+    box-shadow: 0 -4px 10px rgba($dark, .2)
+
+    .header
+      @include flex($justify: center)
+      flex-direction: column
+
+      .logo
+        margin: 1rem 0
+
+      .nav-list
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        width: 100%
+        position: relative
+
+        .shopping-bag
+          position: absolute
+          top: 0
+          left: 50%
+          transform: translate(-50%, -50%)
+          height: 70px
+          width: 70px
+          border-radius: 50%
+          background-color: $dark
+          @include flex($justify: center)
+
+          .cart
+            height: 40px
+            width: 40px
+            position: relative
+
+            .count
+              position: absolute
+              top: 65%
+              left: 50%
+              transform: translate(-50%, -50%)
+              font-size: 14px
+              font-weight: 600
+              cursor: pointer
+              color: $light
+
+            img
+              width: 100%
+
+        .icon
+          @include flex($justify: center)
+          height: 60px
+          width: 100%
+          border: 1px solid $sec
+          cursor: pointer
+
+          i
+            color: $sec
+
+          .cart, .profile
+            height: 25px
+            width: 25px
+            position: relative
+
+            .count
+              position: absolute
+              top: 65%
+              left: 50%
+              transform: translate(-50%, -50%)
+              font-size: 10px
+              font-weight: 600
+              cursor: pointer
+
+            img
+              width: 100%
+
+  .search-pop
+    position: fixed
+    top: -100px
+    left: 0
+    width: 100%
+    background-color: $light
+    z-index: 25
+    pointer-events: none
+    @include trans()
+    box-shadow: 0 4px 10px rgba($dark, .2)
+
+    &.active
+      top: 0
+      pointer-events: auto
+
+    .inner
+      display: grid
+      grid-template-columns: 1fr 5fr .8fr
+      border-bottom: 1px solid $sec
+
+      select
+        border-right: 1px solid $sec
+        padding: 1rem
+
+      .group
+        position: relative
+        border-right: 1px solid $sec
+
+        input
+          padding: 1rem
+          width: 100%
+
+        .search-btn
+          position: absolute
+          right: 10px
+          top: 50%
+          transform: translateY(-50%)
+
+      .search-close-btn
+        @include flex($justify: center)
+        cursor: pointer
