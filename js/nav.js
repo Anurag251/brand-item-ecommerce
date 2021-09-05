@@ -58,6 +58,7 @@ sideNavDropdown.forEach((sideNavDropBtn, idx) => {
 const sideNav = document.querySelector('.side-nav');
 const sideNavBtn = document.querySelector('.side-nav-btn');
 const sideNavBg = document.querySelector('.side-nav-bg');
+const navCloseBtn = document.querySelector('.nav-close-btn');
 
 sideNavBtn.addEventListener('click', () => {
   sideNav.classList.toggle('active');
@@ -65,6 +66,11 @@ sideNavBtn.addEventListener('click', () => {
 });
 
 sideNavBg.addEventListener('click', () => {
+  sideNav.classList.remove('active');
+  sideNavBg.classList.remove('active');
+});
+
+navCloseBtn.addEventListener('click', () => {
   sideNav.classList.remove('active');
   sideNavBg.classList.remove('active');
 });
