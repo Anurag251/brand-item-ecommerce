@@ -359,6 +359,49 @@ $star: #E28800
     .list
       grid-template-columns: 1fr 1fr 1fr
 
+  /*************    kitchen-new-product     **************/
+  .kitchen-new-product, .bags-new-product
+    .list
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+
+  /*************    electronic-page-banner     **************/
+  .electronic-page-banner
+    grid-template-columns: 1fr
+
+    .categories
+      border-radius: 15px
+
+      li
+        line-height: 3rem
+
+    .swiper
+      grid-area: 1
+      border-radius: 15px
+      .swiper-slide
+        height: 400px
+
+  /*************    electronic-collections     **************/
+  .electronic-collections
+    .item
+      height: 170px
+
+      &.large-image
+        height: 270px
+
+  /*************    hot-categories     **************/
+  .hot-categories
+    .list
+      grid-template-columns: 1fr 1fr 1fr
+
+  /*************    all-product     **************/
+  .all-product
+    grid-template-columns: 1fr 2.5fr
+
+    .product-list
+      .list
+        grid-template-columns: 1fr 1fr
+
 @media only screen and(max-width: 900px)
   .wrapper
     max-width: 800px
@@ -403,6 +446,47 @@ $star: #E28800
     .big-item, .swiper
       .swiper-slide
         height: 400px
+
+  /*************    kitchen-collections     **************/
+  .kitchen-collections
+    .list
+      .item
+        height: 250px
+
+  /*************    bags-collections     **************/
+  .bags-collections
+    .list
+      grid-template-areas: 'item1 item3 ' 'item2 item3' ' item4 item5'
+
+  /*************    what-are-you-looking-for     **************/
+  .what-are-you-looking-for
+    height: 500px
+
+    .details
+      form
+        width: 100%
+        padding: 1rem 2rem
+
+      .group
+        grid-template-columns: 1fr
+
+  /*************    sign-in-and-sign-up     **************/
+  .sign-in-and-sign-up
+    grid-template-columns: 1fr
+
+    .sign-in
+      margin-bottom: 3rem
+
+@media only screen and(max-width: 800px)
+  /*************    kitchen-collections     **************/
+  .kitchen-collections
+    .list
+      grid-template-areas: 'item1 item1 item2' 'item3 item5 item5' 'item6 item6 item4'
+
+  /*************    hot-categories     **************/
+  .hot-categories
+    .list
+      grid-template-columns: 1fr 1fr
 
 @media only screen and(max-width: 750px)
 
@@ -458,6 +542,22 @@ $star: #E28800
   .shoes-new-product
     .list
       grid-template-columns: 1fr 1fr
+
+  /*************    kitchen-new-product     **************/
+  .kitchen-new-product, .bags-new-product
+    .list
+      display: grid
+      grid-template-columns: 1fr 1fr
+
+  /*************    electronic-collections     **************/
+  .electronic-collections
+    grid-template-areas: 'item1 item2' 'item3 item3' 'item4 item5'
+
+    .item
+      height: 220px
+
+      &.large-image
+        height: 230px
 
 @media only screen and(max-width: 700px)
   .title
@@ -540,6 +640,60 @@ $star: #E28800
           margin-left: 1.5rem
           font-weight: 600
 
+  /*************    all-product     **************/
+  .all-product
+    grid-template-columns: 1fr
+
+    .filter-open-btn
+      font-size: 18px
+      display: block
+
+    .product-side-bar
+      position: fixed
+      left: -300px
+      top: 0
+      height: 100%
+      width: 250px
+      background-color: $light
+      z-index: 20
+      padding: 2rem 1rem 4rem
+      pointer-events: none
+      @include trans()
+
+      &.active
+        left: 0
+        pointer-events: auto
+
+@media only screen and(max-width: 650px)
+  /*************    bags-collections     **************/
+  .bags-collections
+    .list
+      grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5'
+
+      .image
+        &.large-image
+          height: 600px
+
+  /*************    electronic-collections     **************/
+  .electronic-collections
+    grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5'
+
+    .item
+      height: 330px
+
+      &.large-image
+        height: 330px
+
+@media only screen and(max-width: 600px)
+  /*************    hot-categories     **************/
+  .hot-categories
+    .list
+      grid-template-columns: 1fr
+
+      .item
+        .image
+          height: 300px
+
 @media only screen and(max-width: 550px)
   /*************    shoes-collections     **************/
   .shoes-collections
@@ -568,6 +722,11 @@ $star: #E28800
       h2
         font-size: 22px
 
+  /*************    kitchen-collections     **************/
+  .kitchen-collections
+    .list
+      grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5' 'item6'
+
 @media only screen and(max-width: 500px)
   .wrapper
     max-width: 800px
@@ -575,7 +734,7 @@ $star: #E28800
   /*************    banner     *************/
   .banner
     .swiper-slide
-      height: 40vh
+      height: 50vh
 
       h1
         font-size: 30px
@@ -671,6 +830,75 @@ $star: #E28800
       .swiper-slide
         height: 300px
 
+  /*************    kitchen-new-product     **************/
+  .kitchen-new-product, .bags-new-product
+    .sec-title
+      text-align: center
+      margin-bottom: 2rem
+
+      h1
+        font-size: 24px
+
+      p
+        font-size: 14px
+
+    .list
+      display: grid
+      grid-template-columns: 1fr
+
+  /*************    electronic-page-banner     **************/
+  .electronic-page-banner
+
+    .swiper
+      .swiper-slide
+        height: 200px
+
+  /*************    electronic-collections     **************/
+  .electronic-collections
+    .item
+      height: 260px
+
+      &.large-image
+        height: 260px
+
+  /*************    what-are-you-looking-for     **************/
+  .what-are-you-looking-for
+    .details
+      padding: 10px
+
+      .title
+        font-size: 22px
+
+      p
+        font-size: 13px
+
+  /*************    all-product     **************/
+  .all-product
+    grid-template-columns: 1fr
+
+    .product-list
+      .title
+
+      .list
+        grid-template-columns: 1fr
+
+        .item
+          .image
+            height: 300px
+
+  /*************    sign-in-and-sign-up     **************/
+  .sign-in-and-sign-up
+    grid-template-columns: 1fr
+
+    .sign-in,.sign-up
+
+      .groups
+        grid-template-columns: 1fr
+        grid-gap: 0
+
+      .button-group
+        grid-template-columns: 1fr
+
 @media only screen and(max-width: 400px)
   /*************    top-categories     *************/
   .top-categories
@@ -705,3 +933,18 @@ $star: #E28800
 
       h2
         font-size: 18px
+
+  /*************    electronic-collections     **************/
+  .electronic-collections
+    .item
+      height: 210px
+
+      &.large-image
+        height: 210px
+
+  /*************    hot-categories     **************/
+  .hot-categories
+    .list
+      .item
+        .image
+          height: 200px

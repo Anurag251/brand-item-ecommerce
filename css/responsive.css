@@ -400,6 +400,53 @@
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
+  /*************    kitchen-new-product     **************/
+  .kitchen-new-product .list, .bags-new-product .list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  /*************    electronic-page-banner     **************/
+  .electronic-page-banner {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .electronic-page-banner .categories {
+    border-radius: 15px;
+  }
+  .electronic-page-banner .categories li {
+    line-height: 3rem;
+  }
+  .electronic-page-banner .swiper {
+    -ms-grid-row: 1;
+    grid-area: 1;
+    border-radius: 15px;
+  }
+  .electronic-page-banner .swiper .swiper-slide {
+    height: 400px;
+  }
+  /*************    electronic-collections     **************/
+  .electronic-collections .item {
+    height: 170px;
+  }
+  .electronic-collections .item.large-image {
+    height: 270px;
+  }
+  /*************    hot-categories     **************/
+  .hot-categories .list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  /*************    all-product     **************/
+  .all-product {
+    -ms-grid-columns: 1fr 2.5fr;
+        grid-template-columns: 1fr 2.5fr;
+  }
+  .all-product .product-list .list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -452,6 +499,46 @@
   }
   .shoes-collections .big-item .swiper-slide, .shoes-collections .swiper .swiper-slide {
     height: 400px;
+  }
+  /*************    kitchen-collections     **************/
+  .kitchen-collections .list .item {
+    height: 250px;
+  }
+  /*************    bags-collections     **************/
+  .bags-collections .list {
+        grid-template-areas: 'item1 item3 ' 'item2 item3' ' item4 item5';
+  }
+  /*************    what-are-you-looking-for     **************/
+  .what-are-you-looking-for {
+    height: 500px;
+  }
+  .what-are-you-looking-for .details form {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .what-are-you-looking-for .details .group {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  /*************    sign-in-and-sign-up     **************/
+  .sign-in-and-sign-up {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .sign-in-and-sign-up .sign-in {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /*************    kitchen-collections     **************/
+  .kitchen-collections .list {
+        grid-template-areas: 'item1 item1 item2' 'item3 item5 item5' 'item6 item6 item4';
+  }
+  /*************    hot-categories     **************/
+  .hot-categories .list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -543,6 +630,23 @@
   .shoes-new-product .list {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  /*************    kitchen-new-product     **************/
+  .kitchen-new-product .list, .bags-new-product .list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  /*************    electronic-collections     **************/
+  .electronic-collections {
+        grid-template-areas: 'item1 item2' 'item3 item3' 'item4 item5';
+  }
+  .electronic-collections .item {
+    height: 220px;
+  }
+  .electronic-collections .item.large-image {
+    height: 230px;
   }
 }
 
@@ -650,6 +754,63 @@
     margin-left: 1.5rem;
     font-weight: 600;
   }
+  /*************    all-product     **************/
+  .all-product {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .all-product .filter-open-btn {
+    font-size: 18px;
+    display: block;
+  }
+  .all-product .product-side-bar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #ffffff;
+    z-index: 20;
+    padding: 2rem 1rem 4rem;
+    pointer-events: none;
+    -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+    transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  }
+  .all-product .product-side-bar.active {
+    left: 0;
+    pointer-events: auto;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  /*************    bags-collections     **************/
+  .bags-collections .list {
+        grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5';
+  }
+  .bags-collections .list .image.large-image {
+    height: 600px;
+  }
+  /*************    electronic-collections     **************/
+  .electronic-collections {
+        grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5';
+  }
+  .electronic-collections .item {
+    height: 330px;
+  }
+  .electronic-collections .item.large-image {
+    height: 330px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /*************    hot-categories     **************/
+  .hot-categories .list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .hot-categories .list .item .image {
+    height: 300px;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -679,6 +840,10 @@
   .sale-off .details h2 {
     font-size: 22px;
   }
+  /*************    kitchen-collections     **************/
+  .kitchen-collections .list {
+        grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5' 'item6';
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -687,7 +852,7 @@
   }
   /*************    banner     *************/
   .banner .swiper-slide {
-    height: 40vh;
+    height: 50vh;
   }
   .banner .swiper-slide h1 {
     font-size: 30px;
@@ -799,6 +964,70 @@
   .shoes-collections .big-item .swiper-slide, .shoes-collections .swiper .swiper-slide {
     height: 300px;
   }
+  /*************    kitchen-new-product     **************/
+  .kitchen-new-product .sec-title, .bags-new-product .sec-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .kitchen-new-product .sec-title h1, .bags-new-product .sec-title h1 {
+    font-size: 24px;
+  }
+  .kitchen-new-product .sec-title p, .bags-new-product .sec-title p {
+    font-size: 14px;
+  }
+  .kitchen-new-product .list, .bags-new-product .list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  /*************    electronic-page-banner     **************/
+  .electronic-page-banner .swiper .swiper-slide {
+    height: 200px;
+  }
+  /*************    electronic-collections     **************/
+  .electronic-collections .item {
+    height: 260px;
+  }
+  .electronic-collections .item.large-image {
+    height: 260px;
+  }
+  /*************    what-are-you-looking-for     **************/
+  .what-are-you-looking-for .details {
+    padding: 10px;
+  }
+  .what-are-you-looking-for .details .title {
+    font-size: 22px;
+  }
+  .what-are-you-looking-for .details p {
+    font-size: 13px;
+  }
+  /*************    all-product     **************/
+  .all-product {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .all-product .product-list .list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .all-product .product-list .list .item .image {
+    height: 300px;
+  }
+  /*************    sign-in-and-sign-up     **************/
+  .sign-in-and-sign-up {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .sign-in-and-sign-up .sign-in .groups, .sign-in-and-sign-up .sign-up .groups {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .sign-in-and-sign-up .sign-in .button-group, .sign-in-and-sign-up .sign-up .button-group {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -830,6 +1059,17 @@
   }
   .sale-off .details h2 {
     font-size: 18px;
+  }
+  /*************    electronic-collections     **************/
+  .electronic-collections .item {
+    height: 210px;
+  }
+  .electronic-collections .item.large-image {
+    height: 210px;
+  }
+  /*************    hot-categories     **************/
+  .hot-categories .list .item .image {
+    height: 200px;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

@@ -438,7 +438,12 @@
           </form>
 
           <div class="product-list">
-            <div class="title">All Product</div>
+            <div class="title">
+              <span>All Product</span>
+              <div class="filter-open-btn">
+                <i class="fas fa-filter"></i>
+              </div>
+            </div>
             <div class="list">
               <div class="item">
                 <div class="item">
@@ -1922,7 +1927,7 @@
           <h1>LOGO</h1>
         </div>
         <div class="nav-close-btn">
-          <img src="./images/icon/shadow-close.svg" alt="">
+          <img src="./images/icon/shadow-close.svg" alt="" />
         </div>
       </div>
       <ul>
@@ -2086,6 +2091,22 @@
 
       zooms.forEach((zoom) => {
         $(zoom).zoom({ on: 'click' });
+      });
+    </script>
+
+    <script>
+      const filterOpenBtn = document.querySelector('.filter-open-btn');
+      const productSideBar = document.querySelector('.product-side-bar');
+      const bg = document.querySelector('.side-nav-bg');
+
+      filterOpenBtn.addEventListener('click', () => {
+        productSideBar.classList.add('active');
+        bg.classList.add('active');
+      });
+
+      bg.addEventListener('click', () => {
+        productSideBar.classList.remove('active');
+        bg.classList.remove('active');
       });
     </script>
   </body>
