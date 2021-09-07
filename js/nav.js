@@ -98,3 +98,16 @@ searchPopBtn.addEventListener('click', () => {
 searchCloseBtn.addEventListener('click', () => {
   searchPop.classList.remove('active');
 });
+
+// scroll-to-top
+const scrollToTop = document.querySelector('.scroll-to-top');
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 100) {
+    scrollToTop.classList.add('show');
+  } else {
+    scrollToTop.classList.remove('show');
+  }
+});
+scrollToTop.addEventListener('click', () => {
+  window.scrollTo(0, 0);
+});

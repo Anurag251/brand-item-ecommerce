@@ -347,30 +347,29 @@
             <div class="name">Total</div>
           </div>
 
-          <div class="item">
-            <div class="section">
-              <div class="image">
-                <img
-                  src="./images/electronic/device/bluetooth-headphone.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product-name">
-                Head Phone Sony High quality sounds
-              </div>
+          <!-- <div class="item">
+            <div class="image">
+              <img
+                src="./images/electronic/device/bluetooth-headphone.jpg"
+                alt=""
+              />
             </div>
 
-            <div class="section">
+            <div class="all-details">
+              <a href="#">
+                <div class="product-name">
+                  Head Phone Sony High quality sounds
+                </div>
+              </a>
+
               <div class="price">Rs 1000 /-</div>
-            </div>
 
-            <div class="section">
               <div class="quantity">
                 <div class="group">
                   <button class="sub-button">
                     <i class="fas fa-chevron-down"></i>
                   </button>
-                  <div class="quantity-number">1</div>
+                  <input type="number" value="1" class="quantity-number" />
                   <button class="add-button">
                     <i class="fas fa-chevron-up"></i>
                   </button>
@@ -378,98 +377,119 @@
               </div>
             </div>
 
-            <div class="section">
-              <div class="price">Rs <span id="total-price">1000</span> /-</div>
+            <div class="delete">
+              <img src="./images/icon/close_big.svg" alt="" />
+            </div>
+          </div> -->
+
+          <div class="item">
+            <div class="image">
+              <img
+                src="./images/electronic/device/bluetooth-headphone.jpg"
+                alt=""
+              />
             </div>
 
-            <div class="section">
-              <div class="delete">
-                <img src="./images/icon/close_big.svg" alt="" />
+            <div class="all-details">
+              <div class="product-name">
+                Head Phone Sony High quality sounds
               </div>
+
+              <div class="price" id="price">Rs 1000 /-</div>
+
+              <div class="quantity">
+                <div class="group">
+                  <button class="sub-button">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <input type="number" value="1" class="quantity-number" />
+                  <button class="add-button">
+                    <i class="fas fa-chevron-up"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="price" id="totalPrice">
+                Rs <span id="total-price">1000</span> /-
+              </div>
+            </div>
+
+            <div class="delete">
+              <img src="./images/icon/close_big.svg" alt="" />
             </div>
           </div>
 
           <div class="item">
-            <div class="section">
-              <div class="image">
-                <img
-                  src="./images/electronic/device/bluetooth-headphone.jpg"
-                  alt=""
-                />
-              </div>
+            <div class="image">
+              <img
+                src="./images/electronic/device/bluetooth-headphone.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="all-details">
               <div class="product-name">
                 Head Phone Sony High quality sounds
               </div>
-            </div>
 
-            <div class="section">
-              <div class="price">Rs 1000 /-</div>
-            </div>
+              <div class="price" id="price">Rs 1000 /-</div>
 
-            <div class="section">
               <div class="quantity">
                 <div class="group">
                   <button class="sub-button">
                     <i class="fas fa-chevron-down"></i>
                   </button>
-                  <div class="quantity-number">1</div>
+                  <input type="number" value="1" class="quantity-number" />
                   <button class="add-button">
                     <i class="fas fa-chevron-up"></i>
                   </button>
                 </div>
               </div>
-            </div>
 
-            <div class="section">
-              <div class="price">Rs <span id="total-price">1000</span> /-</div>
-            </div>
-
-            <div class="section">
-              <div class="delete">
-                <img src="./images/icon/close_big.svg" alt="" />
+              <div class="price" id="totalPrice">
+                Rs <span id="total-price">1000</span> /-
               </div>
+            </div>
+
+            <div class="delete">
+              <img src="./images/icon/close_big.svg" alt="" />
             </div>
           </div>
 
           <div class="item">
-            <div class="section">
-              <div class="image">
-                <img
-                  src="./images/electronic/device/bluetooth-headphone.jpg"
-                  alt=""
-                />
-              </div>
+            <div class="image">
+              <img
+                src="./images/electronic/device/bluetooth-headphone.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="all-details">
               <div class="product-name">
                 Head Phone Sony High quality sounds
               </div>
-            </div>
 
-            <div class="section">
-              <div class="price">Rs 1000 /-</div>
-            </div>
+              <div class="price" id="price">Rs 1000 /-</div>
 
-            <div class="section">
               <div class="quantity">
                 <div class="group">
                   <button class="sub-button">
                     <i class="fas fa-chevron-down"></i>
                   </button>
-                  <div class="quantity-number">1</div>
+                  <input type="number" value="1" class="quantity-number" />
                   <button class="add-button">
                     <i class="fas fa-chevron-up"></i>
                   </button>
                 </div>
               </div>
-            </div>
 
-            <div class="section">
-              <div class="price">Rs <span id="total-price">1000</span> /-</div>
-            </div>
-
-            <div class="section">
-              <div class="delete">
-                <img src="./images/icon/close_big.svg" alt="" />
+              <div class="price" id="totalPrice">
+                Rs <span id="total-price">1000</span> /-
               </div>
+            </div>
+
+            <div class="delete">
+              <img src="./images/icon/close_big.svg" alt="" />
             </div>
           </div>
 
@@ -526,13 +546,13 @@
 
                     <div class="group">
                       <label for="name">Postal Code</label>
-                      <input type="text" id="name" required />
+                      <input type="number" id="name" required />
                     </div>
                   </div>
 
                   <div class="group">
                     <label for="name">Mobile Number</label>
-                    <input type="text" id="name" required />
+                    <input type="number" id="name" required />
                   </div>
                 </div>
 
@@ -589,12 +609,12 @@
 
                   <div class="group">
                     <label for="name">Card Number</label>
-                    <input type="text" id="name" required />
+                    <input type="number" id="name" required />
                   </div>
 
                   <div class="group">
                     <label for="name">CVC Number</label>
-                    <input type="text" id="name" required />
+                    <input type="number" id="name" required />
                   </div>
 
                   <div class="groups">
@@ -944,6 +964,12 @@
       </ul>
     </div>
     <!-- side-nav-end -->
+
+    <!-- scroll-to-top-start -->
+    <div class="scroll-to-top">
+      <img src="./images/icon/chevron_up.svg" alt="" />
+    </div>
+    <!-- scroll-to-top-end -->
 
     <!-- js -->
     <script src="./js/nav.js"></script>

@@ -10,6 +10,7 @@
   list-style: none
   font-family: 'Nunito', sans-serif
   text-decoration: none
+  scroll-behavior: smooth
 
 $main: #000000
 $pri: #ffffff
@@ -1017,44 +1018,123 @@ footer
 
   .title-sec
     display: grid
-    grid-template-columns: 3fr 1fr 1fr 1fr .5fr
+    grid-template-columns: 2fr 1fr 1fr 1fr .5fr
     background-color: $bg
     padding: 1.5rem
     border-radius: 15px
     margin-bottom: 2rem
 
     .name
-      font-size: 25px
+      font-size: 20px
       font-weight: 600
 
+  .comment
+    // .item
+    //   @include flex($justify: flex-start)
+    //   border: 1px solid #bfbfbf
+    //   padding: 1rem
+    //   border-radius: 15px
+    //   position: relative
+    //   margin-bottom: 2rem
+
+    //   .image
+    //     width: 200px
+    //     height: 200px
+    //     @include flex($justify: center)
+    //     border-radius: 15px
+    //     border: 1px solid #bfbfbf
+    //     overflow: hidden
+
+    //     img
+    //       width: 100%
+
+    //   .all-details
+    //     height: 150px
+    //     @include flex($justify: space-between)
+    //     align-items: flex-start
+    //     flex-direction: column
+    //     margin-left: 1rem
+
+    //     .product-name
+    //       font-size: 24px
+    //       font-weight: 600
+    //       color: $dark
+
+    //     .price
+    //       font-size: 24px
+    //       color: $red
+
+    //     .quantity
+    //       .group
+    //         @include flex($justify: flex-start)
+
+    //         .quantity-number
+    //           width: 30px
+    //           text-align: center
+
+    //         .add-button, .sub-button
+    //           height: 20px
+    //           width: 20px
+    //           @include flex($justify: center)
+    //           border: 1px solid $sec
+    //           border-radius: 3px
+    //           background-color: $light
+    //           cursor: pointer
+
+    //           i
+    //             font-size: 12px
+    //             text-align: center
+
+    //         .quantity-number
+    //           margin: 0 10px
+
+    //   .delete
+    //     position: absolute
+    //     right: 10px
+    //     top: 10px
+    //     height: 30px
+    //     width: 30px
+    //     cursor: pointer
+
+    //     img
+    //       width: 100%
+
   .item
-    display: grid
-    grid-template-columns: 3fr 1fr 1fr 1fr .5fr
+    @include flex($justify: flex-start)
     padding: 1rem
     border-radius: 15px
     border: 1px solid #BFBFBF
     margin-bottom: 1rem
-    grid-gap: 20px
 
-    .section
-      @include flex($justify: flex-start)
+    .image
+      height: 140px
+      width: 140px
+      @include flex($justify: center)
 
-      .image
-        height: 200px
-        width: 30%
-        @include flex($justify: center)
+      img
+        width: 100%
 
-        img
-          width: 100%
+    .delete
+      height: 30px
+      width: 30px
+      cursor: pointer
+
+      img
+        width: 100%
+
+    .all-details
+      display: grid
+      grid-template-columns: 1.5fr 1fr 1fr 1fr .5fr
+      width: 100%
 
       .product-name
         width: 70%
-        font-size: 20px
+        font-size: 16px
         font-weight: 600
-        padding: 1rem
+        margin-left: 10px
 
       .price
-        font-size: 20px
+        font-size: 16px
         color: $red
 
       .delete
@@ -2716,3 +2796,28 @@ footer
             margin-top: 10px
             @include price()
             justify-content: center
+
+/*************    scroll-to-top     **************/
+
+.scroll-to-top
+  position: fixed
+  bottom: 20px
+  right: -50px
+  height: 40px
+  width: 40px
+  cursor: pointer
+  z-index: 10
+  background-color: $light
+  border-radius: 50%
+  box-shadow: 1px 1px 10px rgba($dark, .2)
+  @include trans()
+  opacity: 0
+  pointer-events: none
+
+  &.show
+    right: 20px
+    opacity: 1
+    pointer-events: auto
+
+  img
+    width: 100%

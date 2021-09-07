@@ -10,6 +10,7 @@
   list-style: none;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1630,8 +1631,8 @@ footer .list .footer-contact h4 i {
 .checkout-page .title-sec, .wishlist-page .title-sec {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr 1fr 1fr .5fr;
-      grid-template-columns: 3fr 1fr 1fr 1fr .5fr;
+  -ms-grid-columns: 2fr 1fr 1fr 1fr .5fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr .5fr;
   background-color: #F1F1F1;
   padding: 1.5rem;
   border-radius: 15px;
@@ -1639,23 +1640,11 @@ footer .list .footer-contact h4 i {
 }
 
 .checkout-page .title-sec .name, .wishlist-page .title-sec .name {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .checkout-page .item, .wishlist-page .item {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 3fr 1fr 1fr 1fr .5fr;
-      grid-template-columns: 3fr 1fr 1fr 1fr .5fr;
-  padding: 1rem;
-  border-radius: 15px;
-  border: 1px solid #BFBFBF;
-  margin-bottom: 1rem;
-  grid-gap: 20px;
-}
-
-.checkout-page .item .section, .wishlist-page .item .section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1665,11 +1654,15 @@ footer .list .footer-contact h4 i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid #BFBFBF;
+  margin-bottom: 1rem;
 }
 
-.checkout-page .item .section .image, .wishlist-page .item .section .image {
-  height: 200px;
-  width: 30%;
+.checkout-page .item .image, .wishlist-page .item .image {
+  height: 140px;
+  width: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1681,33 +1674,51 @@ footer .list .footer-contact h4 i {
           align-items: center;
 }
 
-.checkout-page .item .section .image img, .wishlist-page .item .section .image img {
+.checkout-page .item .image img, .wishlist-page .item .image img {
   width: 100%;
 }
 
-.checkout-page .item .section .product-name, .wishlist-page .item .section .product-name {
-  width: 70%;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 1rem;
-}
-
-.checkout-page .item .section .price, .wishlist-page .item .section .price {
-  font-size: 20px;
-  color: #AF0000;
-}
-
-.checkout-page .item .section .delete, .wishlist-page .item .section .delete {
+.checkout-page .item .delete, .wishlist-page .item .delete {
   height: 30px;
   width: 30px;
   cursor: pointer;
 }
 
-.checkout-page .item .section .delete img, .wishlist-page .item .section .delete img {
+.checkout-page .item .delete img, .wishlist-page .item .delete img {
   width: 100%;
 }
 
-.checkout-page .item .section .quantity .group, .wishlist-page .item .section .quantity .group {
+.checkout-page .item .all-details, .wishlist-page .item .all-details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr 1fr 1fr .5fr;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr .5fr;
+  width: 100%;
+}
+
+.checkout-page .item .all-details .product-name, .wishlist-page .item .all-details .product-name {
+  width: 70%;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.checkout-page .item .all-details .price, .wishlist-page .item .all-details .price {
+  font-size: 16px;
+  color: #AF0000;
+}
+
+.checkout-page .item .all-details .delete, .wishlist-page .item .all-details .delete {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.checkout-page .item .all-details .delete img, .wishlist-page .item .all-details .delete img {
+  width: 100%;
+}
+
+.checkout-page .item .all-details .quantity .group, .wishlist-page .item .all-details .quantity .group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1719,12 +1730,12 @@ footer .list .footer-contact h4 i {
           align-items: center;
 }
 
-.checkout-page .item .section .quantity .group .quantity-number, .wishlist-page .item .section .quantity .group .quantity-number {
+.checkout-page .item .all-details .quantity .group .quantity-number, .wishlist-page .item .all-details .quantity .group .quantity-number {
   width: 30px;
   text-align: center;
 }
 
-.checkout-page .item .section .quantity .group .add-button, .checkout-page .item .section .quantity .group .sub-button, .wishlist-page .item .section .quantity .group .add-button, .wishlist-page .item .section .quantity .group .sub-button {
+.checkout-page .item .all-details .quantity .group .add-button, .checkout-page .item .all-details .quantity .group .sub-button, .wishlist-page .item .all-details .quantity .group .add-button, .wishlist-page .item .all-details .quantity .group .sub-button {
   height: 20px;
   width: 20px;
   display: -webkit-box;
@@ -1742,12 +1753,12 @@ footer .list .footer-contact h4 i {
   cursor: pointer;
 }
 
-.checkout-page .item .section .quantity .group .add-button i, .checkout-page .item .section .quantity .group .sub-button i, .wishlist-page .item .section .quantity .group .add-button i, .wishlist-page .item .section .quantity .group .sub-button i {
+.checkout-page .item .all-details .quantity .group .add-button i, .checkout-page .item .all-details .quantity .group .sub-button i, .wishlist-page .item .all-details .quantity .group .add-button i, .wishlist-page .item .all-details .quantity .group .sub-button i {
   font-size: 12px;
   text-align: center;
 }
 
-.checkout-page .item .section .quantity .group .quantity-number, .wishlist-page .item .section .quantity .group .quantity-number {
+.checkout-page .item .all-details .quantity .group .quantity-number, .wishlist-page .item .all-details .quantity .group .quantity-number {
   margin: 0 10px;
 }
 
@@ -4624,5 +4635,34 @@ footer .list .footer-contact h4 i {
   height: 1px;
   width: 100%;
   background-color: #000000;
+}
+
+/*************    scroll-to-top     **************/
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: -50px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 10;
+  background-color: #ffffff;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-to-top.show {
+  right: 20px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-to-top img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

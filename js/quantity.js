@@ -1,17 +1,17 @@
 const decrementBtn = document.querySelectorAll('.sub-button');
 const increamentBtn = document.querySelectorAll('.add-button');
-let quantityNumber = document.querySelector('.quantity-number');
+let quantityNumber = document.querySelectorAll('.quantity-number');
 let totalPrice = document.querySelectorAll('#total-price');
 
 decrementBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    quantityNumber.stepUp(-1);
+    quantityNumber[idx].stepUp(-1);
   });
 });
 
 increamentBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    quantityNumber.stepUp(1);
+    quantityNumber[idx].stepUp(1);
   });
 });
 
