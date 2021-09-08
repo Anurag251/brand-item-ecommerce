@@ -588,6 +588,19 @@
   .checkout-page .item .delete img, .wishlist-page .item .delete img {
     width: 100%;
   }
+  /*************    contact-page     **************/
+  .contact-page .title {
+    font-size: 30px;
+  }
+  .contact-page .map {
+    height: 500px;
+  }
+  .contact-page .other {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -839,6 +852,35 @@
     left: 0;
     pointer-events: auto;
   }
+  /*************    contact-page     **************/
+  .contact-page .title {
+    font-size: 24px;
+  }
+  .contact-page .map {
+    height: 500px;
+  }
+  .contact-page .other {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  /*************    prodect-details-page     *************/
+  .prodect-details-page {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .prodect-details-page .item-details .others .size ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -902,6 +944,26 @@
   /*************    kitchen-collections     **************/
   .kitchen-collections .list {
         grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5' 'item6';
+  }
+  /*************    prodect-details-page     *************/
+  .prodect-details-page .item-details h3 {
+    font-size: 18px;
+  }
+  .prodect-details-page .item-details .others {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .prodect-details-page .item-details .others .quantity {
+    margin-bottom: 2rem;
+  }
+  /*************    you-may-also-like     **************/
+  .you-may-also-like .title {
+    font-size: 24px;
   }
 }
 
@@ -1035,8 +1097,6 @@
     font-size: 14px;
   }
   .kitchen-new-product .list, .bags-new-product .list {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
@@ -1153,6 +1213,10 @@
   /*************    hot-categories     **************/
   .hot-categories .list .item .image {
     height: 200px;
+  }
+  /*************    contact-page     **************/
+  .contact-page .map {
+    height: 350px;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

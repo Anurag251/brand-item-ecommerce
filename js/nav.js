@@ -10,7 +10,7 @@ cart.addEventListener('click', () => {
 const brandDropdown = document.querySelector('.drop-brand');
 const brandDropdownBtn = document.querySelector('.drop-down-brand');
 
-brandDropdownBtn.addEventListener('click', () => {
+$(brandDropdownBtn).hover(() => {
   brandDropdown.classList.toggle('active');
 });
 
@@ -18,7 +18,7 @@ brandDropdownBtn.addEventListener('click', () => {
 const dropDown = document.querySelector('.drop-down');
 const drop = document.querySelector('.drop');
 
-dropDown.addEventListener('click', () => {
+$(dropDown).hover(() => {
   drop.classList.toggle('active');
 });
 
@@ -86,13 +86,14 @@ document.addEventListener('mousemove', (e) => {
 });
 
 // search-popup
-
 const searchPop = document.querySelector('.search-pop');
 const searchCloseBtn = document.querySelector('.search-close-btn');
 const searchPopBtn = document.querySelector('.search-pop-btn');
+const searchPopInput = document.querySelector('.search-pop .input');
 
 searchPopBtn.addEventListener('click', () => {
   searchPop.classList.toggle('active');
+  searchPopInput.focus();
 });
 
 searchCloseBtn.addEventListener('click', () => {

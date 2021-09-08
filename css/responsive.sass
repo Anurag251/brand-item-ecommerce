@@ -528,6 +528,16 @@ $star: #E28800
         img
           width: 100%
 
+  /*************    contact-page     **************/
+  .contact-page
+    .title
+      font-size: 30px
+    .map
+      height: 500px
+    .other
+      display: grid
+      grid-template-columns: 1fr 1fr
+
 @media only screen and(max-width: 800px)
   /*************    kitchen-collections     **************/
   .kitchen-collections
@@ -714,6 +724,26 @@ $star: #E28800
         left: 0
         pointer-events: auto
 
+  /*************    contact-page     **************/
+  .contact-page
+    .title
+      font-size: 24px
+    .map
+      height: 500px
+    .other
+      grid-template-columns: 1fr
+
+  /*************    prodect-details-page     *************/
+  .prodect-details-page
+    grid-template-columns: 1fr
+
+    .item-details
+      .others
+        .size
+          ul
+            @include flex($justify: flex-start)
+            flex-wrap: wrap
+
 @media only screen and(max-width: 650px)
   /*************    bags-collections     **************/
   .bags-collections
@@ -776,6 +806,23 @@ $star: #E28800
   .kitchen-collections
     .list
       grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5' 'item6'
+
+  /*************    prodect-details-page     *************/
+  .prodect-details-page
+    .item-details
+      h3
+        font-size: 18px
+      .others
+        align-items: flex-start
+        flex-direction: column
+
+        .quantity
+          margin-bottom: 2rem
+
+  /*************    you-may-also-like     **************/
+  .you-may-also-like
+    .title
+      font-size: 24px
 
 @media only screen and(max-width: 500px)
   .wrapper
@@ -893,7 +940,6 @@ $star: #E28800
         font-size: 14px
 
     .list
-      display: grid
       grid-template-columns: 1fr
 
   /*************    electronic-page-banner     **************/
@@ -1028,3 +1074,8 @@ $star: #E28800
       .item
         .image
           height: 200px
+
+  /*************    contact-page     **************/
+  .contact-page
+    .map
+      height: 350px
