@@ -1101,8 +1101,9 @@ header .menubar .search .group .search-btn {
 }
 
 .collections .sections .section ul li.heading {
-  font-size: 30px;
-  margin-bottom: 2rem;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  font-weight: 600;
   color: #000000;
 }
 
@@ -1380,7 +1381,8 @@ footer .list .footer-contact h4 i {
 
 .quick-view-pop .details .images .swiper-slide img {
   width: 100%;
-  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .quick-view-pop .details .item-details h3 {
@@ -1803,7 +1805,7 @@ footer .list .footer-contact h4 i {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 100px;
 }
 
 .checkout-page .payment-section ::-webkit-scrollbar, .wishlist-page .payment-section ::-webkit-scrollbar {
@@ -1820,32 +1822,63 @@ footer .list .footer-contact h4 i {
   border-radius: 10px;
 }
 
+.checkout-page .payment-section .payment-form, .wishlist-page .payment-section .payment-form {
+  overflow: hidden;
+}
+
 .checkout-page .payment-section .payment-form h2, .wishlist-page .payment-section .payment-form h2 {
   margin-bottom: 1rem;
   font-size: 20px;
 }
 
-.checkout-page .payment-section .payment-form .email, .wishlist-page .payment-section .payment-form .email {
-  border: 1px solid #BFBFBF;
-  width: 100%;
-  padding: .8rem;
-  border-radius: 15px;
-}
-
-.checkout-page .payment-section .payment-form .shipping-address, .wishlist-page .payment-section .payment-form .shipping-address {
-  margin-top: 2rem;
-}
-
-.checkout-page .payment-section .payment-form .shipping-address h2, .wishlist-page .payment-section .payment-form .shipping-address h2 {
-  margin-bottom: 1.6rem;
+.checkout-page .payment-section .payment-form .form, .wishlist-page .payment-section .payment-form .form {
+  width: 600%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .checkout-page .payment-section .payment-form .groups, .wishlist-page .payment-section .payment-form .groups {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  width: 16.66%;
+  padding-top: 1rem;
+  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  transition: 0.45s cubic-bezier(0, 0, 0, 1);
+}
+
+.checkout-page .payment-section .payment-form .name, .wishlist-page .payment-section .payment-form .name {
+  font-size: 24px;
+  margin: 1rem 0 1.5rem;
+}
+
+.checkout-page .payment-section .payment-form .btns, .wishlist-page .payment-section .payment-form .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.checkout-page .payment-section .payment-form .btns button, .wishlist-page .payment-section .payment-form .btns button {
+  padding: .7rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 1px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 0em #ffffff inset;
+          box-shadow: 0 0 0 0em #ffffff inset;
+  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1.5px solid #000000;
+  width: 100%;
+  font-size: 18px;
+}
+
+.checkout-page .payment-section .payment-form .btns button:hover, .wishlist-page .payment-section .payment-form .btns button:hover {
+  -webkit-box-shadow: 0 0 0 3em #ffffff inset;
+          box-shadow: 0 0 0 3em #ffffff inset;
+  color: #000000;
+}
+
+.checkout-page .payment-section .payment-form .btns button.prev, .wishlist-page .payment-section .payment-form .btns button.prev {
+  margin-right: 10px;
 }
 
 .checkout-page .payment-section .payment-form .group, .wishlist-page .payment-section .payment-form .group {
@@ -1870,7 +1903,10 @@ footer .list .footer-contact h4 i {
 }
 
 .checkout-page .payment-section .payment-form .group input, .checkout-page .payment-section .payment-form .group select, .wishlist-page .payment-section .payment-form .group input, .wishlist-page .payment-section .payment-form .group select {
-  padding: 1rem 1rem .6rem;
+  height: 50px;
+  padding-left: 1rem;
+  padding-top: .5rem;
+  font-size: 18px;
   width: 100%;
 }
 
@@ -1910,25 +1946,6 @@ footer .list .footer-contact h4 i {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.checkout-page .payment-section .payment-form button, .wishlist-page .payment-section .payment-form button {
-  padding: .7rem 2rem;
-  background-color: #000000;
-  color: #ffffff;
-  border-radius: 1px;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 0 0em #ffffff inset;
-          box-shadow: 0 0 0 0em #ffffff inset;
-  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
-  transition: 0.45s cubic-bezier(0, 0, 0, 1);
-  border: 1.5px solid #000000;
-}
-
-.checkout-page .payment-section .payment-form button:hover, .wishlist-page .payment-section .payment-form button:hover {
-  -webkit-box-shadow: 0 0 0 3em #ffffff inset;
-          box-shadow: 0 0 0 3em #ffffff inset;
-  color: #000000;
 }
 
 .checkout-page .payment-section .product-list, .wishlist-page .payment-section .product-list {
@@ -2055,7 +2072,8 @@ footer .list .footer-contact h4 i {
 
 .prodect-details-page .images .swiper-slide img {
   width: 100%;
-  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .prodect-details-page .item-details h3 {
@@ -3357,8 +3375,8 @@ footer .list .footer-contact h4 i {
 .sign-in-and-sign-up {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1.7fr 1fr;
+      grid-template-columns: 1.7fr 1fr;
   grid-gap: 20px;
 }
 
@@ -3367,6 +3385,10 @@ footer .list .footer-contact h4 i {
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.sign-in-and-sign-up .sign-in, .sign-in-and-sign-up .sign-up {
+  padding: 2rem;
 }
 
 .sign-in-and-sign-up .sign-in .groups, .sign-in-and-sign-up .sign-up .groups {

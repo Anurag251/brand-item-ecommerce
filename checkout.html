@@ -508,9 +508,126 @@
               <h2>Contact Informations</h2>
 
               <form action="">
-                <input class="email" type="email" placeholder="Email" />
+                <div class="name">Shipping Address</div>
+                <div class="form">
+                  <div class="groups slide-page">
+                    <div class="group">
+                      <label for="email">Email</label>
+                      <input type="email" name="" id="email" />
+                    </div>
 
-                <div class="shipping-address">
+                    <div class="btns">
+                      <button class="firstNext next">Next</button>
+                    </div>
+                  </div>
+
+                  <div class="groups">
+                    <div class="group">
+                      <label for="fname">First Name</label>
+                      <input type="text" name="" id="fname" />
+                    </div>
+
+                    <div class="group">
+                      <label for="fname">Last Name</label>
+                      <input type="text" name="" id="fname" />
+                    </div>
+
+                    <div class="btns">
+                      <button class="prev prev-1">Prev</button>
+                      <button class="next-1">Next</button>
+                    </div>
+                  </div>
+
+                  <div class="groups">
+                    <div class="group">
+                      <label for="address">Address</label>
+                      <input type="text" name="" id="address" />
+                    </div>
+
+                    <div class="group">
+                      <label for="city">City</label>
+                      <input type="text" name="" id="city" />
+                    </div>
+
+                    <div class="btns">
+                      <button class="prev prev-2">Prev</button>
+                      <button class="next-2">Next</button>
+                    </div>
+                  </div>
+
+                  <div class="groups">
+                    <div class="group">
+                      <label for="fname">Country</label>
+                      <select name="" id="">
+                        <option value="">Nepal</option>
+                        <option value="">Germany</option>
+                        <option value="">India</option>
+                        <option value="">London</option>
+                      </select>
+                    </div>
+
+                    <div class="group">
+                      <label for="Postal">Postal Code</label>
+                      <input type="number" name="" id="Postal" />
+                    </div>
+
+                    <div class="btns">
+                      <button class="prev prev-3">Prev</button>
+                      <button class="next-3">Next</button>
+                    </div>
+                  </div>
+
+                  <div class="groups">
+                    <div class="group">
+                      <label for="phone">Mobile Number</label>
+                      <input type="number" name="" id="phone" />
+                    </div>
+
+                    <div class="btns">
+                      <button class="prev prev-4">Prev</button>
+                      <button class="next-4">Next</button>
+                    </div>
+                  </div>
+
+                  <div class="groups">
+                    <div class="group">
+                      <label for="Card">Card Number</label>
+                      <input type="number" name="" id="Card" />
+                    </div>
+
+                    <div class="group">
+                      <label for="CVC">CVC Number</label>
+                      <input type="number" name="" id="CVC" />
+                    </div>
+
+                    <div class="group">
+                      <label for="fname">Expires</label>
+                      <select name="" id="">
+                        <option value="">Jan</option>
+                        <option value="">Fev</option>
+                        <option value="">Mar</option>
+                        <option value="">Apr</option>
+                      </select>
+                    </div>
+
+                    <div class="group">
+                      <label for="fname"></label>
+                      <select name="" id="">
+                        <option value="">2020</option>
+                        <option value="">2021</option>
+                        <option value="">2022</option>
+                        <option value="">2023</option>
+                      </select>
+                    </div>
+
+                    <div class="btns">
+                      <button class="prev prev-5">Prev</button>
+                      <button class="submit">Submit</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="shipping-address">
                   <h2>Shipping Address</h2>
                   <div class="groups">
                     <div class="group">
@@ -522,16 +639,27 @@
                       <label for="name">Last Name</label>
                       <input type="text" id="name" required />
                     </div>
+
+                    <div class="btns">
+                      <button>Next</button>
+                    </div>
                   </div>
 
-                  <div class="group">
-                    <label for="name">Address</label>
-                    <input type="text" id="name" required />
-                  </div>
+                  <div class="groups">
+                    <div class="group">
+                      <label for="name">Address</label>
+                      <input type="text" id="name" required />
+                    </div>
 
-                  <div class="group">
-                    <label for="name">City</label>
-                    <input type="text" id="name" required />
+                    <div class="group">
+                      <label for="name">City</label>
+                      <input type="text" id="name" required />
+                    </div>
+
+                    <div class="btns">
+                      <button>Prev</button>
+                      <button>Next</button>
+                    </div>
                   </div>
 
                   <div class="groups">
@@ -549,11 +677,16 @@
                       <label for="name">Postal Code</label>
                       <input type="number" id="name" required />
                     </div>
-                  </div>
 
-                  <div class="group">
-                    <label for="name">Mobile Number</label>
-                    <input type="number" id="name" required />
+                    <div class="group">
+                      <label for="name">Mobile Number</label>
+                      <input type="number" id="name" required />
+                    </div>
+
+                    <div class="btns">
+                      <button>Prev</button>
+                      <button>Next</button>
+                    </div>
                   </div>
                 </div>
 
@@ -638,11 +771,10 @@
                       </select>
                     </div>
                   </div>
-                </div>
-
-                <button>Submit</button>
+                </div> -->
               </form>
             </div>
+
             <div class="all-cart-product">
               <div class="product-list">
                 <div class="product">
@@ -975,5 +1107,6 @@
     <!-- js -->
     <script src="./js/nav.js"></script>
     <script src="./js/quantity.js"></script>
+    <script src="./js/wizard-form.js"></script>
   </body>
 </html>

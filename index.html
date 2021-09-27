@@ -179,25 +179,25 @@
           <li class="drop-down">
             Shop <i class="fas fa-chevron-down"></i>
             <ul class="drop">
-              <li>
-                <a href="clothing.html"> Chothings </a>
-              </li>
+              <a href="clothing.html">
+                <li>Chothings</li>
+              </a>
 
-              <li>
-                <a href="electronic.html"> Electronic </a>
-              </li>
+              <a href="electronic.html">
+                <li>Electronic</li>
+              </a>
 
-              <li>
-                <a href="sneakers.html"> Shoes </a>
-              </li>
+              <a href="sneakers.html">
+                <li>Shoes</li>
+              </a>
 
-              <li>
-                <a href="kitchen.html"> Kitchen </a>
-              </li>
+              <a href="kitchen.html">
+                <li>Kitchen</li>
+              </a>
 
-              <li>
-                <a href="bags.html"> Bags </a>
-              </li>
+              <a href="bags.html">
+                <li>Bags</li>
+              </a>
             </ul>
           </li>
 
@@ -1550,7 +1550,7 @@
     <!-- Initialize Swiper -->
     <script>
       // banner
-      var swiper = new Swiper('.banner .mySwiper', {
+      var swiper = new Swiper(".banner .mySwiper", {
         autoplay: {
           delay: 4500,
           disableOnInteraction: false,
@@ -1558,7 +1558,7 @@
       });
 
       // deals
-      var swiper = new Swiper('.deals .mySwiper', {
+      var swiper = new Swiper(".deals .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
@@ -1566,12 +1566,12 @@
           disableOnInteraction: false,
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           640: {
@@ -1590,7 +1590,7 @@
       });
 
       // quick-view-pop
-      var swiper = new Swiper('.quick-view-pop .mySwiper', {
+      var swiper = new Swiper(".quick-view-pop .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
@@ -1598,8 +1598,8 @@
           disableOnInteraction: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           440: {
@@ -1627,7 +1627,7 @@
     </script>
 
     <script>
-      const stars = document.querySelectorAll('.stars');
+      const stars = document.querySelectorAll(".stars");
 
       const fullStar = `
     <svg
@@ -1680,10 +1680,10 @@
 
     <script>
       // image-magnify
-      const zooms = document.querySelectorAll('#zoom');
+      const zooms = document.querySelectorAll("#zoom");
 
       zooms.forEach((zoom) => {
-        $(zoom).zoom({ on: 'click' });
+        $(zoom).zoom({ on: "click" });
       });
     </script>
   </body>
