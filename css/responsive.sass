@@ -28,13 +28,16 @@ $star: #E28800
   bottom: 0
 
 @mixin button()
-  padding: .5rem 1rem
+  padding: .7rem 2rem
   background-color: $main
   color: $light
   border-radius: 1px
   cursor: pointer
   box-shadow: 0 0 0 0em $light inset
   @include trans()
+  border: 1px solid $main
+  font-size: 16px
+
   &:hover
     box-shadow: 0 0 0 3em $light inset
     color: $main

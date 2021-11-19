@@ -41,14 +41,17 @@
           <div class="search">
             <form action="">
               <div class="group">
-                <select name="" id="">
-                  <option value="">All Categories</option>
-                  <option value="">Electronic</option>
-                  <option value="">Clothing</option>
-                  <option value="">Kitchen</option>
-                  <option value="">Shooes</option>
-                  <option value="">Brands</option>
-                </select>
+                <div class="custom_select">
+                  <select name="" id="">
+                    <option value="">Select</option>
+                    <option value="">All Categories</option>
+                    <option value="">Electronic</option>
+                    <option value="">Clothing</option>
+                    <option value="">Kitchen</option>
+                    <option value="">Shooes</option>
+                    <option value="">Brands</option>
+                  </select>
+                </div>
                 <input
                   type="search"
                   class="input"
@@ -153,7 +156,7 @@
               </div>
             </div>
 
-            <a href="login-signup.html">
+            <a href="sign-in.html">
               <div class="login-signup">
                 <div class="icon">
                   <img src="./images/icon/Profile.svg" alt="profile" />
@@ -1412,7 +1415,7 @@
     <!-- Initialize Swiper -->
     <script>
       // banner
-      var swiper = new Swiper('.banner .mySwiper', {
+      var swiper = new Swiper(".banner .mySwiper", {
         autoplay: {
           delay: 4500,
           disableOnInteraction: false,
@@ -1420,7 +1423,7 @@
       });
 
       // quick-view-pop
-      var swiper = new Swiper('.quick-view-pop .mySwiper', {
+      var swiper = new Swiper(".quick-view-pop .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
@@ -1428,8 +1431,8 @@
           disableOnInteraction: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           440: {
@@ -1457,7 +1460,7 @@
     </script>
 
     <script>
-      const stars = document.querySelectorAll('.stars');
+      const stars = document.querySelectorAll(".stars");
 
       const fullStar = `
     <svg
@@ -1510,30 +1513,30 @@
 
     <script>
       // image-magnify
-      const zooms = document.querySelectorAll('#zoom');
+      const zooms = document.querySelectorAll("#zoom");
 
       zooms.forEach((zoom) => {
-        $(zoom).zoom({ on: 'click' });
+        $(zoom).zoom({ on: "click" });
       });
 
       // our-dress
       $(document).ready(function () {
-        $('.box-item').not('.data-new-arrive').hide('1000');
+        $(".box-item").not(".data-new-arrive").hide("1000");
       });
 
       $(document).ready(function () {
-        $('.our-dress ul li').click(function () {
-          const value = $(this).attr('data-filters');
-          $('.box-item')
-            .not('.' + value)
-            .hide('1000');
-          $('.box-item')
-            .filter('.' + value)
-            .show('1000');
+        $(".our-dress ul li").click(function () {
+          const value = $(this).attr("data-filters");
+          $(".box-item")
+            .not("." + value)
+            .hide("1000");
+          $(".box-item")
+            .filter("." + value)
+            .show("1000");
         });
 
-        $('.our-dress ul li').click(function () {
-          $(this).addClass('active').siblings().removeClass('active');
+        $(".our-dress ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
         });
       });
     </script>

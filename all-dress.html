@@ -41,14 +41,17 @@
           <div class="search">
             <form action="">
               <div class="group">
-                <select name="" id="">
-                  <option value="">All Categories</option>
-                  <option value="">Electronic</option>
-                  <option value="">Clothing</option>
-                  <option value="">Kitchen</option>
-                  <option value="">Shooes</option>
-                  <option value="">Brands</option>
-                </select>
+                <div class="custom_select">
+                  <select name="" id="">
+                    <option value="">Select</option>
+                    <option value="">All Categories</option>
+                    <option value="">Electronic</option>
+                    <option value="">Clothing</option>
+                    <option value="">Kitchen</option>
+                    <option value="">Shooes</option>
+                    <option value="">Brands</option>
+                  </select>
+                </div>
                 <input
                   type="search"
                   class="input"
@@ -153,7 +156,7 @@
               </div>
             </div>
 
-            <a href="login-signup.html">
+            <a href="sign-in.html">
               <div class="login-signup">
                 <div class="icon">
                   <img src="./images/icon/Profile.svg" alt="profile" />
@@ -1299,7 +1302,7 @@
     <!-- Initialize Swiper -->
     <script>
       // electronic-page-banner
-      var swiper = new Swiper('.electronic-page-banner .mySwiper', {
+      var swiper = new Swiper(".electronic-page-banner .mySwiper", {
         autoplay: {
           delay: 4500,
           disableOnInteraction: false,
@@ -1307,7 +1310,7 @@
       });
 
       // flash-deals
-      var swiper = new Swiper('.flash-deals .mySwiper', {
+      var swiper = new Swiper(".flash-deals .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
@@ -1315,12 +1318,12 @@
           disableOnInteraction: false,
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           640: {
@@ -1339,7 +1342,7 @@
       });
 
       // quick-view-pop
-      var swiper = new Swiper('.quick-view-pop .mySwiper', {
+      var swiper = new Swiper(".quick-view-pop .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
@@ -1347,8 +1350,8 @@
           disableOnInteraction: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           440: {
@@ -1376,7 +1379,7 @@
     </script>
 
     <script>
-      const stars = document.querySelectorAll('.stars');
+      const stars = document.querySelectorAll(".stars");
 
       const fullStar = `
     <svg
@@ -1429,25 +1432,25 @@
 
     <script>
       // image-magnify
-      const zooms = document.querySelectorAll('#zoom');
+      const zooms = document.querySelectorAll("#zoom");
 
       zooms.forEach((zoom) => {
-        $(zoom).zoom({ on: 'click' });
+        $(zoom).zoom({ on: "click" });
       });
 
       // filter
-      const filterOpenBtn = document.querySelector('.filter-open-btn');
-      const productSideBar = document.querySelector('.product-side-bar');
-      const bg = document.querySelector('.side-nav-bg');
+      const filterOpenBtn = document.querySelector(".filter-open-btn");
+      const productSideBar = document.querySelector(".product-side-bar");
+      const bg = document.querySelector(".side-nav-bg");
 
-      filterOpenBtn.addEventListener('click', () => {
-        productSideBar.classList.add('active');
-        bg.classList.add('active');
+      filterOpenBtn.addEventListener("click", () => {
+        productSideBar.classList.add("active");
+        bg.classList.add("active");
       });
 
-      bg.addEventListener('click', () => {
-        productSideBar.classList.remove('active');
-        bg.classList.remove('active');
+      bg.addEventListener("click", () => {
+        productSideBar.classList.remove("active");
+        bg.classList.remove("active");
       });
     </script>
   </body>

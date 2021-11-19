@@ -13,6 +13,11 @@
   scroll-behavior: smooth;
 }
 
+select {
+  -webkit-appearance: none;
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+}
+
 body {
   background-color: #ffffff;
 }
@@ -203,6 +208,8 @@ header .menubar .other .cart .shopping-cart-dropdown button {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   width: 100%;
   text-transform: uppercase;
   margin-top: 1rem;
@@ -296,15 +303,15 @@ header .menubar .other .login-signup .text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 10px;
+  font-size: 12px;
   color: #666666;
 }
 
 header .menubar .search .group {
-  border: 1px solid #666666;
+  -webkit-box-shadow: 0 0 2px #666666;
+          box-shadow: 0 0 2px #666666;
   border-radius: 15px;
   position: relative;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,19 +321,86 @@ header .menubar .search .group {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0;
+  background-color: #000000;
+  /*style the arrow inside the select element:*/
+  /*point the arrow upwards when the select box is open (active):*/
+  /*style the items (options), including the selected item:*/
+  /*style items (options):*/
+  /*hide the items when the select box is closed:*/
 }
 
-header .menubar .search .group select {
-  padding: .7rem .5rem;
-  margin-right: 10px;
-  color: #666666;
+header .menubar .search .group .custom_select {
+  position: relative;
+  height: 100%;
   width: 20%;
+  font-size: 13px;
+}
+
+header .menubar .search .group .custom_select select {
+  display: none;
+}
+
+header .menubar .search .group .select-selected {
+  background-color: #000000;
+  border-radius: 15px 0 0 15px;
+  height: 100%;
+}
+
+header .menubar .search .group .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+header .menubar .search .group .select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+header .menubar .search .group .select-items div, header .menubar .search .group .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header .menubar .search .group .select-items {
+  position: absolute;
+  background-color: #000000;
+  border-radius: 15px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  overflow: hidden;
+}
+
+header .menubar .search .group .select-hide {
+  display: none;
+}
+
+header .menubar .search .group .select-items div:hover, header .menubar .search .group .same-as-selected {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 header .menubar .search .group input {
   border-left: 1px solid #666666;
   padding: .7rem 1rem;
+  font-size: 16px;
   width: 80%;
+  height: 100%;
+  background-color: #ffffff;
 }
 
 header .menubar .search .group .search-btn {
@@ -335,7 +409,7 @@ header .menubar .search .group .search-btn {
   right: 0;
   top: 0;
   height: 100%;
-  width: 40px;
+  width: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,6 +422,11 @@ header .menubar .search .group .search-btn {
   color: #ffffff;
   cursor: pointer;
   z-index: 1;
+  border-radius: 0 15px 15px 0;
+}
+
+header .menubar .search .group .search-btn i {
+  font-size: 16px;
 }
 
 /*************    nav-bar     *************/
@@ -558,7 +637,7 @@ header .menubar .search .group .search-btn {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80vh;
+  min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,6 +728,7 @@ header .menubar .search .group .search-btn {
   z-index: 2;
   width: 100%;
   color: #fff;
+  padding: 1rem 20px;
 }
 
 .banner .wrapper h1 {
@@ -673,6 +753,8 @@ header .menubar .search .group .search-btn {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
 }
 
 .banner .wrapper .button:hover {
@@ -805,6 +887,8 @@ header .menubar .search .group .search-btn {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
 }
 
 .menu-item .item button:hover {
@@ -848,6 +932,7 @@ header .menubar .search .group .search-btn {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-size: contain;
   height: 300px;
   border: 1px solid #666666;
   border-radius: 15px;
@@ -1024,6 +1109,8 @@ header .menubar .search .group .search-btn {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   margin-top: 1rem;
   padding: .5rem 1rem;
   font-size: 14px;
@@ -1143,6 +1230,8 @@ header .menubar .search .group .search-btn {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
 }
 
 .collections .sections .section .image button:hover {
@@ -1387,6 +1476,7 @@ footer .list .footer-contact h4 i {
 
 .quick-view-pop .details .item-details h3 {
   font-size: 22px;
+  color: #000000;
 }
 
 .quick-view-pop .details .item-details .rating {
@@ -1611,6 +1701,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   width: 100%;
   margin-top: 2rem;
   border: 1.6px solid #000000;
@@ -1710,6 +1802,26 @@ footer .list .footer-contact h4 i {
   color: #AF0000;
 }
 
+.checkout-page .item .all-details .price button, .wishlist-page .item .all-details .price button {
+  padding: .7rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 1px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 0em #ffffff inset;
+          box-shadow: 0 0 0 0em #ffffff inset;
+  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
+}
+
+.checkout-page .item .all-details .price button:hover, .wishlist-page .item .all-details .price button:hover {
+  -webkit-box-shadow: 0 0 0 3em #ffffff inset;
+          box-shadow: 0 0 0 3em #ffffff inset;
+  color: #000000;
+}
+
 .checkout-page .item .all-details .delete, .wishlist-page .item .all-details .delete {
   height: 30px;
   width: 30px;
@@ -1787,6 +1899,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
 }
 
 .checkout-page .total-price-sec .continue-shopping button:hover, .wishlist-page .total-price-sec .continue-shopping button:hover {
@@ -1866,6 +1980,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   border: 1.5px solid #000000;
   width: 100%;
   font-size: 18px;
@@ -2300,6 +2416,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   width: 100%;
   margin-top: 2rem;
   border: 1.6px solid #000000;
@@ -2523,6 +2641,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   margin-top: 1rem;
   padding: .5rem 1rem;
   font-size: 14px;
@@ -2890,6 +3010,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   -webkit-box-shadow: 0 0 0 3em #ffffff inset;
           box-shadow: 0 0 0 3em #ffffff inset;
   color: #000000;
@@ -3253,6 +3375,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   border: 1.5px solid #000000;
   font-size: 20px;
   border-radius: 0;
@@ -3342,6 +3466,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   -webkit-box-shadow: 0 0 0 3em #ffffff inset;
           box-shadow: 0 0 0 3em #ffffff inset;
   color: #000000;
@@ -3372,26 +3498,40 @@ footer .list .footer-contact h4 i {
 }
 
 /*************    sign-in-and-sign-up     **************/
-.sign-in-and-sign-up {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1.7fr 1fr;
-      grid-template-columns: 1.7fr 1fr;
-  grid-gap: 20px;
+.sign-in-form .wrapper {
+  max-width: 600px;
 }
 
-.sign-in-and-sign-up .form-title {
-  margin-bottom: 2rem;
+.sign-in-form .form-title {
+  margin-bottom: 1rem;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.sign-in-and-sign-up .sign-in, .sign-in-and-sign-up .sign-up {
+.sign-in-form h4 {
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.sign-in-form h4 a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.sign-in-form h5 {
+  color: #000000;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.sign-in-form .sign-in, .sign-in-form .sign-up {
   padding: 2rem;
 }
 
-.sign-in-and-sign-up .sign-in .groups, .sign-in-and-sign-up .sign-up .groups {
+.sign-in-form .sign-in .groups, .sign-in-form .sign-up .groups {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -3399,14 +3539,14 @@ footer .list .footer-contact h4 i {
   grid-gap: 20px;
 }
 
-.sign-in-and-sign-up .sign-in .group, .sign-in-and-sign-up .sign-up .group {
+.sign-in-form .sign-in .group, .sign-in-form .sign-up .group {
   position: relative;
   border-radius: 15px;
   border: 1px solid #bfbfbf;
   margin-bottom: 1.5rem;
 }
 
-.sign-in-and-sign-up .sign-in .group label, .sign-in-and-sign-up .sign-up .group label {
+.sign-in-form .sign-in .group label, .sign-in-form .sign-up .group label {
   position: absolute;
   top: 0;
   left: 15px;
@@ -3420,12 +3560,12 @@ footer .list .footer-contact h4 i {
   border: 1px solid #bfbfbf;
 }
 
-.sign-in-and-sign-up .sign-in .group input, .sign-in-and-sign-up .sign-in .group select, .sign-in-and-sign-up .sign-up .group input, .sign-in-and-sign-up .sign-up .group select {
+.sign-in-form .sign-in .group input, .sign-in-form .sign-in .group select, .sign-in-form .sign-up .group input, .sign-in-form .sign-up .group select {
   padding: 1rem 1rem .6rem;
   width: 100%;
 }
 
-.sign-in-and-sign-up .sign-in .button-group, .sign-in-and-sign-up .sign-up .button-group {
+.sign-in-form .sign-in .button-group, .sign-in-form .sign-up .button-group {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -3433,7 +3573,7 @@ footer .list .footer-contact h4 i {
   grid-gap: 20px;
 }
 
-.sign-in-and-sign-up .sign-in .button-group button, .sign-in-and-sign-up .sign-up .button-group button {
+.sign-in-form .sign-in .button-group button, .sign-in-form .sign-up .button-group button {
   padding: .7rem 2rem;
   background-color: #000000;
   color: #ffffff;
@@ -3443,17 +3583,19 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   border-radius: 15px;
   border: 1.6px solid #000000;
 }
 
-.sign-in-and-sign-up .sign-in .button-group button:hover, .sign-in-and-sign-up .sign-up .button-group button:hover {
+.sign-in-form .sign-in .button-group button:hover, .sign-in-form .sign-up .button-group button:hover {
   -webkit-box-shadow: 0 0 0 3em #ffffff inset;
           box-shadow: 0 0 0 3em #ffffff inset;
   color: #000000;
 }
 
-.sign-in-and-sign-up .sign-in .button-group button.sign-in-with-google, .sign-in-and-sign-up .sign-up .button-group button.sign-in-with-google {
+.sign-in-form .sign-in .button-group button.sign-in-with-google, .sign-in-form .sign-up .button-group button.sign-in-with-google {
   -webkit-box-shadow: 0 0 0 3rem #0071DA inset;
           box-shadow: 0 0 0 3rem #0071DA inset;
   background-color: #ffffff;
@@ -3461,11 +3603,119 @@ footer .list .footer-contact h4 i {
   font-weight: 600;
 }
 
-.sign-in-and-sign-up .sign-in .button-group button.sign-in-with-google:hover, .sign-in-and-sign-up .sign-up .button-group button.sign-in-with-google:hover {
+.sign-in-form .sign-in .button-group button.sign-in-with-google:hover, .sign-in-form .sign-up .button-group button.sign-in-with-google:hover {
   -webkit-box-shadow: 0 0 0 0em #0071DA inset;
           box-shadow: 0 0 0 0em #0071DA inset;
   background-color: #ffffff;
   color: #0071DA;
+}
+
+/*************    sign-up     **************/
+.sign-up-form .wrapper {
+  max-width: 600px;
+}
+
+.sign-up-form .wrapper .sign-up {
+  overflow: hidden;
+}
+
+.sign-up-form .wrapper .sign-up h2 {
+  margin-bottom: 1rem;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sign-up-form .wrapper .sign-up h4 {
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.sign-up-form .wrapper .sign-up h4 a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.sign-up-form .wrapper .sign-up .form {
+  width: 600%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign-up-form .wrapper .sign-up .groups {
+  width: 16.66%;
+  padding-top: 1rem;
+  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  transition: 0.45s cubic-bezier(0, 0, 0, 1);
+}
+
+.sign-up-form .wrapper .sign-up .name {
+  font-size: 24px;
+  margin: 1rem 0 1.5rem;
+}
+
+.sign-up-form .wrapper .sign-up .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign-up-form .wrapper .sign-up .btns button {
+  padding: .7rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 1px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 0em #ffffff inset;
+          box-shadow: 0 0 0 0em #ffffff inset;
+  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
+  border: 1.5px solid #000000;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+.sign-up-form .wrapper .sign-up .btns button:hover {
+  -webkit-box-shadow: 0 0 0 3em #ffffff inset;
+          box-shadow: 0 0 0 3em #ffffff inset;
+  color: #000000;
+}
+
+.sign-up-form .wrapper .sign-up .btns button.prev {
+  margin-right: 10px;
+}
+
+.sign-up-form .wrapper .sign-up .group {
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 1.5rem;
+}
+
+.sign-up-form .wrapper .sign-up .group label {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 12px;
+  background-color: #ffffff;
+  padding: .2rem 1rem;
+  color: #666666;
+  border-radius: 20px;
+  border: 1px solid #bfbfbf;
+}
+
+.sign-up-form .wrapper .sign-up .group input, .sign-up-form .wrapper .sign-up .group select {
+  height: 50px;
+  padding-left: 1rem;
+  padding-top: .5rem;
+  font-size: 18px;
+  width: 100%;
 }
 
 /*************    kitchen-collections     **************/
@@ -3829,6 +4079,7 @@ footer .list .footer-contact h4 i {
       grid-template-columns: 1fr 3fr;
   grid-gap: 20px;
   padding-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 .electronic-page-banner .categories {
@@ -4129,6 +4380,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   margin-top: 1rem;
   padding: .5rem 1rem;
   font-size: 14px;
@@ -4212,6 +4465,8 @@ footer .list .footer-contact h4 i {
           box-shadow: 0 0 0 0em #ffffff inset;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  border: 1px solid #000000;
+  font-size: 16px;
   border-radius: 15px;
   border: 1.6px solid #000000;
 }

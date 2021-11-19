@@ -12,6 +12,10 @@
   text-decoration: none
   scroll-behavior: smooth
 
+select
+  -webkit-appearance: none
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+
 $main: #000000
 $pri: #ffffff
 $sec: #666666
@@ -52,6 +56,9 @@ body
   cursor: pointer
   box-shadow: 0 0 0 0em $light inset
   @include trans()
+  border: 1px solid $main
+  font-size: 16px
+
   &:hover
     box-shadow: 0 0 0 3em $light inset
     color: $main
@@ -289,42 +296,112 @@ header
         .text
           display: flex
           flex-direction: column
-          font-size: 10px
+          font-size: 12px
           color: $sec
 
     .search
       .group
-        border: 1px solid $sec
+        // border: 1px solid $sec
+        box-shadow: 0 0 2px $sec
         border-radius: 15px
         position: relative
-        overflow: hidden
+        // overflow: hidden
         @include flex($justify: center)
+        padding: 0
+        background-color: $dark
 
-        select
-          padding: .7rem .5rem
-          margin-right: 10px
-          color: $sec
+        // select
+        //   padding: .7rem .5rem
+        //   margin-right: 10px
+        //   color: $sec
+        //   width: 20%
+        //   font-size: 16px
+        //   background: none !important
+        //   cursor: pointer
+
+        .custom_select 
+          position: relative;
+          height: 100%
           width: 20%
+          font-size: 13px
+
+        .custom_select select
+          display: none;
+
+        .select-selected
+          background-color: $main;
+          border-radius: 15px 0 0 15px
+          height: 100%
+
+        /*style the arrow inside the select element:*/
+        .select-selected:after
+          position: absolute;
+          content: "";
+          top: 14px;
+          right: 10px;
+          width: 0;
+          height: 0;
+          border: 6px solid transparent;
+          border-color: #fff transparent transparent transparent;
+        
+        /*point the arrow upwards when the select box is open (active):*/
+        .select-selected.select-arrow-active:after 
+          border-color: transparent transparent #fff transparent;
+          top: 7px;
+
+        /*style the items (options), including the selected item:*/
+        .select-items div,.select-selected 
+          color: $light;
+          padding: 8px 16px;
+          border: 1px solid transparent;
+          border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+          cursor: pointer;
+          user-select: none;
+
+        /*style items (options):*/
+        .select-items 
+          position: absolute;
+          background-color: $main;
+          border-radius: 15px
+          top: 100%;
+          left: 0;
+          right: 0;
+          z-index: 99;
+          overflow: hidden
+
+        /*hide the items when the select box is closed:*/
+        .select-hide 
+          display: none;
+
+        .select-items div:hover, .same-as-selected 
+          background-color: rgba(255, 255, 255, 0.2);
 
         input
           border-left: 1px solid $sec
           padding: .7rem 1rem
+          font-size: 16px
           width: 80%
+          height: 100%
+          background-color: $light
 
         .search-btn
           background-color: $main
+          // border: 2px solid $dark
           position: absolute
           right: 0
           top: 0
           height: 100%
-          width: 40px
+          width: 50px
           @include flex($justify: center)
           color: $pri
           cursor: pointer
           z-index: 1
+          border-radius: 0 15px 15px 0
+
+          i
+            font-size: 16px
 
 /*************    nav-bar     *************/
-
 .nav-bar
   padding: .5rem 0
   background-color: $main
@@ -445,13 +522,12 @@ header
             color: $red
 
 /*************    banner     *************/
-
 .banner
   overflow-x: hidden
 
   .swiper-slide
     @include image()
-    height: 80vh
+    min-height: 80vh
     @include flex($justify: flex-start)
     position: relative
     width: 100%
@@ -484,6 +560,7 @@ header
     z-index: 2
     width: 100%
     color: #fff
+    padding: 1rem 20px
 
     h1
       font-size: 50px
@@ -499,7 +576,6 @@ header
       @include button()
 
 /*************    serv     *************/
-
 .serv
   .wrapper
     @include flex($justify: space-between)
@@ -568,7 +644,6 @@ header
       @include button()
 
 /*************    deals     *************/
-
 .deals
   overflow-x: hidden
 
@@ -598,6 +673,7 @@ header
 
     .image
       @include image()
+      background-size: contain
       height: 300px
       border: 1px solid $sec
       border-radius: 15px
@@ -861,6 +937,7 @@ footer
     opacity: 0
     pointer-events: none
     @include trans()
+
   .quick-view-close
     height: 40px
     width: 40px
@@ -919,6 +996,7 @@ footer
     .item-details
       h3
         font-size: 22px
+        color: $main
 
       .rating
         @include rating()
@@ -1008,9 +1086,7 @@ footer
         text-transform: uppercase
 
 /*************    checkout     *************/
-
 .checkout-page, .wishlist-page
-
   .title
     margin-bottom: 2rem
     font-weight: 700
@@ -1136,6 +1212,9 @@ footer
       .price
         font-size: 16px
         color: $red
+
+        button
+          @include button()
 
       .delete
         height: 30px
@@ -2070,17 +2149,30 @@ footer
       color: $light
 
 /*************    sign-in-and-sign-up     **************/
-
-.sign-in-and-sign-up
-  display: grid
-  grid-template-columns: 1.7fr 1fr
-  grid-gap: 20px
+.sign-in-form
+  .wrapper
+    max-width: 600px
 
   .form-title
-    margin-bottom: 2rem
+    margin-bottom: 1rem
     font-size: 30px
     text-transform: uppercase
     font-weight: 600
+
+  h4
+    margin-bottom: 2rem
+    font-weight: 400
+
+    a
+      color: $main
+      text-decoration: underline
+
+  h5
+    color: $dark
+    text-align: center
+    font-size: 18px
+    margin-top: 1rem
+    font-weight: 500
 
   .sign-in,.sign-up
     padding: 2rem
@@ -2133,8 +2225,81 @@ footer
             background-color: $light
             color: #0071DA
 
-/*************    kitchen-collections     **************/
+/*************    sign-up     **************/
+.sign-up-form
+  .wrapper
+    max-width: 600px
 
+    .sign-up
+      overflow: hidden
+
+      h2
+        margin-bottom: 1rem
+        font-size: 30px
+        text-transform: uppercase
+        font-weight: 600
+
+      h4
+        margin-bottom: 2rem
+        font-weight: 400
+
+        a
+          color: $main
+          text-decoration: underline
+
+      .form
+        width: 600%
+        display: flex
+
+      .groups
+        width: 16.66%
+        padding-top: 1rem 
+        @include trans()
+
+      .name
+        font-size: 24px
+        margin: 1rem 0 1.5rem 
+
+      .btns
+        display: flex
+
+        button
+          @include button()
+          border: 1.5px solid $main
+          width: 100%
+          font-size: 18px
+          border-radius: 15px
+
+          &.prev
+            margin-right: 10px
+
+      .group
+        position: relative
+        border-radius: 15px
+        border: 1px solid #bfbfbf
+        margin-bottom: 1.5rem
+
+        label
+          position: absolute
+          top: 0
+          left: 15px
+          transform: translateY(-50%)
+          font-size: 12px
+          background-color: $light
+          padding: .2rem 1rem
+          color: $sec
+          border-radius: 20px
+          border: 1px solid #bfbfbf
+
+        input,select
+          height: 50px
+          padding-left: 1rem
+          padding-top: .5rem
+          font-size: 18px
+          width: 100%
+          
+
+/*************    kitchen-collections     **************/
 .kitchen-collections
   .list
     display: grid
@@ -2358,6 +2523,7 @@ footer
   grid-template-columns: 1fr 3fr
   grid-gap: 20px
   padding-bottom: 3rem
+  margin-top: 2rem
 
   .categories
     border: 1px solid $sec

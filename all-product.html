@@ -41,14 +41,17 @@
           <div class="search">
             <form action="">
               <div class="group">
-                <select name="" id="">
-                  <option value="">All Categories</option>
-                  <option value="">Electronic</option>
-                  <option value="">Clothing</option>
-                  <option value="">Kitchen</option>
-                  <option value="">Shooes</option>
-                  <option value="">Brands</option>
-                </select>
+                <div class="custom_select">
+                  <select name="" id="">
+                    <option value="">Select</option>
+                    <option value="">All Categories</option>
+                    <option value="">Electronic</option>
+                    <option value="">Clothing</option>
+                    <option value="">Kitchen</option>
+                    <option value="">Shooes</option>
+                    <option value="">Brands</option>
+                  </select>
+                </div>
                 <input
                   type="search"
                   class="input"
@@ -153,7 +156,7 @@
               </div>
             </div>
 
-            <a href="login-signup.html">
+            <a href="sign-in.html">
               <div class="login-signup">
                 <div class="icon">
                   <img src="./images/icon/Profile.svg" alt="profile" />
@@ -443,6 +446,10 @@
               <span>All Product</span>
               <div class="filter-open-btn">
                 <i class="fas fa-filter"></i>
+                <!-- Shot by
+                <select name="" id="">
+                  <option value="">Price high to low</option>
+                </select> -->
               </div>
             </div>
             <div class="list">
@@ -1790,7 +1797,9 @@
         </div>
 
         <div class="item-details">
-          <h3>RUFFLE NECK TIERED MAXI DRESS WITH PIN TUCKS IN RUST MULTI</h3>
+          <a href="product-details.html">
+            <h3>RUFFLE NECK TIERED MAXI DRESS WITH PIN TUCKS IN RUST MULTI</h3>
+          </a>
           <div class="rating">
             <div class="stars" data-value="2"></div>
           </div>
@@ -2012,7 +2021,7 @@
     <!-- Initialize Swiper -->
     <script>
       // quick-view-pop
-      var swiper = new Swiper('.quick-view-pop .mySwiper', {
+      var swiper = new Swiper(".quick-view-pop .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
@@ -2020,8 +2029,8 @@
           disableOnInteraction: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           440: {
@@ -2049,7 +2058,7 @@
     </script>
 
     <script>
-      const stars = document.querySelectorAll('.stars');
+      const stars = document.querySelectorAll(".stars");
 
       const fullStar = `
     <svg
@@ -2102,26 +2111,26 @@
 
     <script>
       // image-magnify
-      const zooms = document.querySelectorAll('#zoom');
+      const zooms = document.querySelectorAll("#zoom");
 
       zooms.forEach((zoom) => {
-        $(zoom).zoom({ on: 'click' });
+        $(zoom).zoom({ on: "click" });
       });
     </script>
 
     <script>
-      const filterOpenBtn = document.querySelector('.filter-open-btn');
-      const productSideBar = document.querySelector('.product-side-bar');
-      const bg = document.querySelector('.side-nav-bg');
+      const filterOpenBtn = document.querySelector(".filter-open-btn");
+      const productSideBar = document.querySelector(".product-side-bar");
+      const bg = document.querySelector(".side-nav-bg");
 
-      filterOpenBtn.addEventListener('click', () => {
-        productSideBar.classList.add('active');
-        bg.classList.add('active');
+      filterOpenBtn.addEventListener("click", () => {
+        productSideBar.classList.add("active");
+        bg.classList.add("active");
       });
 
-      bg.addEventListener('click', () => {
-        productSideBar.classList.remove('active');
-        bg.classList.remove('active');
+      bg.addEventListener("click", () => {
+        productSideBar.classList.remove("active");
+        bg.classList.remove("active");
       });
     </script>
   </body>

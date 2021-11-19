@@ -41,14 +41,17 @@
           <div class="search">
             <form action="">
               <div class="group">
-                <select name="" id="">
-                  <option value="">All Categories</option>
-                  <option value="">Electronic</option>
-                  <option value="">Clothing</option>
-                  <option value="">Kitchen</option>
-                  <option value="">Shooes</option>
-                  <option value="">Brands</option>
-                </select>
+                <div class="custom_select">
+                  <select name="" id="">
+                    <option value="">Select</option>
+                    <option value="">All Categories</option>
+                    <option value="">Electronic</option>
+                    <option value="">Clothing</option>
+                    <option value="">Kitchen</option>
+                    <option value="">Shooes</option>
+                    <option value="">Brands</option>
+                  </select>
+                </div>
                 <input
                   type="search"
                   class="input"
@@ -153,7 +156,7 @@
               </div>
             </div>
 
-            <a href="login-signup.html">
+            <a href="sign-in.html">
               <div class="login-signup">
                 <div class="icon">
                   <img src="./images/icon/Profile.svg" alt="profile" />
@@ -1328,7 +1331,9 @@
         </div>
 
         <div class="item-details">
-          <h3>RUFFLE NECK TIERED MAXI DRESS WITH PIN TUCKS IN RUST MULTI</h3>
+          <a href="product-details.html">
+            <h3>RUFFLE NECK TIERED MAXI DRESS WITH PIN TUCKS IN RUST MULTI</h3>
+          </a>
           <div class="rating">
             <div class="stars" data-value="2"></div>
           </div>
@@ -1416,7 +1421,7 @@
             </a>
           </div>
 
-          <a href="login-signup.html">
+          <a href="sign-in.html">
             <div class="icon">
               <div class="profile">
                 <img src="./images/icon/Profile.svg" alt="" />
@@ -1430,27 +1435,34 @@
 
     <!-- search-pop-start -->
     <div class="search-pop">
-      <div class="inner">
-        <select name="" id="">
-          <option value="">All Categories</option>
-          <option value="">Electronic</option>
-          <option value="">Clothing</option>
-          <option value="">Kitchen</option>
-          <option value="">Shooes</option>
-          <option value="">Brands</option>
-        </select>
+      <form action="">
+        <div class="inner">
+          <select name="" id="">
+            <option value="">All Categories</option>
+            <option value="">Electronic</option>
+            <option value="">Clothing</option>
+            <option value="">Kitchen</option>
+            <option value="">Shooes</option>
+            <option value="">Brands</option>
+          </select>
 
-        <div class="group">
-          <input type="search" class="input" placeholder="Search..." required />
-          <button class="search-btn">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
+          <div class="group">
+            <input
+              type="search"
+              class="input"
+              placeholder="Search..."
+              required
+            />
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
 
-        <div class="search-close-btn">
-          <img src="./images/icon/close_big.svg" alt="" />
+          <div class="search-close-btn">
+            <img src="./images/icon/close_big.svg" alt="" />
+          </div>
         </div>
-      </div>
+      </form>
     </div>
     <!-- search-pop-end -->
 
@@ -1576,15 +1588,19 @@
         breakpoints: {
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
-          768: {
+          700: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
-          1024: {
+          900: {
             slidesPerView: 4,
-            spaceBetween: 20,
+            spaceBetween: 10,
+          },
+          1200: {
+            slidesPerView: 5,
+            spaceBetween: 10,
           },
         },
       });
