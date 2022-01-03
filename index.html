@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- animation -->
+    <link rel="stylesheet" href="./css/animation.css" />
     <!-- responsive -->
     <link rel="stylesheet" href="./css/responsive.css" />
     <!-- swiper -->
@@ -28,6 +30,7 @@
         style="background-image: url(./images/shopping-loader.gif)"
       ></div>
     </div>
+
     <div class="desktop-nav sticky-nav">
       <!-- header-start -->
       <header>
@@ -161,9 +164,19 @@
                 <div class="icon">
                   <img src="./images/icon/Profile.svg" alt="profile" />
                 </div>
-                <div class="text">
-                  <span>Login</span>
-                  <span>Register</span>
+
+                <div class="sign-in-sign-up-dropdown">
+                  <ul>
+                    <a href="#">
+                      <li>Profile <i class="fas fa-user"></i></li>
+                    </a>
+                    <a href="#">
+                      <li>Setting <i class="fas fa-cog"></i></li>
+                    </a>
+                    <a href="#">
+                      <li>Logout <i class="fas fa-sign-out-alt"></i></li>
+                    </a>
+                  </ul>
                 </div>
               </div>
             </a>
@@ -175,9 +188,9 @@
       <!-- nav-bar-start -->
       <div class="nav-bar">
         <ul class="wrapper">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
+          <a href="index.html">
+            <li>Home</li>
+          </a>
 
           <li class="drop-down">
             Shop <i class="fas fa-chevron-down"></i>
@@ -207,55 +220,7 @@
           <li class="drop-down-brand">
             Brands <i class="fas fa-chevron-down"></i>
             <div class="drop-brand">
-              <div class="list">
-                <h3>Puma</h3>
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/shoes/NMD_R1_Shoes_White_GX0999_01_standard.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Sneakers</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/shoes/OZWEEGO_Shoes_Grey_GY1346_01_standard.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Sport</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/shoes/shoe19.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Boot</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="list">
+              <!-- <div class="list">
                 <h3>Adidas</h3>
                 <a href="#">
                   <div class="item">
@@ -271,63 +236,120 @@
                     </div>
                   </div>
                 </a>
-              </div>
+              </div> -->
+              <a href="#">
+                <div class="item">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/clothing/shoes/NMD_R1_Shoes_White_GX0999_01_standard.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Adidas</div>
+                </div>
+              </a>
 
-              <div class="list">
-                <h3>Sony</h3>
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/electronic/device/tv.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">UHD 4K Tv</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
+              <a href="#">
+                <div class="item">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/clothing/bags/product-16.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Kings</div>
+                </div>
+              </a>
 
+              <!-- <div class="item">
                 <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">
-                        High Quality Wireless HeadSet
-                      </div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/electronic/bn-cate1-2.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Home Threater</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/electronic/deals/bluetooth-headphone.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Skull Candy</div>
                 </a>
               </div>
+
+              <div class="item">
+                <a href="#">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/clothing/shoes/shoe19.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Puma</div>
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="#">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/electronic/device/tv.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Samsung</div>
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="#">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/electronic/deals/laptop.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Dell</div>
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="#">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/clothing/derss/DRE27_03__68006.1629091267.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Queen</div>
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="#">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/bags/product/product-details-img4.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Tom And Jerry</div>
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="#">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/bags/product/bag1.jpg);
+                    "
+                  ></div>
+                  <div class="product-name">Guchi</div>
+                </a>
+              </div> -->
             </div>
           </li>
 
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
+          <a href="contact.html">
+            <li>Contact</li>
+          </a>
         </ul>
       </div>
       <!-- nav-bar-end -->
@@ -337,6 +359,11 @@
       <div class="logo">
         <h2>LOGO</h2>
       </div>
+    </div>
+
+    <!-- side-nav-bg -->
+    <div class="side-nav-bg">
+      <img class="cursor-close" src="./images/icon/shadow-close.svg" alt="" />
     </div>
 
     <!-- banner-start -->
@@ -529,273 +556,386 @@
             Deals of the Day
             <span><i class="far fa-clock"></i>9 : 19 : 01</span>
           </h1>
+
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+              <!-- <div class="swiper-slide">
+                  <div class="item">
+                    <div
+                      class="image"
+                      style="
+                        background-image: url(./images/deals/electric-microwave.jpg);
+                      "
+                    >
+                      <div class="ribbon-tag">
+                        <div class="tag">Sale</div>
+                      </div>
+  
+                      <div class="others">
+                        <button class="quick-view icon">
+                          <i class="fas fa-search"></i>
+                        </button>
+  
+                        <form action="">
+                          <button class="icon wishlist-btn">
+                            <i class="far fa-heart"></i>
+                          </button>
+                        </form>
+  
+                        <form action="">
+                          <button class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <a href="product-details.html">
+                      <div class="product-name">Electric Microwave</div>
+                    </a>
+                    <div class="rating">
+                      <div class="stars" data-value="2"></div>
+                    </div>
+                    <div class="price">
+                      <div class="new">$200.00</div>
+                      <div class="old"><del></del>$250.00</div>
+                    </div>
+                    <a href="#">
+                      <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+                  </div>
+                </div> -->
+
               <div class="swiper-slide">
                 <div class="item">
-                  <!-- porduct-image -->
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/bluetooth-headphone.jpg);
-                    "
-                  >
-                    <!-- porduct-tag -->
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
+                  <div class="image">
+                    <img src="./images/deals/computer-racks.jpg" />
+
+                    <button class="quick-view">
+                      <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="tag">Sale</div>
+
+                    <!-- <form action=""> -->
+                    <button class="wishlist-btn">
+                      <i class="fas fa-heart"></i>
+                      <span></span>
+                    </button>
+                    <!-- </form> -->
+
+                    <form action="">
+                      <button class="add-to-cart-button">
+                        <div class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+
+                        <h6>Add To Cart</h6>
+                      </button>
+                    </form>
+                  </div>
+
+                  <div class="details">
+                    <a href="product-details.html">
+                      <h4 class="product-name">Dell Gaming Laptop</h4>
+                    </a>
+                    <div class="rating">
+                      <div class="stars" data-value="2"></div>
                     </div>
-
-                    <!-- porduct-quick-view -->
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <!-- porduct-wishlist -->
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <!-- porduct-add-to-cart -->
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
+                    <div class="price">
+                      <div class="new">$200.00</div>
+                      <div class="old"><del></del>$250.00</div>
                     </div>
                   </div>
-
-                  <!-- porduct-name -->
-                  <a href="product-details.html">
-                    <div class="product-name">Bluetooth Headphone</div>
-                  </a>
-
-                  <!-- porduct-rating -->
-                  <div class="rating">
-                    <div class="stars" data-value="4"></div>
-                  </div>
-
-                  <!-- porduct-price -->
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-
-                  <!-- porduct-add-to-cart -->
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/electric-microwave.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
+                  <div class="image">
+                    <img src="./images/deals/bluetooth-headphone.jpg" />
+
+                    <button class="quick-view">
+                      <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="tag">Sale</div>
+
+                    <!-- <form action=""> -->
+                    <button class="wishlist-btn">
+                      <i class="fas fa-heart"></i>
+                      <span></span>
+                    </button>
+                    <!-- </form> -->
+
+                    <form action="">
+                      <button class="add-to-cart-button">
+                        <div class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+
+                        <h6>Add To Cart</h6>
+                      </button>
+                    </form>
+                  </div>
+
+                  <div class="details">
+                    <a href="product-details.html">
+                      <h4 class="product-name">Bluetooth Headphone</h4>
+                    </a>
+                    <div class="rating">
+                      <div class="stars" data-value="2"></div>
                     </div>
-
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
+                    <div class="price">
+                      <div class="new">$200.00</div>
+                      <div class="old"><del></del>$250.00</div>
                     </div>
                   </div>
-                  <a href="product-details.html">
-                    <div class="product-name">Electric Microwave</div>
-                  </a>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/fleece-jacket.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
+                  <div class="image">
+                    <img src="./images/deals/electric-microwave.jpg" />
+
+                    <button class="quick-view">
+                      <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="tag">Sale</div>
+
+                    <!-- <form action=""> -->
+                    <button class="wishlist-btn">
+                      <i class="fas fa-heart"></i>
+                      <span></span>
+                    </button>
+                    <!-- </form> -->
+
+                    <form action="">
+                      <button class="add-to-cart-button">
+                        <div class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+
+                        <h6>Add To Cart</h6>
+                      </button>
+                    </form>
+                  </div>
+
+                  <div class="details">
+                    <a href="product-details.html">
+                      <h4 class="product-name">Microwave</h4>
+                    </a>
+                    <div class="rating">
+                      <div class="stars" data-value="2"></div>
                     </div>
-
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
+                    <div class="price">
+                      <div class="new">$200.00</div>
+                      <div class="old"><del></del>$250.00</div>
                     </div>
                   </div>
-                  <a href="product-details.html">
-                    <div class="product-name">Fleece Jacket</div>
-                  </a>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/hummingbird-printed-t-shirt.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
+                  <div class="image">
+                    <img src="./images/deals/virtual-reality-glasses.jpg" />
+
+                    <button class="quick-view">
+                      <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="tag">Sale</div>
+
+                    <!-- <form action=""> -->
+                    <button class="wishlist-btn">
+                      <i class="fas fa-heart"></i>
+                      <span></span>
+                    </button>
+                    <!-- </form> -->
+
+                    <form action="">
+                      <button class="add-to-cart-button">
+                        <div class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+
+                        <h6>Add To Cart</h6>
+                      </button>
+                    </form>
+                  </div>
+
+                  <div class="details">
+                    <a href="product-details.html">
+                      <h4 class="product-name">Virtual Reality</h4>
+                    </a>
+                    <div class="rating">
+                      <div class="stars" data-value="2"></div>
                     </div>
-
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
+                    <div class="price">
+                      <div class="new">$200.00</div>
+                      <div class="old"><del></del>$250.00</div>
                     </div>
                   </div>
-                  <a href="product-details.html">
-                    <div class="product-name">Projector</div>
-                  </a>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/portable-speaker.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
+                  <div class="image">
+                    <img src="./images/deals/portable-speaker.jpg" />
+
+                    <button class="quick-view">
+                      <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="tag">Sale</div>
+
+                    <!-- <form action=""> -->
+                    <button class="wishlist-btn">
+                      <i class="fas fa-heart"></i>
+                      <span></span>
+                    </button>
+                    <!-- </form> -->
+
+                    <form action="">
+                      <button class="add-to-cart-button">
+                        <div class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+
+                        <h6>Add To Cart</h6>
+                      </button>
+                    </form>
+                  </div>
+
+                  <div class="details">
+                    <a href="product-details.html">
+                      <h4 class="product-name">Portable Speaker</h4>
+                    </a>
+                    <div class="rating">
+                      <div class="stars" data-value="2"></div>
                     </div>
-
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
+                    <div class="price">
+                      <div class="new">$200.00</div>
+                      <div class="old"><del></del>$250.00</div>
                     </div>
                   </div>
-                  <a href="product-details.html">
-                    <div class="product-name">Portable Speaker</div>
-                  </a>
-                  <div class="rating">
-                    <div class="stars" data-value="3"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/computer-racks.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
+                  <div class="image">
+                    <img src="./images/deals/hummingbird-printed-t-shirt.jpg" />
+
+                    <button class="quick-view">
+                      <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="tag">Sale</div>
+
+                    <!-- <form action=""> -->
+                    <button class="wishlist-btn">
+                      <i class="fas fa-heart"></i>
+                      <span></span>
+                    </button>
+                    <!-- </form> -->
+
+                    <form action="">
+                      <button class="add-to-cart-button">
+                        <div class="icon">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+
+                        <h6>Add To Cart</h6>
+                      </button>
+                    </form>
+                  </div>
+
+                  <div class="details">
+                    <a href="product-details.html">
+                      <h4 class="product-name">Hummingbird Printed T-Shirt</h4>
+                    </a>
+                    <div class="rating">
+                      <div class="stars" data-value="2"></div>
                     </div>
-
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
+                    <div class="price">
+                      <div class="new">$200.00</div>
+                      <div class="old"><del></del>$250.00</div>
                     </div>
                   </div>
-                  <a href="product-details.html">
-                    <div class="product-name">Dell Laptop</div>
-                  </a>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
                 </div>
               </div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -1467,10 +1607,7 @@
     <!-- search-pop-end -->
 
     <!-- side-nav-start -->
-    <!-- side-nav-bg -->
-    <div class="side-nav-bg">
-      <img class="cursor-close" src="./images/icon/shadow-close.svg" alt="" />
-    </div>
+
     <!-- side-nav -->
     <div class="side-nav">
       <div class="side-nav-logo">
@@ -1482,33 +1619,33 @@
         </div>
       </div>
       <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
+        <a href="index.html">
+          <li>Home</li>
+        </a>
 
         <li class="side_nav_dropdown">
           <span>Shop <i class="fas fa-chevron-down rotation"></i></span>
 
           <ul class="side_nav_drop">
-            <li>
-              <a href="clothing.html">Clothing</a>
-            </li>
+            <a href="clothing.html">
+              <li>Chothings</li>
+            </a>
 
-            <li>
-              <a href="electronic.html">Electronic</a>
-            </li>
+            <a href="electronic.html">
+              <li>Electronic</li>
+            </a>
 
-            <li>
-              <a href="sneakers.html">Shoes</a>
-            </li>
+            <a href="sneakers.html">
+              <li>Shoes</li>
+            </a>
 
-            <li>
-              <a href="kitchen.html">Kitchen</a>
-            </li>
+            <a href="kitchen.html">
+              <li>Kitchen</li>
+            </a>
 
-            <li>
-              <a href="bags.html">Bags</a>
-            </li>
+            <a href="bags.html">
+              <li>Bags</li>
+            </a>
           </ul>
         </li>
 
@@ -1516,31 +1653,31 @@
           <span>Brands <i class="fas fa-chevron-down rotation"></i></span>
 
           <ul class="side_nav_drop">
-            <li>
-              <a href="#">Sony</a>
-            </li>
+            <a href="clothing.html">
+              <li>Chothings</li>
+            </a>
 
-            <li>
-              <a href="#">Adidas</a>
-            </li>
+            <a href="electronic.html">
+              <li>Electronic</li>
+            </a>
 
-            <li>
-              <a href="#">Acer</a>
-            </li>
+            <a href="sneakers.html">
+              <li>Shoes</li>
+            </a>
 
-            <li>
-              <a href="#">Samsung</a>
-            </li>
+            <a href="kitchen.html">
+              <li>Kitchen</li>
+            </a>
 
-            <li>
-              <a href="#">Puma</a>
-            </li>
+            <a href="bags.html">
+              <li>Bags</li>
+            </a>
           </ul>
         </li>
 
-        <li>
-          <a href="#">Contact</a>
-        </li>
+        <a href="contact.html">
+          <li>Contact</li>
+        </a>
       </ul>
     </div>
     <!-- side-nav-end -->
@@ -1556,6 +1693,7 @@
     <script src="./js/quantity.js"></script>
     <script src="./js/quick-view.js"></script>
     <script src="./js/derss-size.js"></script>
+    <script src="./js/wishlist-button.js"></script>
     <!-- swiper-js -->
     <script src="./js/swiper.min.js"></script>
 
@@ -1563,28 +1701,32 @@
     <script>
       // banner
       var swiper = new Swiper(".banner .mySwiper", {
-        autoplay: {
-          delay: 4500,
-          disableOnInteraction: false,
-        },
+        // autoplay: {
+        //   delay: 4500,
+        //   disableOnInteraction: false,
+        // },
       });
 
       // deals
       var swiper = new Swiper(".deals .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
+
         autoplay: {
           delay: 3500,
           disableOnInteraction: false,
         },
+
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
+
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+
         breakpoints: {
           640: {
             slidesPerView: 2,
@@ -1647,8 +1789,8 @@
 
       const fullStar = `
     <svg
-          width="17"
-          height="15"
+          width="12"
+          height="12"
           viewBox="0 0 17 15"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -1662,9 +1804,9 @@
 
       const blankStar = `
     <svg
-            width="16"
-            height="15"
-            viewBox="0 0 16 15"
+            width="12"
+            height="12"
+            viewBox="0 0 17 14"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >

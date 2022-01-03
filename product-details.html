@@ -9,7 +9,11 @@
     <!-- responsive -->
     <link rel="stylesheet" href="./css/responsive.css" />
     <!-- swiper -->
-    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <!-- <link rel="stylesheet" href="./css/swiper.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <!-- jquery -->
     <script src="./js/jquery.js"></script>
     <!-- zoom -->
@@ -339,10 +343,10 @@
     <!-- product-details-start -->
     <section>
       <div class="wrapper">
-        <div class="prodect-details-page">
+        <div class="product-details-page">
           <div class="images">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
+            <div class="swiper mySwiper2">
+              <!-- <div class="swiper-wrapper">
                 <div class="swiper-slide" id="zoom">
                   <img
                     src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
@@ -374,6 +378,106 @@
                 <div class="swiper-slide" id="zoom">
                   <img
                     src="./images/clothing/derss/GFworking1_01__31648.1629091267.jpg"
+                    alt=""
+                  />
+                </div>
+              </div> -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" id="zoom">
+                  <img src="./images/clothing/bags/product-16.jpg" alt="" />
+                </div>
+
+                <div class="swiper-slide" id="zoom">
+                  <img src="./images/clothing/shoes/shoe19.jpg" alt="" />
+                </div>
+
+                <div class="swiper-slide" id="zoom">
+                  <img
+                    src="./images/kitchen/product/4_235e6b8c-7d21-44d6-b62f-fe1c4cda0254_large.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide" id="zoom">
+                  <img
+                    src="./images/kitchen/product/black-silicone-utensils-with-acacia-handle.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide" id="zoom">
+                  <img
+                    src="./images/kitchen/product/french-kitchen-marble-rolling-pin-with-stand.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+              <!-- <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./images/clothing/derss/DRE27_02__52917.1629091267.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./images/clothing/derss/DRE27_03__68006.1629091267.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./images/clothing/derss/GFworking1_01__31648.1629091267.jpg"
+                    alt=""
+                  />
+                </div>
+              </div> -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/clothing/bags/product-16.jpg" alt="" />
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="./images/clothing/shoes/shoe19.jpg" alt="" />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./images/kitchen/product/4_235e6b8c-7d21-44d6-b62f-fe1c4cda0254_large.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./images/kitchen/product/black-silicone-utensils-with-acacia-handle.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./images/kitchen/product/french-kitchen-marble-rolling-pin-with-stand.jpg"
                     alt=""
                   />
                 </div>
@@ -424,13 +528,11 @@
               <div class="size">
                 <h4>Size:</h4>
                 <ul>
-                  <li class="not">xxs</li>
+                  <input type="hidden" name="" id="sizeInput" />
                   <li>xs</li>
                   <li>s</li>
                   <li>m</li>
-                  <li class="not">l</li>
                   <li>xl</li>
-                  <li class="not">2xl</li>
                   <li>3xl</li>
                   <li>4xl</li>
                 </ul>
@@ -652,6 +754,8 @@
                   </div>
                 </div>
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
         </div>
@@ -784,6 +888,8 @@
                 />
               </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
 
@@ -1005,69 +1111,93 @@
     <script src="./js/quick-view.js"></script>
     <script src="./js/derss-size.js"></script>
     <!-- swiper-js -->
-    <script src="./js/swiper.min.js"></script>
+    <!-- <script src="./js/swiper.min.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script>
       // image-magnify
-      const zooms = document.querySelectorAll('#zoom');
+      const zooms = document.querySelectorAll("#zoom");
 
       zooms.forEach((zoom) => {
-        $(zoom).zoom({ on: 'click' });
+        $(zoom).zoom({ on: "click" });
       });
     </script>
 
     <script>
-      // prodect-details-page
-      var swiper = new Swiper('.prodect-details-page .mySwiper', {
-        slidesPerView: 1,
+      var swiper = new Swiper(".product-details-page .mySwiper", {
+        spaceBetween: 5,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".product-details-page .mySwiper2", {
+        slidesPerView: 2,
         spaceBetween: 10,
-        autoplay: {
-          delay: 2000,
-          disableOnInteraction: true,
-        },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
-        breakpoints: {
-          440: {
-            slidesPerView: 2,
-            spaceBetween: 6,
-          },
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 6,
-          },
-          701: {
-            slidesPerView: 1,
-            spaceBetween: 6,
-          },
-          900: {
-            slidesPerView: 2,
-            spaceBetween: 6,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 6,
-          },
+        thumbs: {
+          swiper: swiper,
         },
       });
 
+      // prodect-details-page
+      // var swiper = new Swiper(".prodect-details-page .mySwiper", {
+      //   slidesPerView: 1,
+      //   spaceBetween: 10,
+      //   autoplay: {
+      //     delay: 2000,
+      //     disableOnInteraction: true,
+      //   },
+
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+
+      //   breakpoints: {
+      //     440: {
+      //       slidesPerView: 2,
+      //       spaceBetween: 6,
+      //     },
+      //     640: {
+      //       slidesPerView: 3,
+      //       spaceBetween: 6,
+      //     },
+      //     701: {
+      //       slidesPerView: 1,
+      //       spaceBetween: 6,
+      //     },
+      //     900: {
+      //       slidesPerView: 2,
+      //       spaceBetween: 6,
+      //     },
+      //     1024: {
+      //       slidesPerView: 2,
+      //       spaceBetween: 6,
+      //     },
+      //   },
+      // });
+
       // you-may-also-like
-      var swiper = new Swiper('.you-may-also-like .mySwiper', {
+      var swiper = new Swiper(".you-may-also-like .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
           delay: 3500,
           disableOnInteraction: false,
         },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   clickable: true,
+        // },
+
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
+
         breakpoints: {
           640: {
             slidesPerView: 2,
@@ -1085,17 +1215,19 @@
       });
 
       // quick-view-pop
-      var swiper = new Swiper('.quick-view-pop .mySwiper', {
+      var swiper = new Swiper(".quick-view-pop .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
           delay: 2000,
           disableOnInteraction: true,
         },
+
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
+
         breakpoints: {
           440: {
             slidesPerView: 2,
@@ -1122,7 +1254,7 @@
     </script>
 
     <script>
-      const stars = document.querySelectorAll('.stars');
+      const stars = document.querySelectorAll(".stars");
 
       const fullStar = `
 <svg

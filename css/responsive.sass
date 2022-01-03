@@ -71,7 +71,7 @@ $star: #E28800
     top: 0
     height: 100%
     width: 100%
-    background-color: rgba($light, .01)
+    background-color: rgba($dark, .01)
     pointer-events: none
     z-index: 24
     opacity: 0
@@ -135,6 +135,9 @@ $star: #E28800
         border-bottom: 1px solid rgba($light, .4)
         padding: 0 1rem
         cursor: pointer
+        color: $light
+        font-size: 20px
+        line-height: 4rem
 
         &:nth-child(1)
           border-top: 1px solid rgba($light, .4)
@@ -151,6 +154,7 @@ $star: #E28800
 
           li
             border-bottom: 1px solid $dark
+            color: $light
 
             &:nth-child(1)
               border-top: none
@@ -165,8 +169,6 @@ $star: #E28800
 
         span
           @include flex($justify: space-between)
-
-        a, span
           color: $light
           font-size: 20px
           line-height: 4rem
@@ -318,23 +320,31 @@ $star: #E28800
       display: grid
       grid-template-columns: 1fr 1fr 1fr
 
+  // /*************    cloth-collections     **************/
+  // .cloth-collections
+  //   grid-template-columns: 1fr 1fr
+  //   grid-gap: 20px
+  //   grid-row-gap: 10px
+
+  //   .two-item
+  //     grid-area: 3
+  //     grid-column: 1/3
+  //     width: 100%
+
+  //     .item
+  //       height: 280px
+  //       margin-bottom: 20px
+
+  //       .image
+  //         height: 280px
+
   /*************    cloth-collections     **************/
   .cloth-collections
-    grid-template-columns: 1fr 1fr
-    grid-gap: 20px
-    grid-row-gap: 10px
+    grid-template-areas: 'item1 item4 ' 'item2 item2' 'item3 item3'
 
-    .two-item
-      grid-area: 3
-      grid-column: 1/3
-      width: 100%
-
-      .item
-        height: 280px
-        margin-bottom: 20px
-
-        .image
-          height: 280px
+    .item
+      &:nth-child(2), &:nth-child(3)
+        height: 330px
 
   /*************    our-dress     **************/
   .our-dress
@@ -346,16 +356,9 @@ $star: #E28800
 
   /*************    shoes-collections     **************/
   .shoes-collections
-    grid-template-columns: 1fr 1fr
-    grid-gap: 20px
-
-    .item-group
-      grid-template-columns: 1fr 1fr
-      grid-gap: 20px
-
-      .item
-        position: relative
-        height: 200px
+    .item
+      position: relative
+      height: 200px
 
   /*************    shoes-new-product     **************/
   .shoes-new-product
@@ -378,11 +381,17 @@ $star: #E28800
       li
         line-height: 3rem
 
-    .swiper
+    .electronic-banner
       grid-area: 1
       border-radius: 15px
+
       .swiper-slide
         height: 400px
+
+  /*************    electronic-product     **************/
+  .electronic-product
+    .list
+      grid-template-columns: 1fr 1fr 1fr 1fr
 
   /*************    electronic-collections     **************/
   .electronic-collections
@@ -422,11 +431,6 @@ $star: #E28800
   .wrapper
     max-width: 800px
 
-  /*************    banner     *************/
-  .banner
-    .swiper-slide
-      height: 60vh
-
   /*************    top-categories     *************/
   .top-categories
     .list
@@ -450,17 +454,14 @@ $star: #E28800
 
   /*************    shoes-collections     **************/
   .shoes-collections
-    grid-template-columns: 1fr
+    display: grid
+    grid-template-areas: 'item1 item1 item2 item2 ' 'item3 item3 item4 item4 ' 'item5 item5 item5 item5'
+    grid-gap: 20px
 
-    .item-group
-      grid-template-columns: 1fr 1fr
+    .item
+      height: 300px
 
-      .item
-        position: relative
-        height: 300px
-
-    .big-item, .swiper
-      .swiper-slide
+      &:nth-last-child(1)
         height: 400px
 
   /*************    kitchen-collections     **************/
@@ -541,6 +542,11 @@ $star: #E28800
       display: grid
       grid-template-columns: 1fr 1fr
 
+  /*************    electronic-product     **************/
+  .electronic-product
+    .list
+      grid-template-columns: 1fr 1fr 1fr
+
 @media only screen and(max-width: 800px)
   /*************    kitchen-collections     **************/
   .kitchen-collections
@@ -551,6 +557,10 @@ $star: #E28800
   .hot-categories
     .list
       grid-template-columns: 1fr 1fr
+
+  /*************    product-details-page     *************/
+  .product-details-page
+    grid-template-columns: 1fr
 
 @media only screen and(max-width: 750px)
 
@@ -674,17 +684,28 @@ $star: #E28800
       display: grid
       grid-template-columns: 1fr 1fr
 
+  // /*************    cloth-collections     **************/
+  // .cloth-collections
+  //   grid-template-columns: 1fr
+  //   grid-gap: 20px
+
+  //   .two-item
+  //     grid-column: 1/2
+
+  //   .item
+  //     .image
+  //       height: 700px
+
   /*************    cloth-collections     **************/
   .cloth-collections
-    grid-template-columns: 1fr
-    grid-gap: 20px
-
-    .two-item
-      grid-column: 1/2
+    grid-template-areas: 'item1 item1' 'item2 item2' 'item3 item3' 'item4 item4'
 
     .item
-      .image
+      &:nth-child(1), &:nth-child(4)
         height: 700px
+
+      &:nth-child(2), &:nth-child(3)
+        height: 300px
 
   /*************    shoes-new-product     **************/
   .shoes-new-product
@@ -736,8 +757,8 @@ $star: #E28800
     .other
       grid-template-columns: 1fr
 
-  /*************    prodect-details-page     *************/
-  .prodect-details-page
+  /*************    product-details-page     *************/
+  .product-details-page
     grid-template-columns: 1fr
 
     .item-details
@@ -747,15 +768,21 @@ $star: #E28800
             @include flex($justify: flex-start)
             flex-wrap: wrap
 
+  /*************    electronic-product     **************/
+  .electronic-product
+    .list
+      grid-template-columns: 1fr 1fr
+
 @media only screen and(max-width: 650px)
   /*************    bags-collections     **************/
   .bags-collections
     .list
       grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5'
 
-      .image
-        &.large-image
-          height: 600px
+      .item
+        &:nth-child(3)
+          .image
+            height: 600px
 
   /*************    electronic-collections     **************/
   .electronic-collections
@@ -780,8 +807,15 @@ $star: #E28800
 @media only screen and(max-width: 550px)
   /*************    shoes-collections     **************/
   .shoes-collections
-    .item-group
-      grid-template-columns: 1fr
+    display: grid
+    grid-template-areas: 'item1 item1' 'item2 item2' 'item3 item3' 'item4 item4' 'item5 item5'
+    grid-gap: 20px
+
+    .item
+      height: 400px
+
+      &:nth-last-child(1)
+        height: 400px
 
   /*************    shoes-new-product     **************/
   .shoes-new-product
@@ -810,8 +844,8 @@ $star: #E28800
     .list
       grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5' 'item6'
 
-  /*************    prodect-details-page     *************/
-  .prodect-details-page
+  /*************    product-details-page     *************/
+  .product-details-page
     .item-details
       h3
         font-size: 18px
@@ -833,8 +867,14 @@ $star: #E28800
 
   /*************    banner     *************/
   .banner
+    &.others-page-banner
+      display: grid
+      grid-template-columns: 1fr
+
+    .wrapper
+      min-height: 70vh
+
     .swiper-slide
-      height: 50vh
 
       h1
         font-size: 30px
@@ -896,8 +936,11 @@ $star: #E28800
   /*************    cloth-collections     **************/
   .cloth-collections
     .item
-      .image
+      &:nth-child(1), &:nth-child(4)
         height: 500px
+
+      &:nth-child(2), &:nth-child(3)
+        height: 200px
 
       .details
         left: 10px
@@ -1028,6 +1071,11 @@ $star: #E28800
           grid-template-columns: 1fr
           grid-gap: 0
 
+  /*************    electronic-product     **************/
+  .electronic-product
+    .list
+      grid-template-columns: 1fr
+
 @media only screen and(max-width: 400px)
   /*************    top-categories     *************/
   .top-categories
@@ -1082,3 +1130,15 @@ $star: #E28800
   .contact-page
     .map
       height: 350px
+
+  /*************    shoes-collections     **************/
+  .shoes-collections
+    display: grid
+    grid-template-areas: 'item1 item1' 'item2 item2' 'item3 item3' 'item4 item4' 'item5 item5'
+    grid-gap: 20px
+
+    .item
+      height: 280px
+
+      &:nth-last-child(1)
+        height: 300px

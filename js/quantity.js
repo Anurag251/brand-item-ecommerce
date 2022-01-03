@@ -1,16 +1,22 @@
-const decrementBtn = document.querySelectorAll('.sub-button');
-const increamentBtn = document.querySelectorAll('.add-button');
-let quantityNumber = document.querySelectorAll('.quantity-number');
-let totalPrice = document.querySelectorAll('#total-price');
+const decrementBtn = document.querySelectorAll(".sub-button");
+const increamentBtn = document.querySelectorAll(".add-button");
+let quantityNumber = document.querySelectorAll(".quantity-number");
+let totalPrice = document.querySelectorAll("#total-price");
+
+if (quantityNumber === -1) {
+  alert("no");
+}
 
 decrementBtn.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     quantityNumber[idx].stepUp(-1);
+
+    console.log(quantityNumber.getAttribute("value"));
   });
 });
 
 increamentBtn.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     quantityNumber[idx].stepUp(1);
   });
 });

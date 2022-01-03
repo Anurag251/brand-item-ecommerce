@@ -1,20 +1,28 @@
 // quick-view-pop
 
-const quickViewPop = document.querySelector('.quick-view-pop');
-const popBg = quickViewPop.querySelector('.pop-bg');
-const popData = quickViewPop.querySelector('.details');
-const popClose = quickViewPop.querySelector('.quick-view-close');
-const quickViews = document.querySelectorAll('.quick-view');
+const quickViewPop = document.querySelectorAll(".quick-view-pop");
+const popClose = document.querySelectorAll(".quick-view-close");
+const quickViews = document.querySelectorAll(".quick-view");
+const popBg = document.querySelector(".side-nav-bg");
 
-quickViews.forEach((quickView) => {
-  quickView.addEventListener('click', () => {
-    quickViewPop.classList.add('show-quick-view');
+quickViews.forEach((quickView, idx) => {
+  quickView.addEventListener("click", () => {
+    quickViewPop[idx].classList.add("show-quick-view");
+    popBg.classList.add("active");
+    checkQuickView([idx]);
   });
 });
 
-popBg.addEventListener('click', () => {
-  quickViewPop.classList.remove('show-quick-view');
+popClose.forEach((closePop, idx) => {
+  closePop.addEventListener("click", () => {
+    quickViewPop[idx].classList.remove("show-quick-view");
+    popBg.classList.remove("active");
+    checkQuickView([idx]);
+  });
 });
-popClose.addEventListener('click', () => {
-  quickViewPop.classList.remove('show-quick-view');
-});
+
+const checkQuickView = (addItemBtn) => {
+  popBg.addEventListener("click", () => {
+    quickViewPop[addItemBtn].classList.remove("show-quick-view");
+  });
+};

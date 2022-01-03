@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- animation -->
+    <link rel="stylesheet" href="./css/animation.css" />
     <!-- responsive -->
     <link rel="stylesheet" href="./css/responsive.css" />
     <!-- swiper -->
@@ -21,6 +23,7 @@
     />
     <title>Document</title>
   </head>
+
   <body>
     <div class="loading">
       <div
@@ -336,6 +339,108 @@
       </div>
     </div>
 
+    <!-- popup-form-add-item-start -->
+    <div class="popup-form-add-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Banner Form</h3>
+          <div class="add-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="bannerName">Banner Name</label>
+              <input type="text" id="bannerName" />
+            </div>
+
+            <div class="group">
+              <label for="bannerLink">Banner Link</label>
+              <input type="text" id="bannerLink" />
+            </div>
+
+            <div class="group">
+              <label for="bannerImage">Banner Image</label>
+              <input type="file" id="bannerImage" />
+            </div>
+
+            <div class="group">
+              <label for="bannerDesc">Banner Name</label>
+              <textarea name="" id="bannerDesc" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Banner</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-add-item-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Banner Form</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="bannerName">Banner Name</label>
+              <input type="text" id="bannerName" value="Hello World" />
+            </div>
+
+            <div class="group">
+              <label for="bannerLink">Banner Link</label>
+              <input type="text" id="bannerLink" value="njaksndcjkans" />
+            </div>
+
+            <div class="group">
+              <label for="bannerImage">Banner Image</label>
+              <input type="file" id="bannerImage" />
+            </div>
+
+            <div class="group">
+              <label for="bannerDesc">Banner Descriptions</label>
+              <textarea
+                name=""
+                id="bannerDesc"
+                cols="30"
+                rows="10"
+                value="Lorem"
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Banner</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
     <!-- banner-start -->
     <div class="wrapper">
       <div class="electronic-page-banner">
@@ -381,7 +486,101 @@
             <a href="#">More Categories</a>
           </li>
         </ul>
-        <div class="swiper mySwiper">
+
+        <div class="banner others-page-banner electronic-banner">
+          <div class="add-item">
+            <button class="icon">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 0C2.334 0 2.17 0.016 2.013 0.048L2.207 1.028C2.30352 1.00915 2.40165 0.99977 2.5 1H2.958V0H2.5ZM4.792 0H3.875V1H4.792V0ZM6.625 0H5.708V1H6.625V0ZM8.458 0H7.542V1H8.458V0ZM10.292 0H9.375V1H10.292V0ZM12.125 0H11.208V1H12.125V0ZM13.5 0H13.042V1H13.5C13.6 1 13.699 1.01 13.793 1.029L13.987 0.048C13.8266 0.0161758 13.6635 9.94507e-05 13.5 0V0ZM15.579 1.11C15.3962 0.837453 15.1618 0.603373 14.889 0.421L14.333 1.252C14.497 1.362 14.638 1.503 14.748 1.667L15.578 1.111L15.579 1.11ZM1.11 0.421C0.837453 0.603769 0.603373 0.838188 0.421 1.111L1.252 1.667C1.362 1.503 1.503 1.362 1.667 1.252L1.11 0.422V0.421ZM16 2.5C16 2.334 15.984 2.17 15.952 2.013L14.972 2.207C14.99 2.301 15 2.399 15 2.5V2.958H16V2.5ZM0.048 2.013C0.0161758 2.17338 9.94507e-05 2.33649 0 2.5L0 2.958H1V2.5C1 2.4 1.01 2.301 1.029 2.207L0.048 2.013V2.013ZM0 3.875V4.792H1V3.875H0ZM16 4.792V3.875H15V4.792H16ZM0 5.708V6.625H1V5.708H0ZM16 6.625V5.708H15V6.625H16ZM0 7.542V8.458H1V7.542H0ZM15 8.458H16V7.542H15V8.458ZM0 9.375V10.292H1V9.375H0ZM16 10.292V9.375H15V10.292H16ZM0 11.208V12.125H1V11.208H0ZM16 12.125V11.208H15V12.125H16ZM0 13.042V13.5C0 13.666 0.016 13.83 0.048 13.987L1.028 13.793C1.00915 13.6965 0.99977 13.5983 1 13.5V13.042H0ZM16 13.5V13.042H15V13.5C15 13.6 14.99 13.699 14.971 13.793L15.952 13.987C15.984 13.829 16 13.667 16 13.5ZM0.421 14.89C0.604 15.162 0.838 15.396 1.111 15.579L1.667 14.748C1.50286 14.6381 1.36186 14.4971 1.252 14.333L0.422 14.889L0.421 14.89ZM14.89 15.579C15.162 15.396 15.396 15.162 15.579 14.889L14.748 14.333C14.638 14.497 14.497 14.638 14.333 14.748L14.889 15.578L14.89 15.579ZM2.013 15.952C2.171 15.984 2.333 16 2.5 16H2.958V15H2.5C2.4 15 2.301 14.99 2.207 14.971L2.013 15.952V15.952ZM13.5 16C13.666 16 13.83 15.984 13.987 15.952L13.793 14.972C13.6965 14.9909 13.5983 15.0002 13.5 15H13.042V16H13.5ZM3.875 16H4.792V15H3.875V16ZM5.708 16H6.625V15H5.708V16ZM7.542 15V16H8.458V15H7.542ZM9.375 16H10.292V15H9.375V16ZM11.208 16H12.125V15H11.208V16ZM8.5 4.5C8.5 4.36739 8.44732 4.24021 8.35355 4.14645C8.25979 4.05268 8.13261 4 8 4C7.86739 4 7.74021 4.05268 7.64645 4.14645C7.55268 4.24021 7.5 4.36739 7.5 4.5V7.5H4.5C4.36739 7.5 4.24021 7.55268 4.14645 7.64645C4.05268 7.74021 4 7.86739 4 8C4 8.13261 4.05268 8.25979 4.14645 8.35355C4.24021 8.44732 4.36739 8.5 4.5 8.5H7.5V11.5C7.5 11.6326 7.55268 11.7598 7.64645 11.8536C7.74021 11.9473 7.86739 12 8 12C8.13261 12 8.25979 11.9473 8.35355 11.8536C8.44732 11.7598 8.5 11.6326 8.5 11.5V8.5H11.5C11.6326 8.5 11.7598 8.44732 11.8536 8.35355C11.9473 8.25979 12 8.13261 12 8C12 7.86739 11.9473 7.74021 11.8536 7.64645C11.7598 7.55268 11.6326 7.5 11.5 7.5H8.5V4.5Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <div class="others-details">
+              <h3>Add your banner</h3>
+            </div>
+          </div>
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                style="background-image: url(./images/banner/banner6.jpg)"
+              >
+                <div class="edit-btn">
+                  <i class="fas fa-edit"></i>
+                </div>
+
+                <div class="delete-btn">
+                  <i class="fas fa-trash"></i>
+                </div>
+
+                <div class="wrapper">
+                  <h1>
+                    Stylish shop <br />
+                    Great Lookbook 2021
+                  </h1>
+
+                  <p>Sale up to 70% off on selected items*</p>
+                  <a href="#">
+                    <button class="button">Shop Now</button>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide"
+                style="background-image: url(./images/banner/banner2.jpg)"
+              >
+                <div class="wrapper">
+                  <h1 data-swiper-parallax="300">
+                    New Arrivals <br />
+                    Denim Jackets
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
+                    commodo viverra maecenas accumsan lacus vel facilisis
+                  </p>
+                  <a href="#">
+                    <button class="button">Shop Now</button>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide"
+                style="background-image: url(./images/banner/banner4.jpg)"
+              >
+                <div class="wrapper">
+                  <h1>
+                    New Arrivals <br />
+                    Denim Jackets
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
+                    commodo viverra maecenas accumsan lacus vel facilisis
+                  </p>
+                  <a href="#">
+                    <button class="button">Shop Now</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div
               class="swiper-slide"
@@ -403,330 +602,708 @@
               style="background-image: url(./images/electronic/banner3.jpg)"
             ></div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- banner-end -->
 
+    <!-- popup-form-add-item-start -->
+    <div class="popup-form-add-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Collection Form</h3>
+          <div class="add-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="collectionName">Collection Name</label>
+              <input type="text" id="collectionName" />
+            </div>
+
+            <div class="group">
+              <label for="collectionImage">Collection Image</label>
+              <input type="file" id="collectionImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Collection</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-add-item-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Collection Form</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="collectionName">Collection Name</label>
+              <input
+                type="text"
+                id="collectionName"
+                value="Spring Collection"
+              />
+            </div>
+
+            <div class="group">
+              <label for="collectionImage">Collection Image</label>
+              <input type="file" id="collectionImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Collection</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
     <!-- electronic-collections-start -->
     <section>
       <div class="wrapper">
+        <div class="add-item add-item-collection">
+          <button class="icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0C2.334 0 2.17 0.016 2.013 0.048L2.207 1.028C2.30352 1.00915 2.40165 0.99977 2.5 1H2.958V0H2.5ZM4.792 0H3.875V1H4.792V0ZM6.625 0H5.708V1H6.625V0ZM8.458 0H7.542V1H8.458V0ZM10.292 0H9.375V1H10.292V0ZM12.125 0H11.208V1H12.125V0ZM13.5 0H13.042V1H13.5C13.6 1 13.699 1.01 13.793 1.029L13.987 0.048C13.8266 0.0161758 13.6635 9.94507e-05 13.5 0V0ZM15.579 1.11C15.3962 0.837453 15.1618 0.603373 14.889 0.421L14.333 1.252C14.497 1.362 14.638 1.503 14.748 1.667L15.578 1.111L15.579 1.11ZM1.11 0.421C0.837453 0.603769 0.603373 0.838188 0.421 1.111L1.252 1.667C1.362 1.503 1.503 1.362 1.667 1.252L1.11 0.422V0.421ZM16 2.5C16 2.334 15.984 2.17 15.952 2.013L14.972 2.207C14.99 2.301 15 2.399 15 2.5V2.958H16V2.5ZM0.048 2.013C0.0161758 2.17338 9.94507e-05 2.33649 0 2.5L0 2.958H1V2.5C1 2.4 1.01 2.301 1.029 2.207L0.048 2.013V2.013ZM0 3.875V4.792H1V3.875H0ZM16 4.792V3.875H15V4.792H16ZM0 5.708V6.625H1V5.708H0ZM16 6.625V5.708H15V6.625H16ZM0 7.542V8.458H1V7.542H0ZM15 8.458H16V7.542H15V8.458ZM0 9.375V10.292H1V9.375H0ZM16 10.292V9.375H15V10.292H16ZM0 11.208V12.125H1V11.208H0ZM16 12.125V11.208H15V12.125H16ZM0 13.042V13.5C0 13.666 0.016 13.83 0.048 13.987L1.028 13.793C1.00915 13.6965 0.99977 13.5983 1 13.5V13.042H0ZM16 13.5V13.042H15V13.5C15 13.6 14.99 13.699 14.971 13.793L15.952 13.987C15.984 13.829 16 13.667 16 13.5ZM0.421 14.89C0.604 15.162 0.838 15.396 1.111 15.579L1.667 14.748C1.50286 14.6381 1.36186 14.4971 1.252 14.333L0.422 14.889L0.421 14.89ZM14.89 15.579C15.162 15.396 15.396 15.162 15.579 14.889L14.748 14.333C14.638 14.497 14.497 14.638 14.333 14.748L14.889 15.578L14.89 15.579ZM2.013 15.952C2.171 15.984 2.333 16 2.5 16H2.958V15H2.5C2.4 15 2.301 14.99 2.207 14.971L2.013 15.952V15.952ZM13.5 16C13.666 16 13.83 15.984 13.987 15.952L13.793 14.972C13.6965 14.9909 13.5983 15.0002 13.5 15H13.042V16H13.5ZM3.875 16H4.792V15H3.875V16ZM5.708 16H6.625V15H5.708V16ZM7.542 15V16H8.458V15H7.542ZM9.375 16H10.292V15H9.375V16ZM11.208 16H12.125V15H11.208V16ZM8.5 4.5C8.5 4.36739 8.44732 4.24021 8.35355 4.14645C8.25979 4.05268 8.13261 4 8 4C7.86739 4 7.74021 4.05268 7.64645 4.14645C7.55268 4.24021 7.5 4.36739 7.5 4.5V7.5H4.5C4.36739 7.5 4.24021 7.55268 4.14645 7.64645C4.05268 7.74021 4 7.86739 4 8C4 8.13261 4.05268 8.25979 4.14645 8.35355C4.24021 8.44732 4.36739 8.5 4.5 8.5H7.5V11.5C7.5 11.6326 7.55268 11.7598 7.64645 11.8536C7.74021 11.9473 7.86739 12 8 12C8.13261 12 8.25979 11.9473 8.35355 11.8536C8.44732 11.7598 8.5 11.6326 8.5 11.5V8.5H11.5C11.6326 8.5 11.7598 8.44732 11.8536 8.35355C11.9473 8.25979 12 8.13261 12 8C12 7.86739 11.9473 7.74021 11.8536 7.64645C11.7598 7.55268 11.6326 7.5 11.5 7.5H8.5V4.5Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <div class="others-details">
+            <h3>Add your collection</h3>
+          </div>
+        </div>
+
         <div class="electronic-collections">
           <div class="item">
             <a href="#">
-              <div
-                class="image"
-                style="
-                  background-image: url(./images/electronic/banner-custom-top-3-1_1024x1024_crop_center.jpg);
-                "
-              ></div>
+              <div class="image">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(./images/clothing/collections/img-5.jpg);
+                  "
+                ></div>
+              </div>
+              <div class="details">
+                <div class="name">Laptops</div>
+              </div>
+            </a>
+
+            <div class="rank">Rank: 1</div>
+          </div>
+
+          <div class="item">
+            <!-- edit delete sec -->
+            <div class="edit-btn">
+              <i class="fas fa-edit"></i>
+            </div>
+
+            <div class="delete-btn">
+              <i class="fas fa-trash"></i>
+            </div>
+            <!-- edit delete sec -->
+
+            <a href="#">
+              <div class="image">
+                <div
+                  class="img"
+                  style="
+                    background-image: url(./images/clothing/collections/img-5.jpg);
+                  "
+                ></div>
+              </div>
+              <div class="details">
+                <div class="name">Laptops</div>
+              </div>
             </a>
           </div>
 
           <div class="item">
-            <a href="#">
+            <div class="image">
               <div
-                class="image"
+                class="img"
                 style="
-                  background-image: url(./images/electronic/banner-custom-top-3-2_1024x1024_crop_center.jpg);
+                  background-image: url(./images/clothing/collections/img-6.jpg);
                 "
               ></div>
-            </a>
+            </div>
+            <div class="details">
+              <div class="name">Spring Collection</div>
+              <a href="#">
+                <button>Shop Now</button>
+              </a>
+            </div>
           </div>
 
           <div class="item">
-            <a href="#">
+            <div class="image">
               <div
-                class="image"
+                class="img"
                 style="
-                  background-image: url(./images/electronic/banner-custom-top-3-3_1024x1024_crop_center.jpg);
+                  background-image: url(./images/clothing/collections/img-2.jpg);
                 "
               ></div>
-            </a>
+            </div>
+            <div class="details">
+              <div class="name">Spring Collection</div>
+              <a href="#">
+                <button>Shop Now</button>
+              </a>
+            </div>
           </div>
 
-          <div class="item large-image">
-            <a href="#">
+          <div class="item">
+            <div class="image">
               <div
-                class="image"
+                class="img"
                 style="
-                  background-image: url(./images/electronic/banner-custom-top-2-1_1024x1024_crop_center.jpg);
+                  background-image: url(./images/clothing/collections/img-2.jpg);
                 "
               ></div>
-            </a>
-          </div>
-
-          <div class="item large-image">
-            <a href="#">
-              <div
-                class="image"
-                style="
-                  background-image: url(./images/electronic/banner-custom-top-2-2_1024x1024_crop_center.jpg);
-                "
-              ></div>
-            </a>
+            </div>
+            <div class="details">
+              <div class="name">Spring Collection</div>
+              <a href="#">
+                <button>Shop Now</button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- electronic-collections-end -->
 
-    <!-- flash-deals-start -->
+    <!-- popup-form-add-item-start -->
+    <div class="popup-form-add-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Deals Form Add</h3>
+          <div class="add-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="bannerLink">Categories Link</label>
+              <input type="text" id="bannerLink" />
+            </div>
+
+            <div class="group">
+              <label for="bannerImage">Categories Image</label>
+              <input type="file" id="bannerImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Banner</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-add-item-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Deals Form Edit</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="bannerLink">Categories Link</label>
+              <input type="text" id="bannerLink" value="category" />
+            </div>
+
+            <div class="group">
+              <label for="bannerImage">Categories Image</label>
+              <input type="file" id="bannerImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Banner</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
+    <!-- deals-start -->
     <section>
       <div class="wrapper">
-        <div class="flash-deals">
-          <h1 class="title">Flash Deals</h1>
+        <div class="electronic-product">
+          <div class="title-sec">
+            <h1 class="title">Product</h1>
 
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <!-- loop-start -->
-              <div class="swiper-slide">
-                <div class="item">
-                  <!-- porduct-image -->
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/bluetooth-headphone.jpg);
-                    "
-                  >
-                    <!-- porduct-tag -->
-                    <div class="ribbon-tag out-of-stock">Out of stock</div>
+            <ul>
+              <li class="active" data-filters="hotItems">Hot</li>
+              <li data-filters="saleItems">Sale</li>
+              <li data-filters="newItems">New</li>
+            </ul>
+          </div>
 
-                    <!-- porduct-quick-view -->
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
+          <!-- <div class="swiper-slide">
+                  <div class="item">
+                    <div
+                      class="image"
+                      style="
+                        background-image: url(./images/deals/electric-microwave.jpg);
+                      "
+                    >
+                      <div class="ribbon-tag">
+                        <div class="tag">Sale</div>
                       </div>
-
-                      <!-- porduct-wishlist -->
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <!-- porduct-add-to-cart -->
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
+  
+                      <div class="others">
+                        <button class="quick-view icon">
+                          <i class="fas fa-search"></i>
+                        </button>
+  
+                        <form action="">
+                          <button class="icon wishlist-btn">
+                            <i class="far fa-heart"></i>
+                          </button>
+                        </form>
+  
+                        <form action="">
+                          <button class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                          </button>
+                        </form>
                       </div>
                     </div>
+                    <a href="product-details.html">
+                      <div class="product-name">Electric Microwave</div>
+                    </a>
+                    <div class="rating">
+                      <div class="stars" data-value="2"></div>
+                    </div>
+                    <div class="price">
+                      <div class="new">$200.00</div>
+                      <div class="old"><del></del>$250.00</div>
+                    </div>
+                    <a href="#">
+                      <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
                   </div>
-
-                  <!-- porduct-name -->
-                  <a href="product-details.html">
-                    <div class="product-name">Bluetooth Headphone</div>
-                  </a>
-
-                  <!-- porduct-rating -->
-                  <div class="rating">
-                    <div class="stars" data-value="4"></div>
-                  </div>
-
-                  <!-- porduct-price -->
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-
-                  <!-- porduct-add-to-cart -->
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
+                </div> -->
+          <div class="list">
+            <div class="item">
+              <div class="add-item">
+                <button class="icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.5 0C2.334 0 2.17 0.016 2.013 0.048L2.207 1.028C2.30352 1.00915 2.40165 0.99977 2.5 1H2.958V0H2.5ZM4.792 0H3.875V1H4.792V0ZM6.625 0H5.708V1H6.625V0ZM8.458 0H7.542V1H8.458V0ZM10.292 0H9.375V1H10.292V0ZM12.125 0H11.208V1H12.125V0ZM13.5 0H13.042V1H13.5C13.6 1 13.699 1.01 13.793 1.029L13.987 0.048C13.8266 0.0161758 13.6635 9.94507e-05 13.5 0V0ZM15.579 1.11C15.3962 0.837453 15.1618 0.603373 14.889 0.421L14.333 1.252C14.497 1.362 14.638 1.503 14.748 1.667L15.578 1.111L15.579 1.11ZM1.11 0.421C0.837453 0.603769 0.603373 0.838188 0.421 1.111L1.252 1.667C1.362 1.503 1.503 1.362 1.667 1.252L1.11 0.422V0.421ZM16 2.5C16 2.334 15.984 2.17 15.952 2.013L14.972 2.207C14.99 2.301 15 2.399 15 2.5V2.958H16V2.5ZM0.048 2.013C0.0161758 2.17338 9.94507e-05 2.33649 0 2.5L0 2.958H1V2.5C1 2.4 1.01 2.301 1.029 2.207L0.048 2.013V2.013ZM0 3.875V4.792H1V3.875H0ZM16 4.792V3.875H15V4.792H16ZM0 5.708V6.625H1V5.708H0ZM16 6.625V5.708H15V6.625H16ZM0 7.542V8.458H1V7.542H0ZM15 8.458H16V7.542H15V8.458ZM0 9.375V10.292H1V9.375H0ZM16 10.292V9.375H15V10.292H16ZM0 11.208V12.125H1V11.208H0ZM16 12.125V11.208H15V12.125H16ZM0 13.042V13.5C0 13.666 0.016 13.83 0.048 13.987L1.028 13.793C1.00915 13.6965 0.99977 13.5983 1 13.5V13.042H0ZM16 13.5V13.042H15V13.5C15 13.6 14.99 13.699 14.971 13.793L15.952 13.987C15.984 13.829 16 13.667 16 13.5ZM0.421 14.89C0.604 15.162 0.838 15.396 1.111 15.579L1.667 14.748C1.50286 14.6381 1.36186 14.4971 1.252 14.333L0.422 14.889L0.421 14.89ZM14.89 15.579C15.162 15.396 15.396 15.162 15.579 14.889L14.748 14.333C14.638 14.497 14.497 14.638 14.333 14.748L14.889 15.578L14.89 15.579ZM2.013 15.952C2.171 15.984 2.333 16 2.5 16H2.958V15H2.5C2.4 15 2.301 14.99 2.207 14.971L2.013 15.952V15.952ZM13.5 16C13.666 16 13.83 15.984 13.987 15.952L13.793 14.972C13.6965 14.9909 13.5983 15.0002 13.5 15H13.042V16H13.5ZM3.875 16H4.792V15H3.875V16ZM5.708 16H6.625V15H5.708V16ZM7.542 15V16H8.458V15H7.542ZM9.375 16H10.292V15H9.375V16ZM11.208 16H12.125V15H11.208V16ZM8.5 4.5C8.5 4.36739 8.44732 4.24021 8.35355 4.14645C8.25979 4.05268 8.13261 4 8 4C7.86739 4 7.74021 4.05268 7.64645 4.14645C7.55268 4.24021 7.5 4.36739 7.5 4.5V7.5H4.5C4.36739 7.5 4.24021 7.55268 4.14645 7.64645C4.05268 7.74021 4 7.86739 4 8C4 8.13261 4.05268 8.25979 4.14645 8.35355C4.24021 8.44732 4.36739 8.5 4.5 8.5H7.5V11.5C7.5 11.6326 7.55268 11.7598 7.64645 11.8536C7.74021 11.9473 7.86739 12 8 12C8.13261 12 8.25979 11.9473 8.35355 11.8536C8.44732 11.7598 8.5 11.6326 8.5 11.5V8.5H11.5C11.6326 8.5 11.7598 8.44732 11.8536 8.35355C11.9473 8.25979 12 8.13261 12 8C12 7.86739 11.9473 7.74021 11.8536 7.64645C11.7598 7.55268 11.6326 7.5 11.5 7.5H8.5V4.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+                <div class="others-details">
+                  <h3>Add your banner</h3>
                 </div>
               </div>
-              <!-- loop-end -->
+            </div>
 
-              <div class="swiper-slide">
-                <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/electronic/deals/tv.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag sale">Sale</div>
+            <div class="item box-item hotItems">
+              <div class="image">
+                <a href="#">
+                  <img src="./images/deals/computer-racks.jpg" />
+                </a>
 
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
+                <button class="quick-view">
+                  <i class="fas fa-search"></i>
+                </button>
 
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
+                <div class="tag">Hot</div>
 
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
+                <!-- <form action=""> -->
+                <button class="wishlist-btn">
+                  <i class="fas fa-heart"></i>
+                  <span></span>
+                </button>
+                <!-- </form> -->
+
+                <form action="">
+                  <button class="add-to-cart-button">
+                    <div class="icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                          fill="black"
+                        />
+                      </svg>
                     </div>
-                  </div>
-                  <div class="product-name">UHD TV</div>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
-                </div>
+
+                    <h6>Add To Cart</h6>
+                  </button>
+                </form>
               </div>
 
-              <div class="swiper-slide">
-                <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/electric-microwave.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag discount">Discount</div>
-
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-name">Electric Microwave</div>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
-                </div>
+              <!-- edit delete sec -->
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
               </div>
 
-              <div class="swiper-slide">
-                <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/electronic/deals/laptop.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
-                    </div>
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+              <!-- edit delete sec -->
 
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-name">Laptop</div>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
+              <div class="details">
+                <a href="product-details.html">
+                  <h4 class="product-name">Dell Gaming Laptop</h4>
+                </a>
+                <div class="rating">
+                  <div class="stars" data-value="2"></div>
+                </div>
+                <div class="price">
+                  <div class="new">$200.00</div>
+                  <div class="old"><del></del>$250.00</div>
                 </div>
               </div>
+            </div>
 
-              <div class="swiper-slide">
-                <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/deals/portable-speaker.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
+            <div class="item box-item saleItems">
+              <div class="image">
+                <a href="#">
+                  <img src="./images/deals/bluetooth-headphone.jpg" />
+                </a>
+
+                <button class="quick-view">
+                  <i class="fas fa-search"></i>
+                </button>
+
+                <div class="tag">Sale</div>
+
+                <!-- <form action=""> -->
+                <button class="wishlist-btn">
+                  <i class="fas fa-heart"></i>
+                  <span></span>
+                </button>
+                <!-- </form> -->
+
+                <form action="">
+                  <button class="add-to-cart-button">
+                    <div class="icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                          fill="black"
+                        />
+                      </svg>
                     </div>
 
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
-
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-name">Speaker</div>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
-                </div>
+                    <h6>Add To Cart</h6>
+                  </button>
+                </form>
               </div>
 
-              <div class="swiper-slide">
-                <div class="item">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/electronic/deals/mobile.jpg);
-                    "
-                  >
-                    <div class="ribbon-tag">
-                      <div class="tag">Sale</div>
+              <div class="details">
+                <a href="product-details.html">
+                  <h4 class="product-name">Bluetooth Headphone</h4>
+                </a>
+                <div class="rating">
+                  <div class="stars" data-value="2"></div>
+                </div>
+                <div class="price">
+                  <div class="new">$200.00</div>
+                  <div class="old"><del></del>$250.00</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item box-item saleItems">
+              <div class="image">
+                <a href="#">
+                  <img src="./images/deals/electric-microwave.jpg" />
+                </a>
+
+                <button class="quick-view">
+                  <i class="fas fa-search"></i>
+                </button>
+
+                <div class="tag">Sale</div>
+
+                <!-- <form action=""> -->
+                <button class="wishlist-btn">
+                  <i class="fas fa-heart"></i>
+                  <span></span>
+                </button>
+                <!-- </form> -->
+
+                <form action="">
+                  <button class="add-to-cart-button">
+                    <div class="icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                          fill="black"
+                        />
+                      </svg>
                     </div>
 
-                    <div class="others">
-                      <div class="quick-view icon">
-                        <i class="fas fa-search"></i>
-                      </div>
+                    <h6>Add To Cart</h6>
+                  </button>
+                </form>
+              </div>
 
-                      <div class="icon">
-                        <i class="far fa-heart"></i>
-                      </div>
+              <div class="details">
+                <a href="product-details.html">
+                  <h4 class="product-name">Microwave</h4>
+                </a>
+                <div class="rating">
+                  <div class="stars" data-value="2"></div>
+                </div>
+                <div class="price">
+                  <div class="new">$200.00</div>
+                  <div class="old"><del></del>$250.00</div>
+                </div>
+              </div>
+            </div>
 
-                      <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                      </div>
+            <div class="item box-item hotItems">
+              <div class="image">
+                <a href="#">
+                  <img src="./images/deals/virtual-reality-glasses.jpg" />
+                </a>
+
+                <button class="quick-view">
+                  <i class="fas fa-search"></i>
+                </button>
+
+                <div class="tag">Hot</div>
+
+                <!-- <form action=""> -->
+                <button class="wishlist-btn">
+                  <i class="fas fa-heart"></i>
+                  <span></span>
+                </button>
+                <!-- </form> -->
+
+                <form action="">
+                  <button class="add-to-cart-button">
+                    <div class="icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                          fill="black"
+                        />
+                      </svg>
                     </div>
-                  </div>
-                  <div class="product-name">Mobile</div>
-                  <div class="rating">
-                    <div class="stars" data-value="2"></div>
-                  </div>
-                  <div class="price">
-                    <div class="new">$200.00</div>
-                    <div class="old"><del></del>$250.00</div>
-                  </div>
-                  <a href="#">
-                    <button>Add To Cart</button>
-                  </a>
+
+                    <h6>Add To Cart</h6>
+                  </button>
+                </form>
+              </div>
+
+              <div class="details">
+                <a href="product-details.html">
+                  <h4 class="product-name">Virtual Reality</h4>
+                </a>
+                <div class="rating">
+                  <div class="stars" data-value="2"></div>
+                </div>
+                <div class="price">
+                  <div class="new">$200.00</div>
+                  <div class="old"><del></del>$250.00</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item box-item newItems">
+              <div class="image">
+                <a href="#">
+                  <img src="./images/deals/portable-speaker.jpg" />
+                </a>
+
+                <button class="quick-view">
+                  <i class="fas fa-search"></i>
+                </button>
+
+                <div class="tag">New</div>
+
+                <!-- <form action=""> -->
+                <button class="wishlist-btn">
+                  <i class="fas fa-heart"></i>
+                  <span></span>
+                </button>
+                <!-- </form> -->
+
+                <form action="">
+                  <button class="add-to-cart-button">
+                    <div class="icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
+
+                    <h6>Add To Cart</h6>
+                  </button>
+                </form>
+              </div>
+
+              <div class="details">
+                <a href="product-details.html">
+                  <h4 class="product-name">Portable Speaker</h4>
+                </a>
+                <div class="rating">
+                  <div class="stars" data-value="2"></div>
+                </div>
+                <div class="price">
+                  <div class="new">$200.00</div>
+                  <div class="old"><del></del>$250.00</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item box-item hotItems">
+              <div class="image">
+                <a href="#">
+                  <img src="./images/deals/hummingbird-printed-t-shirt.jpg" />
+                </a>
+
+                <button class="quick-view">
+                  <i class="fas fa-search"></i>
+                </button>
+
+                <div class="tag">Hot</div>
+
+                <!-- <form action=""> -->
+                <button class="wishlist-btn">
+                  <i class="fas fa-heart"></i>
+                  <span></span>
+                </button>
+                <!-- </form> -->
+
+                <form action="">
+                  <button class="add-to-cart-button">
+                    <div class="icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
+
+                    <h6>Add To Cart</h6>
+                  </button>
+                </form>
+              </div>
+
+              <div class="details">
+                <a href="product-details.html">
+                  <h4 class="product-name">Hummingbird Printed T-Shirt</h4>
+                </a>
+                <div class="rating">
+                  <div class="stars" data-value="2"></div>
+                </div>
+                <div class="price">
+                  <div class="new">$200.00</div>
+                  <div class="old"><del></del>$250.00</div>
                 </div>
               </div>
             </div>
@@ -734,10 +1311,10 @@
         </div>
       </div>
     </section>
-    <!-- flash-deals-end -->
+    <!-- deals-end -->
 
     <!-- what-are-you-looking-for-start -->
-    <section>
+    <!-- <section>
       <div class="wrapper">
         <div
           class="what-are-you-looking-for"
@@ -783,17 +1360,144 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- what-are-you-looking-for-end -->
 
-    <!-- hot-categories-start -->
+    <!-- popup-form-add-item-start -->
+    <div class="popup-form-add-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Categories Form Add</h3>
+          <div class="add-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="bannerLink">Categories Link</label>
+              <input type="text" id="bannerLink" />
+            </div>
+
+            <div class="group">
+              <label for="bannerImage">Categories Image</label>
+              <input type="file" id="bannerImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Banner</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-add-item-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Categories Form Edit</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="bannerLink">Categories Link</label>
+              <input type="text" id="bannerLink" value="category" />
+            </div>
+
+            <div class="group">
+              <label for="bannerImage">Categories Image</label>
+              <input type="file" id="bannerImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Banner</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
+    <!-- new-fashion-start -->
     <section>
+      <div class="new-fashion">
+        <div
+          class="new-fashion-bg-image"
+          style="background-image: url(./images/clothing/cta.jpg)"
+        >
+          <div class="edit-btn">
+            <i class="fas fa-edit"></i>
+          </div>
+
+          <div class="delete-btn">
+            <i class="fas fa-trash"></i>
+          </div>
+
+          <div class="details">
+            <h6>TRENDING</h6>
+            <h2>New Fashion</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              nisi distinctio magni, iure deserunt doloribus optio
+            </p>
+            <a href="#">
+              <button>Shop Now</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- <div class="add-item">
+          <button class="icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0C2.334 0 2.17 0.016 2.013 0.048L2.207 1.028C2.30352 1.00915 2.40165 0.99977 2.5 1H2.958V0H2.5ZM4.792 0H3.875V1H4.792V0ZM6.625 0H5.708V1H6.625V0ZM8.458 0H7.542V1H8.458V0ZM10.292 0H9.375V1H10.292V0ZM12.125 0H11.208V1H12.125V0ZM13.5 0H13.042V1H13.5C13.6 1 13.699 1.01 13.793 1.029L13.987 0.048C13.8266 0.0161758 13.6635 9.94507e-05 13.5 0V0ZM15.579 1.11C15.3962 0.837453 15.1618 0.603373 14.889 0.421L14.333 1.252C14.497 1.362 14.638 1.503 14.748 1.667L15.578 1.111L15.579 1.11ZM1.11 0.421C0.837453 0.603769 0.603373 0.838188 0.421 1.111L1.252 1.667C1.362 1.503 1.503 1.362 1.667 1.252L1.11 0.422V0.421ZM16 2.5C16 2.334 15.984 2.17 15.952 2.013L14.972 2.207C14.99 2.301 15 2.399 15 2.5V2.958H16V2.5ZM0.048 2.013C0.0161758 2.17338 9.94507e-05 2.33649 0 2.5L0 2.958H1V2.5C1 2.4 1.01 2.301 1.029 2.207L0.048 2.013V2.013ZM0 3.875V4.792H1V3.875H0ZM16 4.792V3.875H15V4.792H16ZM0 5.708V6.625H1V5.708H0ZM16 6.625V5.708H15V6.625H16ZM0 7.542V8.458H1V7.542H0ZM15 8.458H16V7.542H15V8.458ZM0 9.375V10.292H1V9.375H0ZM16 10.292V9.375H15V10.292H16ZM0 11.208V12.125H1V11.208H0ZM16 12.125V11.208H15V12.125H16ZM0 13.042V13.5C0 13.666 0.016 13.83 0.048 13.987L1.028 13.793C1.00915 13.6965 0.99977 13.5983 1 13.5V13.042H0ZM16 13.5V13.042H15V13.5C15 13.6 14.99 13.699 14.971 13.793L15.952 13.987C15.984 13.829 16 13.667 16 13.5ZM0.421 14.89C0.604 15.162 0.838 15.396 1.111 15.579L1.667 14.748C1.50286 14.6381 1.36186 14.4971 1.252 14.333L0.422 14.889L0.421 14.89ZM14.89 15.579C15.162 15.396 15.396 15.162 15.579 14.889L14.748 14.333C14.638 14.497 14.497 14.638 14.333 14.748L14.889 15.578L14.89 15.579ZM2.013 15.952C2.171 15.984 2.333 16 2.5 16H2.958V15H2.5C2.4 15 2.301 14.99 2.207 14.971L2.013 15.952V15.952ZM13.5 16C13.666 16 13.83 15.984 13.987 15.952L13.793 14.972C13.6965 14.9909 13.5983 15.0002 13.5 15H13.042V16H13.5ZM3.875 16H4.792V15H3.875V16ZM5.708 16H6.625V15H5.708V16ZM7.542 15V16H8.458V15H7.542ZM9.375 16H10.292V15H9.375V16ZM11.208 16H12.125V15H11.208V16ZM8.5 4.5C8.5 4.36739 8.44732 4.24021 8.35355 4.14645C8.25979 4.05268 8.13261 4 8 4C7.86739 4 7.74021 4.05268 7.64645 4.14645C7.55268 4.24021 7.5 4.36739 7.5 4.5V7.5H4.5C4.36739 7.5 4.24021 7.55268 4.14645 7.64645C4.05268 7.74021 4 7.86739 4 8C4 8.13261 4.05268 8.25979 4.14645 8.35355C4.24021 8.44732 4.36739 8.5 4.5 8.5H7.5V11.5C7.5 11.6326 7.55268 11.7598 7.64645 11.8536C7.74021 11.9473 7.86739 12 8 12C8.13261 12 8.25979 11.9473 8.35355 11.8536C8.44732 11.7598 8.5 11.6326 8.5 11.5V8.5H11.5C11.6326 8.5 11.7598 8.44732 11.8536 8.35355C11.9473 8.25979 12 8.13261 12 8C12 7.86739 11.9473 7.74021 11.8536 7.64645C11.7598 7.55268 11.6326 7.5 11.5 7.5H8.5V4.5Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <div class="others-details">
+            <h3>Add your footer banner</h3>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!-- new-fashion-end -->
+
+    <!-- hot-categories-start -->
+    <!-- <section>
       <div class="wrapper">
         <div class="hot-categories">
           <h1 class="title">Hot Categories</h1>
           <div class="list">
             <div class="item">
-              <div class="image">
+              <!-- <div class="image">
                 <div
                   class="img"
                   style="
@@ -818,9 +1522,36 @@
                   </a>
                 </ul>
               </div>
+              <div class="add-item">
+                <button class="icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.5 0C2.334 0 2.17 0.016 2.013 0.048L2.207 1.028C2.30352 1.00915 2.40165 0.99977 2.5 1H2.958V0H2.5ZM4.792 0H3.875V1H4.792V0ZM6.625 0H5.708V1H6.625V0ZM8.458 0H7.542V1H8.458V0ZM10.292 0H9.375V1H10.292V0ZM12.125 0H11.208V1H12.125V0ZM13.5 0H13.042V1H13.5C13.6 1 13.699 1.01 13.793 1.029L13.987 0.048C13.8266 0.0161758 13.6635 9.94507e-05 13.5 0V0ZM15.579 1.11C15.3962 0.837453 15.1618 0.603373 14.889 0.421L14.333 1.252C14.497 1.362 14.638 1.503 14.748 1.667L15.578 1.111L15.579 1.11ZM1.11 0.421C0.837453 0.603769 0.603373 0.838188 0.421 1.111L1.252 1.667C1.362 1.503 1.503 1.362 1.667 1.252L1.11 0.422V0.421ZM16 2.5C16 2.334 15.984 2.17 15.952 2.013L14.972 2.207C14.99 2.301 15 2.399 15 2.5V2.958H16V2.5ZM0.048 2.013C0.0161758 2.17338 9.94507e-05 2.33649 0 2.5L0 2.958H1V2.5C1 2.4 1.01 2.301 1.029 2.207L0.048 2.013V2.013ZM0 3.875V4.792H1V3.875H0ZM16 4.792V3.875H15V4.792H16ZM0 5.708V6.625H1V5.708H0ZM16 6.625V5.708H15V6.625H16ZM0 7.542V8.458H1V7.542H0ZM15 8.458H16V7.542H15V8.458ZM0 9.375V10.292H1V9.375H0ZM16 10.292V9.375H15V10.292H16ZM0 11.208V12.125H1V11.208H0ZM16 12.125V11.208H15V12.125H16ZM0 13.042V13.5C0 13.666 0.016 13.83 0.048 13.987L1.028 13.793C1.00915 13.6965 0.99977 13.5983 1 13.5V13.042H0ZM16 13.5V13.042H15V13.5C15 13.6 14.99 13.699 14.971 13.793L15.952 13.987C15.984 13.829 16 13.667 16 13.5ZM0.421 14.89C0.604 15.162 0.838 15.396 1.111 15.579L1.667 14.748C1.50286 14.6381 1.36186 14.4971 1.252 14.333L0.422 14.889L0.421 14.89ZM14.89 15.579C15.162 15.396 15.396 15.162 15.579 14.889L14.748 14.333C14.638 14.497 14.497 14.638 14.333 14.748L14.889 15.578L14.89 15.579ZM2.013 15.952C2.171 15.984 2.333 16 2.5 16H2.958V15H2.5C2.4 15 2.301 14.99 2.207 14.971L2.013 15.952V15.952ZM13.5 16C13.666 16 13.83 15.984 13.987 15.952L13.793 14.972C13.6965 14.9909 13.5983 15.0002 13.5 15H13.042V16H13.5ZM3.875 16H4.792V15H3.875V16ZM5.708 16H6.625V15H5.708V16ZM7.542 15V16H8.458V15H7.542ZM9.375 16H10.292V15H9.375V16ZM11.208 16H12.125V15H11.208V16ZM8.5 4.5C8.5 4.36739 8.44732 4.24021 8.35355 4.14645C8.25979 4.05268 8.13261 4 8 4C7.86739 4 7.74021 4.05268 7.64645 4.14645C7.55268 4.24021 7.5 4.36739 7.5 4.5V7.5H4.5C4.36739 7.5 4.24021 7.55268 4.14645 7.64645C4.05268 7.74021 4 7.86739 4 8C4 8.13261 4.05268 8.25979 4.14645 8.35355C4.24021 8.44732 4.36739 8.5 4.5 8.5H7.5V11.5C7.5 11.6326 7.55268 11.7598 7.64645 11.8536C7.74021 11.9473 7.86739 12 8 12C8.13261 12 8.25979 11.9473 8.35355 11.8536C8.44732 11.7598 8.5 11.6326 8.5 11.5V8.5H11.5C11.6326 8.5 11.7598 8.44732 11.8536 8.35355C11.9473 8.25979 12 8.13261 12 8C12 7.86739 11.9473 7.74021 11.8536 7.64645C11.7598 7.55268 11.6326 7.5 11.5 7.5H8.5V4.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+                <div class="others-details">
+                  <h3>Add your Categories</h3>
+                </div>
+              </div>
             </div>
 
             <div class="item">
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </div>
+
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+
               <div class="image">
                 <div
                   class="img"
@@ -1018,7 +1749,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- hot-categories-end -->
 
     <!-- footer-start -->
@@ -1103,7 +1834,6 @@
 
     <!-- quick-view-pop-start -->
     <div class="quick-view-pop">
-      <div class="pop-bg"></div>
       <div class="details">
         <div class="quick-view-close">
           <img src="./images/icon/close_big.svg" alt="" />
@@ -1366,53 +2096,23 @@
     <script src="./js/quantity.js"></script>
     <script src="./js/quick-view.js"></script>
     <script src="./js/derss-size.js"></script>
+    <script src="./js/popup-form.js"></script>
+    <script src="./js/wishlist-button.js"></script>
     <!-- swiper-js -->
     <script src="./js/swiper.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
       // electronic-page-banner
-      var swiper = new Swiper('.electronic-page-banner .mySwiper', {
+      var swiper = new Swiper(".electronic-page-banner .mySwiper", {
         autoplay: {
           delay: 4500,
           disableOnInteraction: false,
         },
       });
 
-      // flash-deals
-      var swiper = new Swiper('.flash-deals .mySwiper', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        autoplay: {
-          delay: 3500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-        },
-      });
-
       // quick-view-pop
-      var swiper = new Swiper('.quick-view-pop .mySwiper', {
+      var swiper = new Swiper(".quick-view-pop .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
@@ -1420,8 +2120,8 @@
           disableOnInteraction: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           440: {
@@ -1449,7 +2149,7 @@
     </script>
 
     <script>
-      const stars = document.querySelectorAll('.stars');
+      const stars = document.querySelectorAll(".stars");
 
       const fullStar = `
     <svg
@@ -1502,10 +2202,33 @@
 
     <script>
       // image-magnify
-      const zooms = document.querySelectorAll('#zoom');
+      const zooms = document.querySelectorAll("#zoom");
 
       zooms.forEach((zoom) => {
-        $(zoom).zoom({ on: 'click' });
+        $(zoom).zoom({ on: "click" });
+      });
+    </script>
+
+    <script>
+      // our-dress
+      $(document).ready(function () {
+        $(".box-item").not(".hotItems").hide("1000");
+      });
+
+      $(document).ready(function () {
+        $(".electronic-product ul li").click(function () {
+          const value = $(this).attr("data-filters");
+          $(".box-item")
+            .not("." + value)
+            .hide("1000");
+          $(".box-item")
+            .filter("." + value)
+            .show("1000");
+        });
+
+        $(".electronic-product ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
       });
     </script>
   </body>
