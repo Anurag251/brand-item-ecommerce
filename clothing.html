@@ -834,6 +834,9 @@
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </div>
     <!-- banner-end -->
@@ -868,6 +871,27 @@
       </div>
     </div>
     <!-- serv-end -->
+
+    <!-- ads-banner-grid-start -->
+    <section>
+      <div class="wrapper">
+        <div class="ads-banner-grid three">
+          <img src="./images/gif/gif1.gif" alt="ads" />
+          <img src="./images/gif/gif2.gif" alt="ads" />
+          <img src="./images/gif/gif-zoot.gif" alt="ads" />
+        </div>
+
+        <div class="ads-banner-grid two">
+          <img src="./images/gif/gif4.gif" alt="ads" />
+          <img src="./images/gif/gif5.gif" alt="ads" />
+        </div>
+
+        <div class="ads-banner-grid one">
+          <img src="./images/gif/gif6.gif" alt="ads" />
+        </div>
+      </div>
+    </section>
+    <!-- ads-banner-grid-end -->
 
     <!-- popup-form-add-item-start -->
     <div class="popup-form-add-item">
@@ -2444,7 +2468,7 @@
 
     <!-- scroll-to-top-start -->
     <div class="scroll-to-top">
-      <img src="./images/icon/chevron_up.svg" alt="" />
+      <img src="./images/icon/chevron_up_light.svg" alt="" />
     </div>
     <!-- scroll-to-top-end -->
 
@@ -2464,6 +2488,16 @@
     <script>
       // banner
       var swiper = new Swiper(".banner .mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
         autoplay: {
           delay: 4500,
           disableOnInteraction: false,

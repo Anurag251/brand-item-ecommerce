@@ -1,30 +1,29 @@
-// dress-size
+const sizes = document.querySelectorAll(".size");
+const sizesInput = document.querySelectorAll("#sizeInput");
 
-const sizes = document.querySelectorAll(".size ul li");
-const sizesInput = document.querySelector("#sizeInput");
+sizes.forEach((size, index) => {
+  const sizeLists = size.querySelectorAll("li");
 
-let choosenSize = null;
-let ad = null;
+  const xyz = (e) => {
+    sizesInput[index].setAttribute("value", e);
+  };
 
-const xyz = (e) => {
-  sizesInput.setAttribute("value", e);
-};
+  sizeLists.forEach((sizeList, idx) => {
+    sizeList.setAttribute("value", sizeList.innerHTML);
 
-sizes.forEach((size, idx) => {
-  size.setAttribute("value", size.innerHTML);
-
-  size.addEventListener("click", (e) => {
-    if (size.getAttribute("value") == size.innerHTML) {
-      sizes[idx].classList.add("active");
-      choosenSize = idx;
-    }
-
-    xyz(size.innerHTML);
-
-    for (let i = 0; i < sizes.length; i++) {
-      if (i !== idx) {
-        sizes[i].classList.remove("active");
+    sizeList.addEventListener("click", () => {
+      if (sizeList.getAttribute("value") == sizeList.innerHTML) {
+        sizeLists[idx].classList.add("active");
+        choosenSize = idx;
       }
-    }
+
+      xyz(sizeList.innerHTML);
+
+      for (let i = 0; i < sizeLists.length; i++) {
+        if (i !== idx) {
+          sizeLists[i].classList.remove("active");
+        }
+      }
+    });
   });
 });

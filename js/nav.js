@@ -102,6 +102,7 @@ searchCloseBtn.addEventListener("click", () => {
 
 // scroll-to-top
 const scrollToTop = document.querySelector(".scroll-to-top");
+
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 100) {
     scrollToTop.classList.add("show");
@@ -109,8 +110,10 @@ window.addEventListener("scroll", () => {
     scrollToTop.classList.remove("show");
   }
 });
+
 scrollToTop.addEventListener("click", () => {
   window.scrollTo(0, 0);
+  window.style.transition = "0.5s";
 });
 
 // custom_select

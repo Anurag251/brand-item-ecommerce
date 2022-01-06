@@ -399,14 +399,31 @@
                 Head Phone Sony High quality sounds
               </div>
 
-              <div class="price" id="price">Rs 1000 /-</div>
+              <div class="price" id="price">Rs 1000</div>
 
               <div class="quantity">
                 <div class="group">
-                  <button class="sub-button">
+                  <button class="sub-button" disabled>
                     <i class="fas fa-chevron-down"></i>
                   </button>
-                  <input type="number" value="1" class="quantity-number" />
+
+                  <form action="">
+                    <input
+                      type="number"
+                      name=""
+                      class="quantity-number"
+                      value="1"
+                      readonly
+                    />
+
+                    <button
+                      type="submit"
+                      name=""
+                      id="forcedClicked"
+                      hidden
+                    ></button>
+                  </form>
+
                   <button class="add-button">
                     <i class="fas fa-chevron-up"></i>
                   </button>
@@ -414,7 +431,130 @@
               </div>
 
               <div class="price" id="totalPrice">
-                Rs <span id="total-price">1000</span> /-
+                <form action="">
+                  Rs
+
+                  <input
+                    type="number"
+                    name=""
+                    id="product-price"
+                    value="100"
+                    oninput="setValueToText(this)"
+                    readonly
+                  />
+
+                  <button
+                    type="submit"
+                    name=""
+                    id="forcedClicked"
+                    hidden
+                    onclick=""
+                  ></button>
+                </form>
+              </div>
+            </div>
+
+            <div class="delete">
+              <img src="./images/icon/close_big.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img
+                src="./images/electronic/device/bluetooth-headphone.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="all-details">
+              <div class="product-name">
+                Head Phone Sony High quality sounds
+              </div>
+
+              <div class="price" id="price">Rs 1000</div>
+
+              <div class="quantity">
+                <div class="group">
+                  <button class="sub-button" disabled>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+
+                  <input
+                    type="number"
+                    name=""
+                    class="quantity-number"
+                    value="1"
+                    readonly
+                  />
+
+                  <button class="add-button">
+                    <i class="fas fa-chevron-up"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="price" id="totalPrice">
+                Rs
+                <input
+                  type="number"
+                  name=""
+                  id="product-price"
+                  value="100"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="delete">
+              <img src="./images/icon/close_big.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img
+                src="./images/electronic/device/bluetooth-headphone.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="all-details">
+              <div class="product-name">
+                Head Phone Sony High quality sounds
+              </div>
+
+              <div class="price" id="price">Rs 1000</div>
+
+              <div class="quantity">
+                <div class="group">
+                  <button class="sub-button" disabled>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+
+                  <input
+                    type="number"
+                    name=""
+                    class="quantity-number"
+                    value="1"
+                    readonly
+                  />
+
+                  <button class="add-button">
+                    <i class="fas fa-chevron-up"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="price" id="totalPrice">
+                Rs
+                <input
+                  type="number"
+                  name=""
+                  id="product-price"
+                  value="100"
+                  readonly
+                />
               </div>
             </div>
 
@@ -440,10 +580,18 @@
 
               <div class="quantity">
                 <div class="group">
-                  <button class="sub-button">
+                  <button class="sub-button" disabled>
                     <i class="fas fa-chevron-down"></i>
                   </button>
-                  <input type="number" value="1" class="quantity-number" />
+
+                  <input
+                    type="number"
+                    name=""
+                    class="quantity-number"
+                    value="1"
+                    readonly
+                  />
+
                   <button class="add-button">
                     <i class="fas fa-chevron-up"></i>
                   </button>
@@ -451,44 +599,14 @@
               </div>
 
               <div class="price" id="totalPrice">
-                Rs <span id="total-price">1000</span> /-
-              </div>
-            </div>
-
-            <div class="delete">
-              <img src="./images/icon/close_big.svg" alt="" />
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="image">
-              <img
-                src="./images/electronic/device/bluetooth-headphone.jpg"
-                alt=""
-              />
-            </div>
-
-            <div class="all-details">
-              <div class="product-name">
-                Head Phone Sony High quality sounds
-              </div>
-
-              <div class="price" id="price">Rs 1000 /-</div>
-
-              <div class="quantity">
-                <div class="group">
-                  <button class="sub-button">
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                  <input type="number" value="1" class="quantity-number" />
-                  <button class="add-button">
-                    <i class="fas fa-chevron-up"></i>
-                  </button>
-                </div>
-              </div>
-
-              <div class="price" id="totalPrice">
-                Rs <span id="total-price">1000</span> /-
+                Rs
+                <input
+                  type="number"
+                  name=""
+                  id="product-price"
+                  value="100"
+                  readonly
+                />
               </div>
             </div>
 
@@ -503,7 +621,17 @@
                 <button>Continue Shopping</button>
               </a>
             </div>
-            <div class="total-price">Total: Rs <span>2000</span> /-</div>
+            <div class="total-price">
+              Total: Rs
+
+              <input type="number" id="total-price" value=" " readonly />
+
+              <h6>Shipping Fee: 24</h6>
+
+              <div class="continue-shopping">
+                <button id="total-price-submit">Checkout</button>
+              </div>
+            </div>
           </div>
 
           <div class="payment-section">

@@ -471,6 +471,9 @@
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </div>
     <!-- banner-end -->
@@ -1467,6 +1470,8 @@
                 />
               </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
 
@@ -1684,7 +1689,7 @@
 
     <!-- scroll-to-top-start -->
     <div class="scroll-to-top">
-      <img src="./images/icon/chevron_up.svg" alt="" />
+      <img src="./images/icon/chevron_up_light.svg" alt="" />
     </div>
     <!-- scroll-to-top-end -->
 
@@ -1694,6 +1699,7 @@
     <script src="./js/quick-view.js"></script>
     <script src="./js/derss-size.js"></script>
     <script src="./js/wishlist-button.js"></script>
+
     <!-- swiper-js -->
     <script src="./js/swiper.min.js"></script>
 
@@ -1701,10 +1707,20 @@
     <script>
       // banner
       var swiper = new Swiper(".banner .mySwiper", {
-        // autoplay: {
-        //   delay: 4500,
-        //   disableOnInteraction: false,
-        // },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+        },
       });
 
       // deals
@@ -1722,10 +1738,10 @@
           clickable: true,
         },
 
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
 
         breakpoints: {
           640: {
