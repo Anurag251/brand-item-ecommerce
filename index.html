@@ -168,13 +168,19 @@
                 <div class="sign-in-sign-up-dropdown">
                   <ul>
                     <a href="#">
-                      <li>Profile <i class="fas fa-user"></i></li>
+                      <li><i class="fas fa-user"></i> Profile</li>
                     </a>
-                    <a href="#">
-                      <li>Setting <i class="fas fa-cog"></i></li>
+
+                    <a href="my-orders.html">
+                      <li><i class="fas fa-box"></i> My Orders</li>
                     </a>
+
                     <a href="#">
-                      <li>Logout <i class="fas fa-sign-out-alt"></i></li>
+                      <li><i class="fas fa-cog"></i> Setting</li>
+                    </a>
+
+                    <a href="#">
+                      <li><i class="fas fa-sign-out-alt"></i> Logout</li>
                     </a>
                   </ul>
                 </div>
@@ -1484,7 +1490,15 @@
           </div>
 
           <div class="price">
-            <div class="new">$<span id="total-price">110</span></div>
+            <div class="new">
+              $<input
+                type="number"
+                name=""
+                id="product-price"
+                value="120"
+                readonly
+              />
+            </div>
             <div class="old"><del></del>$120.32</div>
           </div>
 
@@ -1497,37 +1511,44 @@
               repellendus maxime odio, ut quasi officia!
             </p>
           </div>
+          <form action="">
+            <div class="others">
+              <div class="quantity">
+                <h4>Quantity:</h4>
+                <div class="group">
+                  <button class="sub-button" disabled>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
 
-          <div class="others">
-            <div class="quantity">
-              <h4>Quantity:</h4>
-              <div class="group">
-                <button class="sub-button">
-                  <i class="fas fa-chevron-down"></i>
-                </button>
-                <input type="number" class="quantity-number" />
-                <button class="add-button">
-                  <i class="fas fa-chevron-up"></i>
-                </button>
+                  <input
+                    type="number"
+                    name=""
+                    class="quantity-number"
+                    value="1"
+                    readonly
+                  />
+
+                  <button class="add-button">
+                    <i class="fas fa-chevron-up"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="size">
+                <h4>Size:</h4>
+                <ul>
+                  <input type="hidden" name="" id="sizeInput" />
+                  <li>xs</li>
+                  <li>s</li>
+                  <li>m</li>
+                  <li>xl</li>
+                  <li>3xl</li>
+                  <li>4xl</li>
+                </ul>
               </div>
             </div>
-
-            <div class="size">
-              <h4>Size:</h4>
-              <ul>
-                <li class="not">xxs</li>
-                <li>xs</li>
-                <li>s</li>
-                <li>m</li>
-                <li class="not">l</li>
-                <li>xl</li>
-                <li class="not">2xl</li>
-                <li>3xl</li>
-                <li>4xl</li>
-              </ul>
-            </div>
-          </div>
-          <button class="button">Add To Cart</button>
+            <button class="button">Add To Cart</button>
+          </form>
         </div>
       </div>
     </div>
@@ -1702,6 +1723,7 @@
 
     <!-- swiper-js -->
     <script src="./js/swiper.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
     <!-- Initialize Swiper -->
     <script>

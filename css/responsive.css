@@ -517,52 +517,6 @@
     margin-bottom: 3rem;
   }
   /*************    checkout     *************/
-  .checkout-page .title-sec, .wishlist-page .title-sec {
-    display: none;
-  }
-  .checkout-page .item, .wishlist-page .item {
-    position: relative;
-  }
-  .checkout-page .item .image, .wishlist-page .item .image {
-    height: 140px;
-    width: 140px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .checkout-page .item .all-details, .wishlist-page .item .all-details {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    grid-gap: 10px;
-  }
-  .checkout-page .item .all-details #price, .wishlist-page .item .all-details #price {
-    display: none;
-  }
-  .checkout-page .item .all-details .quantity, .wishlist-page .item .all-details .quantity {
-    margin-left: 10px;
-  }
-  .checkout-page .item .all-details #totalPrice, .wishlist-page .item .all-details #totalPrice {
-    -ms-grid-row: 2;
-    grid-area: 2;
-    margin-left: 10px;
-  }
-  .checkout-page .item .delete, .wishlist-page .item .delete {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-  }
-  .checkout-page .item .delete img, .wishlist-page .item .delete img {
-    width: 100%;
-  }
   /*************    contact-page     **************/
   .contact-page .title {
     font-size: 30px;
@@ -1155,17 +1109,6 @@
         grid-template-columns: 1fr;
   }
   /*************    checkout     *************/
-  .checkout-page .item .image, .wishlist-page .item .image {
-    height: 100px;
-    width: 100px;
-  }
-  .checkout-page .item .all-details .product-name, .wishlist-page .item .all-details .product-name {
-    font-size: 14px;
-  }
-  .checkout-page .item .delete, .wishlist-page .item .delete {
-    height: 20px;
-    width: 20px;
-  }
   .checkout-page .total-price-sec .continue-shopping button, .wishlist-page .total-price-sec .continue-shopping button {
     padding: .4rem .8rem;
     font-size: 13px;

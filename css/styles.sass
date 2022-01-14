@@ -10,14 +10,14 @@
   list-style: none
   font-family: 'Lato', sans-serif
   text-decoration: none
-  scroll-behavior: smooth
 
 select
   -webkit-appearance: none
   background: url(data:image/svg+xmlbase64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%
 
 $main: #6f42c1
-$pri: #cb0c9f
+$blue: #0571b9
+$pri: #b30e8c
 $sec: #666666
 $bg: #F1F1F1
 $dark: #000000
@@ -31,6 +31,7 @@ body
 
 @mixin trans()
   transition: 0.45s cubic-bezier(0, 0, 0, 1),
+  // transition: x 2s linear cubic-bezier(0.5,700,0.5,-700)
 
 @mixin flex($justify)
   display: flex
@@ -50,7 +51,7 @@ body
   bottom: 0
 
 @mixin gradient()
-  background-image: linear-gradient(30deg, $main, $pri)
+  background-image: linear-gradient(30deg, $pri, $main, $blue)
 
 @mixin button()
   padding: .7rem 2rem
@@ -64,7 +65,7 @@ body
   border-radius: 10px
 
   &:hover
-    background-image: linear-gradient(30deg, $pri, $main)
+    animation: gradientColor .7s alternate infinite
 
 @mixin rating()
   @include flex($justify: flex-start)
@@ -253,7 +254,7 @@ body
     left: 0%
     top: 0px
     transform: translateX(-50%)
-    min-width: 100px
+    min-width: 130px
     background-color: $light
     padding: .6rem
     border-radius: 10px
@@ -265,15 +266,18 @@ body
 
     ul
       @include flex($justify: center)
+      align-items: flex-start
       flex-direction: column
+      width: 100%
 
       li
         font-size: 14px
         line-height: 2rem
         border-bottom: 1px solid rgba($dark, .2)
-        @include flex($justify: flex-start)
+        @include flex($justify: center)
         padding: 0 .5rem
         border-radius: 10px
+        width: 100%
         color: $dark
 
         &:hover
@@ -283,7 +287,7 @@ body
           border-bottom: none
 
         i
-          margin-left: 10px
+          margin-right: 10px
 
 .swiper-pagination-bullet
   height: 5px
@@ -338,7 +342,7 @@ section
 
 .wishlist-btn
   position: absolute
-  right: 0
+  right: 5px
   top: -30px
   cursor: pointer
   height: 40px
@@ -346,12 +350,13 @@ section
   overflow: hidden
   @include flex($justify: center)
   @include trans()
-  z-index: 2
+  z-index: 4
 
   &.active
     i
       color: $pri
       animation: size .4s ease-in-out
+      text-shadow: 0 0 3px rgba($main, .5)
 
     &::after
       animation: fade1 1s
@@ -368,7 +373,8 @@ section
 
   i
     font-size: 20px
-    color: #bdbdbd
+    color: #fcfcfc
+    text-shadow: 0 0 6px rgba($dark, .2)
 
   span
     position: absolute
@@ -475,6 +481,7 @@ header
 
         img
           width: 100%
+          cursor: pointer
 
       .wishlist
         position: relative
@@ -1142,7 +1149,7 @@ header
           .image
 
             .wishlist-btn
-              top: 0
+              top: 5px
 
             .add-to-cart-button
               right: 0
@@ -1169,7 +1176,7 @@ header
           transform: scale(1.1)
 
         .wishlist-btn
-          top: 0
+          top: 5px
 
         .add-to-cart-button
           right: 0
@@ -1536,6 +1543,18 @@ footer
       .price
         @include price()
 
+        input
+          color: $red
+          font-size: 16px
+          margin-left: 5px
+          resize: horizontal
+          width: 80px
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button
+          -webkit-appearance: none
+          margin: 0
+
       .profuct-desc
         margin-top: 2rem
 
@@ -1556,6 +1575,11 @@ footer
               width: 30px
               text-align: center
               margin: 0 10px
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button
+              -webkit-appearance: none
+              margin: 0
 
             .add-button, .sub-button
               height: 20px
@@ -1619,182 +1643,154 @@ footer
 
 /*************    checkout     *************/
 .checkout-page, .wishlist-page
+
   .title
     margin-bottom: 2rem
     font-weight: 700
     text-align: center
 
   .title-sec
-    display: grid
-    grid-template-columns: 2fr 1fr 1fr 1fr .5fr
-    background-color: $bg
-    padding: 1.5rem
+    background-color: $main
     border-radius: 15px
-    margin-bottom: 2rem
 
     .name
-      font-size: 20px
-      font-weight: 600
+      font-size: 18px
+      font-weight: 500
+      padding: .5rem
+      color: $light
 
-  .comment
-    // .item
-    //   @include flex($justify: flex-start)
-    //   border: 1px solid #bfbfbf
-    //   padding: 1rem
-    //   border-radius: 15px
-    //   position: relative
-    //   margin-bottom: 2rem
+  .table
+    overflow-x: auto
 
-    //   .image
-    //     width: 200px
-    //     height: 200px
-    //     @include flex($justify: center)
-    //     border-radius: 15px
-    //     border: 1px solid #bfbfbf
-    //     overflow: hidden
-
-    //     img
-    //       width: 100%
-
-    //   .all-details
-    //     height: 150px
-    //     @include flex($justify: space-between)
-    //     align-items: flex-start
-    //     flex-direction: column
-    //     margin-left: 1rem
-
-    //     .product-name
-    //       font-size: 24px
-    //       font-weight: 600
-    //       color: $dark
-
-    //     .price
-    //       font-size: 24px
-    //       color: $red
-
-    //     .quantity
-    //       .group
-    //         @include flex($justify: flex-start)
-
-    //         .quantity-number
-    //           width: 30px
-    //           text-align: center
-
-    //         .add-button, .sub-button
-    //           height: 20px
-    //           width: 20px
-    //           @include flex($justify: center)
-    //           border: 1px solid $sec
-    //           border-radius: 3px
-    //           background-color: $light
-    //           cursor: pointer
-
-    //           i
-    //             font-size: 12px
-    //             text-align: center
-
-    //         .quantity-number
-    //           margin: 0 10px
-
-    //   .delete
-    //     position: absolute
-    //     right: 10px
-    //     top: 10px
-    //     height: 30px
-    //     width: 30px
-    //     cursor: pointer
-
-    //     img
-    //       width: 100%
+  table
+    width: 100%
+    margin-bottom: 1rem
+    min-width: 1000px
 
   .item
-    @include flex($justify: flex-start)
-    padding: 1rem
+    padding: .5rem 0
     border-radius: 15px
     border: 1px solid #BFBFBF
-    margin-bottom: 1rem
+    margin-bottom: 2rem
+    background-color: rgba($main, .1)
 
-    .image
-      height: 140px
-      width: 140px
+    .checkbox
       @include flex($justify: center)
 
+      input
+        height: 30px
+        width: 30px
+        cursor: pointer
+
+    .image
+      @include flex($justify: flex-start)
+
       img
+        width: 80px
+        height: 80px
+        object-fit: contain
+
+    .group
+      max-width: 400px
+      width: 100%
+      margin-left: 10px
+
+    .vendor-name
+      font-size: 12px
+      margin-top: .4rem
+      color: #5c5c5c
+
+    .product-name
+      font-size: 15px
+      font-weight: 500
+      color: $dark
+
+    .inner
+      @include flex($justify: center)
+
+    .discount-price
+      color: #8D8D8D
+      position: relative
+      text-align: center
+      font-size: 15px
+      display: inline-block
+
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        height: 1.5px
         width: 100%
+        background-color: #8D8D8D
+
+    .price
+      font-size: 15px
+      color: $red
+      text-align: center
+      @include flex($justify: center)
+
+      input
+        color: $red
+        max-width: 100px
+        font-size: 16px
+        margin-left: 5px
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+      button
+        @include button()
 
     .delete
-      height: 30px
-      width: 30px
       cursor: pointer
-
-      img
-        width: 100%
-
-    .all-details
-      display: grid
-      grid-template-columns: 1.5fr 1fr 1fr 1fr .5fr
+      @include flex($justify: center)
       width: 100%
 
-      .product-name
-        width: 70%
-        font-size: 16px
-        font-weight: 600
-        margin-left: 10px
+      img
+        height: 30px
+        width: 30px
+        object-fit: contain
 
-      .price
-        font-size: 16px
-        color: $red
+    .size
+      font-size: 15px
+      text-align: center
+
+    .quantity
+      .group
+        @include flex($justify: center)
+        margin: 0
+
+        .quantity-number
+          width: 30px
+          text-align: center
+
+        .add-button, .sub-button
+          height: 20px
+          width: 20px
+          @include flex($justify: center)
+          border: 1px solid $dark
+          border-radius: 0
+          background-color: none
+          cursor: pointer
+
+          i
+            font-size: 12px
+            text-align: center
 
         input
-          color: $red
-          width: 70px
-          font-size: 16px
-          margin-left: 5px
+          font-size: 15px
 
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button
           -webkit-appearance: none
           margin: 0
 
-        button
-          @include button()
-
-      .delete
-        height: 30px
-        width: 30px
-        cursor: pointer
-
-        img
-          width: 100%
-
-      .quantity
-        .group
-          @include flex($justify: flex-start)
-
-          .quantity-number
-            width: 30px
-            text-align: center
-
-          .add-button, .sub-button
-            height: 20px
-            width: 20px
-            @include flex($justify: center)
-            border: 1px solid $sec
-            border-radius: 3px
-            background-color: $light
-            cursor: pointer
-
-            i
-              font-size: 12px
-              text-align: center
-
-          input::-webkit-outer-spin-button,
-          input::-webkit-inner-spin-button
-            -webkit-appearance: none
-            margin: 0
-
-          .quantity-number
-            margin: 0 10px
+        .quantity-number
+          margin: 0 10px
 
   .total-price-sec
     @include flex($justify: space-between)
@@ -1805,30 +1801,56 @@ footer
       button
         @include button()
 
+    h6
+      font-size: 14px
+      color: #3d3d3d
+      font-weight: 400
+      margin-bottom: .4rem
+
+      &:nth-child(1)
+        font-weight: 600
+
+        input
+          font-weight: 600
+
+      input
+        font-size: 14px
+        color: #3d3d3d
+        font-weight: 400
+        max-width: 100px
+        width: 50%
+
     .total-price
-      font-size: 24px
+      font-size: 17px
       font-weight: 700
-      min-width: 100px
+      min-width: 200px
+      margin-bottom: 1rem
+      color: $red
 
       h6
         margin: 1rem 0
 
       input
-        font-size: 24px
+        font-size: 17px
         font-weight: 700
         max-width: 100px
-        margin-left: 7px
+        color: $red
 
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button
-        -webkit-appearance: none
-        margin: 0
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
 
   .payment-section
     display: grid
     grid-template-columns: 1fr 1fr
-    grid-gap: 100px
+    grid-column-gap: 50px
+    grid-row-gap: 20px
     @include scroll()
+
+    .p-title
+      font-size: 24px
+      margin: 1rem 0
 
     .payment-form
       overflow: hidden
@@ -1848,7 +1870,7 @@ footer
 
       .name
         font-size: 24px
-        margin: 1rem 0 1.5rem
+        margin: 1rem 0
 
       .btns
         display: flex
@@ -1910,7 +1932,7 @@ footer
               @include image()
 
     .product-list
-      height: 600px
+      max-height: 600px
       border: 1px solid #bfbfbf
       padding: 1.5rem
       border-radius: 15px
@@ -1919,16 +1941,17 @@ footer
       .product
         display: grid
         grid-template-columns: 1fr 3fr
-        grid-gap: 20px
+        grid-gap: 10px
         margin-bottom: 2rem
 
         &:nth-last-child(1)
           margin-bottom: 0
 
         .image
-          height: 130px
+          height: 100px
           width: 100%
           @include image()
+          background-size: contain
           border: 1px solid #bfbfbf
           border-radius: 15px
           position: relative
@@ -1938,9 +1961,9 @@ footer
             top: 0
             left: 0
             transform: translate(-50%, -50%)
-            height: 30px
-            width: 30px
-            font-size: 13px
+            height: 25px
+            width: 25px
+            font-size: 12px
             background-color: $dark
             color: $light
             border-radius: 50%
@@ -1948,21 +1971,26 @@ footer
 
         .details
           .name
-            font-size: 22px
+            font-size: 16px
             font-weight: 600
-            margin-bottom: .8rem
+
+          .vendor
+            font-size: 14px
+            margin: .3rem 0
 
           .price
             color: $red
-            font-size: 18px
+            font-size: 14px
             font-weight: 500
 
-    .final-price
-      @include flex($justify: space-between)
-      margin-top: 1rem
+    .all-price-from-checkout
       padding: 1.5rem
       border: 1px solid #bfbfbf
       border-radius: 15px
+      margin-top: 1rem
+
+    .final-price, .shipping-fee
+      @include flex($justify: space-between)
 
       .total
         font-size: 24px
@@ -1973,6 +2001,99 @@ footer
         color: $red
         font-weight: 700
         font-size: 18px
+
+    .shipping-fee
+      margin-bottom: 10px
+      border-bottom: 1px dashed #bfbfbf
+      padding-bottom: 10px
+
+      .total
+        font-size: 18px
+
+      .price
+        font-size: 14px
+
+    .shipping-details
+      margin-bottom: 2rem
+
+      .shipping-list
+        display: grid
+        grid-gap: 10px
+
+      .datails
+        padding: 1rem
+        @include gradient()
+        color: $light
+        border-radius: 20px
+        position: relative
+
+        .edit-btn, .delete-btn
+          transform: scale(.8)
+
+        .edit-btn
+          background-color: #fff
+          background-image: none
+          color: $dark
+
+        h5
+          font-size: 15px
+          font-weight: 400
+          @include flex($justify: flex-start)
+          margin-bottom: .5rem
+
+          i
+            margin-right: 5px
+            font-size: 14px
+
+          &.name
+            font-size: 20px
+            font-weight: 600
+            margin-bottom: 1rem
+
+  .payment-option
+    margin-top: 2rem
+
+    .input-groups
+      @include flex($justify: flex-start)
+      flex-wrap: wrap
+
+    .group-option
+      flex: 25%
+      @include flex($justify: center)
+
+      label
+        height: 100px
+        width: 120px
+
+      .img
+        height: 100px
+        max-width: 120px
+        @include image()
+        background-size: contain
+        opacity: .5
+        position: relative
+        overflow: hidden
+
+        &::after
+          content: ''
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          height: 0
+          width: 0
+          border-radius: 50%
+          background-color: rgba($main, .4)
+
+        &.active
+          opacity: 1
+
+          &::after
+            height: 200px
+            width: 200px
+
+    button
+      @include button()
 
 /*************    product-details-page     *************/
 .product-details-page
@@ -1987,10 +2108,20 @@ footer
 
   .images
     overflow-x: hidden
+    display: none
+
+    &.active
+      display: block
 
     .mySwiper, .mySwiper2
+
       img
         width: 100%
+
+    .mySwiper2
+
+      img
+        cursor: zoom-in
 
     // .mySwiper2
     //   margin-bottom: 5px
@@ -2014,6 +2145,18 @@ footer
     .price
       @include price()
 
+      input
+        color: $red
+        font-size: 16px
+        margin-left: 5px
+        resize: horizontal
+        width: 80px
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
     .profuct-desc
       margin-top: 2rem
 
@@ -2021,6 +2164,35 @@ footer
         font-size: 16px
         color: $sec
         line-height: 1.5rem
+
+    .product-varient
+      margin-top: 1rem
+
+      .inner
+        @include flex($justify: flex-start)
+        flex-wrap: wrap
+
+        img
+          height: 70px
+          width: 70px
+          object-fit: contain
+          margin: 10px
+          cursor: pointer
+          position: relative
+
+          &.active
+            border: 2px solid $main
+
+          &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 30px
+            width: 30px
+            background-color: rgba($main, .8)
+            z-index: 2
 
     .others
       margin-top: 2rem
@@ -2034,6 +2206,11 @@ footer
             width: 30px
             text-align: center
             margin: 0 10px
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button
+            -webkit-appearance: none
+            margin: 0
 
           .add-button, .sub-button
             height: 20px
@@ -2278,6 +2455,7 @@ footer
       color: rgba($main, .6)
       cursor: pointer
       @include trans()
+
       &:after
         content: ''
         position: absolute
@@ -2288,6 +2466,7 @@ footer
         background-color: rgba($main, .9)
         z-index: 1
         @include trans()
+
       &.active
         position: relative
         color: rgba($main, .9)
@@ -2311,9 +2490,13 @@ footer
       &:hover
         .image
           .quick-view
-            top: 50%
+            height: 60px
+            width: 60px
             pointer-events: auto
             opacity: 1
+
+          .wishlist-btn
+            top: 5px
 
           .add-to-cart
             bottom: 0
@@ -2334,15 +2517,16 @@ footer
           height: 100%
           width: 100%
           @include trans()
+
         .quick-view
           position: absolute
-          top: 30%
+          top: 50%
           left: 50%
           transform: translate(-50%, -50%)
           background-color: rgba($dark, .3)
           backdrop-filter: blur(5px)
-          height: 60px
-          width: 60px
+          height: 140px
+          width: 140px
           border-radius: 50%
           @include flex($justify: center)
           pointer-events: none
@@ -2374,6 +2558,7 @@ footer
           opacity: 0
           pointer-events: none
           @include trans()
+
           &:hover
             box-shadow: 0 0 0 0 $dark inset
             background-color: $light
@@ -3899,7 +4084,7 @@ footer
   @include gradient()
   right: 50px
 
-.delete-confirm
+.delete-confirm, #delete-confirm
   position: fixed
   left: 50%
   top: 50%
@@ -3971,7 +4156,7 @@ footer
     font-size: 12px
     cursor: pointer
 
-.popup-form-add-item, .popup-form-edit-item, .logo-image-upload
+.popup-form-add-item, .popup-form-edit-item, .logo-image-upload, #popup-form-add-item, #popup-form-edit-item
   position: fixed
   top: 50%
   left: 50%
@@ -4116,9 +4301,6 @@ footer
     transform: translate(-50%, -50%) scale(1)
 
 .side-nav-bg
-  cursor: none
-
-.side-nav-bg
   position: fixed
   left: 0
   top: 0
@@ -4130,6 +4312,7 @@ footer
   pointer-events: none
   z-index: 20
   opacity: 0
+  cursor: none
 
   .cursor-close
     position: absolute
@@ -4138,7 +4321,7 @@ footer
     pointer-events: none
     height: 50px
     width: 50px
-    @include trans()
+    transition: .2s cubic-bezier(0,.2,.1,.9)
 
     img
       width: 100%
@@ -4234,8 +4417,8 @@ footer
     left: 0
     box-shadow: 0 4px 10px rgba($dark, .2)
 
-    &.ractangle-shape
-      width: 200px
+    &.rectangle-shape
+      width: 150px
       border-radius: 0
 
       .image
@@ -4446,3 +4629,138 @@ footer
     height: 300px
     width: 100%
     object-fit: cover
+
+.my-ordes
+  .orders-list
+    margin-top: 1rem
+
+    .item
+      margin-bottom: 1rem
+      padding: 1rem
+      background-color: rgba($main, .1)
+      border-radius: 20px
+
+      .head-sec
+        margin-bottom: 1rem
+        @include flex($justify: space-between)
+        align-items: flex-start
+        padding-bottom: 1rem
+        border-bottom: 1px solid rgba($main, .8)
+
+        .order-number
+          font-size: 16px
+
+          span
+            color: $main
+
+        .date
+          font-size: 12px
+          color: rgba($dark, .7)
+
+        button
+          font-size: 15px
+          color: $main
+          cursor: pointer
+          padding: .5rem 1rem
+          text-transform: uppercase
+
+          &:hover
+            i
+              transform: translateX(4px)
+              opacity: 1
+
+          i
+            transform: translateX(-10px)
+            font-size: 12px
+            opacity: 0
+            @include trans()
+
+      .product-sec
+        display: grid
+        grid-template-columns: 3fr 1fr 1fr 2fr
+        text-align: center
+        align-items: center
+
+        .product
+          @include flex($justify: flex-start)
+          align-items: flex-start
+          padding-right: 1rem
+
+          &:hover
+            .p-name
+              color: $main
+
+          .p-image
+            height: 80px
+            width: 80px
+            object-fit: contain
+            margin-right: 10px
+            border-radius: 10px
+
+          .p-name
+            font-size: 15px
+            margin-top: 5px
+            text-align: left
+            color: $dark
+            margin-bottom: 5px
+
+          .shipped-by
+            font-size: 13px
+            font-weight: 400
+            text-align: left
+            color: rgba($dark, .6)
+
+        .qty
+          font-size: 15px
+          color: rgba($dark, .6)
+
+        .status
+          font-size: 15px
+          padding: .5rem 1rem
+          display: inline-block
+          border-radius: 10px
+          text-transform: uppercase
+          background-color: rgba($dark, .1)
+
+        .delivered-on
+          text-align: right
+
+          &.process
+            color: #00b11d
+
+.order-detail
+  .head-sec
+    padding: 1rem
+    background-color: rgba($main, .1)
+    @include flex($justify: space-between)
+    margin: 1rem 0
+    border-radius: 10px
+
+    .order-number
+      font-size: 16px
+      margin-bottom: 3px
+
+      span
+        color: $main
+
+    .date
+      font-size: 12px
+      color: rgba($dark, .7)
+
+      span
+        color: $main
+
+    .total-price
+      font-size: 20px
+      color: rgba($dark, .6)
+      font-weight: 600
+
+      span
+        color: $dark
+
+  .orders-list
+    .item
+      .head-sec
+        margin-bottom: 1rem
+        padding-bottom: 1rem
+        border-bottom: 1px solid rgba($main, .8)

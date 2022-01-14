@@ -112,8 +112,10 @@ window.addEventListener("scroll", () => {
 });
 
 scrollToTop.addEventListener("click", () => {
-  window.scrollTo(0, 0);
-  window.style.transition = "0.5s";
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
 
 // custom_select

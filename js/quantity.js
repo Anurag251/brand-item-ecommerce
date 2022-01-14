@@ -1,147 +1,160 @@
-const decrementBtn = document.querySelectorAll(".sub-button");
-const increamentBtn = document.querySelectorAll(".add-button");
-let quantityNumber = document.querySelectorAll(".quantity-number");
-let productPrice = document.querySelectorAll("#product-price");
-let totalPrice = document.querySelector("#total-price");
-let productPriceText = document.querySelector("#product-price-text");
-const totalPriceSubmit = document.querySelector("#total-price-submit");
-const forcedClicked = document.querySelectorAll("#forcedClicked");
+const checkoutPage = document.querySelector(".checkout-page .table");
+const quickViewPopComp = document.querySelectorAll("#product-details");
+const imageBtn = document.querySelectorAll("#product-details #imageBtn");
+const imageItems = document.querySelectorAll("#product-details .images");
+let imageData = document.querySelector("#imageData");
 
-totalPriceSubmit.addEventListener("click", () => {
-  forcedClicked.forEach((force, idx) => {
-    force.click();
+if (checkoutPage) {
+  const checkOutPageItem = document.querySelectorAll(".checkout-page .item");
+  const increaseBtns = document.querySelectorAll(".add-button");
+  const decreaseBtns = document.querySelectorAll(".sub-button");
+  let quantityNumber = document.querySelectorAll(".quantity-number");
+  const productPrice = document.querySelectorAll("#price");
+  const discountPrice = document.querySelectorAll("#discountPrice");
+  let productTotalPrice = document.querySelectorAll("#product-price");
+  const shippingPrice = document.querySelector("#shipping-price");
+  let totalPrice = document.querySelector("#total-price");
+  let grandTotal = document.querySelectorAll("#grand-total");
+  const forcedClicked = document.querySelectorAll("#forcedClicked");
+  const totalPriceSubmit = document.querySelectorAll("#total-price-submit");
+
+  const check = (event, index) => {
+    if (parseInt(event.value) <= 0) {
+      decreaseBtns[index].setAttribute("disabled", "disabled");
+    } else {
+      decreaseBtns[index].removeAttribute("disabled");
+    }
+
+    let arr = [];
+
+    productTotalPrice.forEach((singlePrice, idx) => {
+      arr[idx] = parseInt(singlePrice.value);
+    });
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+
+    totalPrice.value = sum;
+
+    grandTotal.forEach((gt) => {
+      gt.value = sum + parseInt(shippingPrice.value);
+    });
+  };
+
+  checkOutPageItem.forEach((checkOutItem, idx) => {
+    let currentPrice = productPrice[idx].value;
+    let currentDiscountPrice = discountPrice[idx].value;
+
+    let discountedPrice = currentPrice - currentDiscountPrice;
+
+    increaseBtns[idx].addEventListener("click", (event) => {
+      // event.preventDefault();
+
+      quantityNumber[idx].stepUp(1);
+
+      productTotalPrice[idx].stepUp(discountedPrice);
+
+      check(quantityNumber[idx], (index = idx));
+    });
+
+    decreaseBtns[idx].addEventListener("click", (event) => {
+      // event.preventDefault();
+
+      quantityNumber[idx].stepUp(-1);
+
+      productTotalPrice[idx].stepUp(-discountedPrice);
+
+      check(quantityNumber[idx], (index = idx));
+    });
+
+    totalPriceSubmit[idx].addEventListener("click", () => {
+      forcedClicked[idx].click();
+    });
   });
-});
 
-function setValueToText(e) {
-  productPriceText.innerHTML = e.value;
+  const confirm = () => {
+    quantityNumber.forEach((qn, index) => {
+      if (parseInt(qn.value) <= 0) {
+        decreaseBtns[index].setAttribute("disabled", "disabled");
+      } else {
+        decreaseBtns[index].removeAttribute("disabled");
+      }
+    });
+
+    productPrice.forEach((prices, idx) => {
+      productTotalPrice[idx].value =
+        (parseInt(prices.value) - parseInt(discountPrice[idx].value)) *
+        parseInt(quantityNumber[idx].value);
+    });
+
+    let allSums = 0;
+
+    productTotalPrice.forEach((ptp, idx) => {
+      allSums += parseInt(ptp.value);
+    });
+
+    totalPrice.value = allSums;
+
+    grandTotal.forEach((gt) => {
+      gt.value = allSums + parseInt(shippingPrice.value);
+    });
+  };
+
+  confirm();
 }
 
-const valueCheck = (e, index) => {
-  if (e <= "1") {
-    decrementBtn[index].setAttribute("disabled", "disabled");
-  } else {
-    decrementBtn[index].removeAttribute("disabled");
-  }
-};
+if (quickViewPopComp) {
+  const increaseBtns = document.querySelectorAll(".add-button");
+  const decreaseBtns = document.querySelectorAll(".sub-button");
+  let quantityNumber = document.querySelectorAll(".quantity-number");
+  let productPrice = document.querySelectorAll("#product-price");
 
-let singlePrice;
-let priceArr = [];
+  quickViewPopComp.forEach((quickView, idx) => {
+    let currentPrice = productPrice[idx].value;
 
-const run = () => {
-  var arr = priceArr;
-  var sum = 0;
-  for (i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
+    const check = () => {
+      if (quantityNumber[idx].value <= "1") {
+        decreaseBtns[idx].setAttribute("disabled", "disabled");
+      } else {
+        decreaseBtns[idx].removeAttribute("disabled");
+      }
+    };
 
-  if (totalPrice) {
-    totalPrice.value = sum;
-  }
-};
+    increaseBtns[idx].addEventListener("click", (event) => {
+      event.preventDefault();
 
-productPrice.forEach((price, idx) => {
-  singlePrice = parseInt(price.value);
-  priceArr[idx] = parseInt(price.value);
-});
+      quantityNumber[idx].stepUp(1);
 
-decrementBtn.forEach((btn, idx) => {
-  let currentPrice = parseInt(productPrice[idx].value);
+      productPrice[idx].stepUp(currentPrice);
 
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    quantityNumber[idx].stepUp(-1);
-
-    productPrice[idx].stepUp(-currentPrice);
-
-    valueCheck(quantityNumber[idx].value, (index = idx));
-
-    productPrice.forEach((price, idx) => {
-      singlePrice = parseInt(price.value);
-      priceArr[idx] = parseInt(price.value);
+      check();
     });
 
-    run();
-  });
-});
+    decreaseBtns[idx].addEventListener("click", (event) => {
+      event.preventDefault();
 
-increamentBtn.forEach((btn, idx) => {
-  let currentPrice = parseInt(productPrice[idx].value);
+      quantityNumber[idx].stepUp(-1);
 
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
+      productPrice[idx].stepUp(-currentPrice);
 
-    quantityNumber[idx].stepUp(1);
-
-    decrementBtn[idx].removeAttribute("disabled");
-
-    productPrice[idx].stepUp(currentPrice);
-
-    productPrice.forEach((price, idx) => {
-      singlePrice = parseInt(price.value);
-      priceArr[idx] = parseInt(price.value);
+      check();
     });
 
-    run();
+    check();
   });
-});
+}
 
-// function addsum(arr) {
-//   var sum = 0;
-//   for (var z = 0; z < arr.length; z++) {
-//     sum += arr[z];
-//   }
-//   return sum;
-// }
+if (imageBtn) {
+  $(document).ready(() => {
+    imageBtn.forEach((btn, idx) => {
+      btn.addEventListener("click", () => {
+        imageData.value = imageBtn[idx].getAttribute("data-id");
 
-// let sum = 0;
-// for (i = 0; i < productPrice.length; i++) {
-//   sum += productPrice[i];
-//   // console(i.value);
-// }
-// console.log(sum);
-
-// let ab = 0;
-
-// const sums = (e) => {
-//   totalPrice.setAttribute("value", e + ab);
-// };
-
-// console.log(ab);
-
-// productPrice.forEach((price) => {
-//   sums(price.value);
-// });
-
-// let number = 1;
-// let currentPrice = parseInt(totalPrice.innerHTML);
-
-// let total = parseInt(totalPrice.innerHTML);
-
-// increamentBtn.forEach((btns, idxs) => {
-//   btns.addEventListener('click', () => {
-//     number += 1;
-//     quantityNumber[idxs].innerHTML = number;
-//     total = parseInt(total) + parseInt(currentPrice);
-//     totalPrice[idxs].innerHTML = total;
-//   });
-// });
-
-// decrementBtn.forEach((btn, idx) => {
-//   btn.addEventListener('click', () => {
-//     number -= 1;
-//     quantityNumber[idx].innerHTML = number;
-//     total = parseInt(total) - parseInt(currentPrice);
-//     totalPrice[idx].innerHTML = total;
-//   });
-// });
-
-// let currentPrice;
-
-// totalPrice.setAttribute("value", currentPrice);
-
-// const increasePrice = (e) => {
-//   currentPrice += e;
-// };
-
-// console.log(totalPrice);
+        $(imageItems[idx]).addClass("active").siblings().removeClass("active");
+        $(btn).addClass("active").siblings().removeClass("active");
+      });
+    });
+  });
+}

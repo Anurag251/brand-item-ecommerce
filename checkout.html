@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <!-- responsive -->
     <link rel="stylesheet" href="./css/responsive.css" />
+    <!-- animation -->
+    <link rel="stylesheet" href="./css/animation.css" />
     <!-- swiper -->
     <link rel="stylesheet" href="./css/swiper.min.css" />
     <!-- jquery -->
@@ -339,16 +341,360 @@
       </div>
     </div>
 
+    <!-- popup-form-edit-item-start -->
+    <div class="" id="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Fashion Form Edit</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="bannerName">Banner Name</label>
+              <input type="text" id="bannerName" />
+            </div>
+
+            <div class="group">
+              <label for="bannerName">Banner Link</label>
+              <input type="text" id="bannerName" />
+            </div>
+
+            <div class="group">
+              <label for="bannerImage">Banner Image</label>
+              <input type="file" id="bannerImage" />
+            </div>
+
+            <div class="group">
+              <label for="bannerDesc">Banner Name</label>
+              <textarea name="" id="bannerDesc" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Banner</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="" id="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
     <section>
       <div class="wrapper">
         <div class="checkout-page">
           <div class="title">Check Out</div>
 
-          <div class="title-sec">
-            <div class="name">Product</div>
-            <div class="name">Price</div>
-            <div class="name">Quantity</div>
-            <div class="name">Total</div>
+          <div class="table">
+            <table>
+              <tr class="title-sec">
+                <th class="name">Select</th>
+                <th class="name">Product</th>
+                <th class="name">Price</th>
+                <th class="name">Discount Price</th>
+                <th class="name">Size</th>
+                <th class="name">Quantity</th>
+                <th class="name">Total</th>
+                <th class="name">Delete</th>
+              </tr>
+
+              <tr class="item">
+                <form action="">
+                  <input type="hidden" id="grand-total" value="1000" readonly />
+
+                  <td>
+                    <div class="checkbox">
+                      <input type="checkbox" id="total-price-submit" />
+                      <button
+                        type="submit"
+                        name=""
+                        id="forcedClicked"
+                        hidden
+                      ></button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <a href="product-details.html">
+                      <div class="image">
+                        <img src="./images/electronic/device/tv.jpg" alt="" />
+
+                        <div class="group">
+                          <div class="product-name">
+                            Head Phone Sony High quality sounds
+                          </div>
+
+                          <div class="vendor-name">
+                            Shipping By: Pankaj Sharma
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </td>
+
+                  <td>
+                    <div class="price">Rs 100</div>
+                    <input type="hidden" id="price" value="100" />
+                  </td>
+
+                  <td>
+                    <div class="inner">
+                      <div class="discount-price">Rs 10</div>
+                      <input type="hidden" id="discountPrice" value="10" />
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="size">XXL</div>
+                  </td>
+
+                  <td>
+                    <div class="quantity">
+                      <div class="group">
+                        <button class="sub-button">
+                          <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <input
+                          type="number"
+                          name=""
+                          class="quantity-number"
+                          value="2"
+                          readonly
+                        />
+
+                        <button class="add-button">
+                          <i class="fas fa-chevron-up"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="price">
+                      Rs
+
+                      <input
+                        type="number"
+                        name=""
+                        id="product-price"
+                        value="90"
+                        readonly
+                      />
+                    </div>
+                  </td>
+                </form>
+
+                <td>
+                  <div class="delete">
+                    <img src="./images/icon/close_big.svg" alt="" />
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="item">
+                <form action="">
+                  <td>
+                    <div class="checkbox">
+                      <input type="checkbox" id="total-price-submit" />
+                      <button
+                        type="submit"
+                        name=""
+                        id="forcedClicked"
+                        hidden
+                      ></button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="image">
+                      <img src="./images/electronic/device/camera.jpg" alt="" />
+
+                      <div class="group">
+                        <div class="product-name">
+                          Head Phone Sony High quality sounds
+                        </div>
+
+                        <div class="vendor-name">
+                          Shipping By: Pankaj Sharma
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="price">Rs 1000</div>
+                    <input type="hidden" id="price" value="1000" />
+                  </td>
+
+                  <td>
+                    <div class="inner">
+                      <div class="discount-price">Rs 100</div>
+                      <input type="hidden" id="discountPrice" value="100" />
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="size">XXL</div>
+                  </td>
+
+                  <td>
+                    <div class="quantity">
+                      <div class="group">
+                        <button class="sub-button">
+                          <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <input
+                          type="number"
+                          name=""
+                          class="quantity-number"
+                          value="1"
+                          readonly
+                        />
+
+                        <button class="add-button">
+                          <i class="fas fa-chevron-up"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="price" id="totalPrice">
+                      Rs
+
+                      <input
+                        type="number"
+                        name=""
+                        id="product-price"
+                        value="100"
+                        readonly
+                      />
+                    </div>
+                  </td>
+                </form>
+
+                <td>
+                  <form action="">
+                    <button class="delete">
+                      <img src="./images/icon/close_big.svg" alt="" />
+                    </button>
+                  </form>
+                </td>
+              </tr>
+
+              <tr class="item">
+                <form action="">
+                  <td>
+                    <div class="checkbox">
+                      <input type="checkbox" id="total-price-submit" />
+                      <button
+                        type="submit"
+                        name=""
+                        id="forcedClicked"
+                        hidden
+                      ></button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="image">
+                      <img
+                        src="./images/electronic/device/bluetooth-headphone.jpg"
+                        alt=""
+                      />
+
+                      <div class="group">
+                        <div class="product-name">
+                          Head Phone Sony High quality sounds
+                        </div>
+
+                        <div class="vendor-name">
+                          Shipping By: Pankaj Sharma
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="price">Rs 200</div>
+                    <input type="hidden" id="price" value="200" />
+                  </td>
+
+                  <td>
+                    <div class="inner">
+                      <div class="discount-price">Rs 100</div>
+                      <input type="hidden" id="discountPrice" value="100" />
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="size">XXL</div>
+                  </td>
+
+                  <td>
+                    <div class="quantity">
+                      <div class="group">
+                        <button class="sub-button">
+                          <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <input
+                          type="number"
+                          name=""
+                          class="quantity-number"
+                          value="1"
+                          readonly
+                        />
+
+                        <button class="add-button">
+                          <i class="fas fa-chevron-up"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="price" id="totalPrice">
+                      Rs
+
+                      <input
+                        type="number"
+                        name=""
+                        id="product-price"
+                        value="100"
+                        readonly
+                      />
+                    </div>
+                  </td>
+                </form>
+
+                <td>
+                  <div class="delete">
+                    <img src="./images/icon/close_big.svg" alt="" />
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
 
           <!-- <div class="item">
@@ -386,260 +732,211 @@
             </div>
           </div> -->
 
-          <div class="item">
-            <div class="image">
-              <img
-                src="./images/electronic/device/bluetooth-headphone.jpg"
-                alt=""
-              />
-            </div>
-
-            <div class="all-details">
-              <div class="product-name">
-                Head Phone Sony High quality sounds
-              </div>
-
-              <div class="price" id="price">Rs 1000</div>
-
-              <div class="quantity">
-                <div class="group">
-                  <button class="sub-button" disabled>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-
-                  <form action="">
-                    <input
-                      type="number"
-                      name=""
-                      class="quantity-number"
-                      value="1"
-                      readonly
-                    />
-
-                    <button
-                      type="submit"
-                      name=""
-                      id="forcedClicked"
-                      hidden
-                    ></button>
-                  </form>
-
-                  <button class="add-button">
-                    <i class="fas fa-chevron-up"></i>
-                  </button>
-                </div>
-              </div>
-
-              <div class="price" id="totalPrice">
-                <form action="">
-                  Rs
-
-                  <input
-                    type="number"
-                    name=""
-                    id="product-price"
-                    value="100"
-                    oninput="setValueToText(this)"
-                    readonly
-                  />
-
-                  <button
-                    type="submit"
-                    name=""
-                    id="forcedClicked"
-                    hidden
-                    onclick=""
-                  ></button>
-                </form>
-              </div>
-            </div>
-
-            <div class="delete">
-              <img src="./images/icon/close_big.svg" alt="" />
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="image">
-              <img
-                src="./images/electronic/device/bluetooth-headphone.jpg"
-                alt=""
-              />
-            </div>
-
-            <div class="all-details">
-              <div class="product-name">
-                Head Phone Sony High quality sounds
-              </div>
-
-              <div class="price" id="price">Rs 1000</div>
-
-              <div class="quantity">
-                <div class="group">
-                  <button class="sub-button" disabled>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-
-                  <input
-                    type="number"
-                    name=""
-                    class="quantity-number"
-                    value="1"
-                    readonly
-                  />
-
-                  <button class="add-button">
-                    <i class="fas fa-chevron-up"></i>
-                  </button>
-                </div>
-              </div>
-
-              <div class="price" id="totalPrice">
-                Rs
-                <input
-                  type="number"
-                  name=""
-                  id="product-price"
-                  value="100"
-                  readonly
-                />
-              </div>
-            </div>
-
-            <div class="delete">
-              <img src="./images/icon/close_big.svg" alt="" />
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="image">
-              <img
-                src="./images/electronic/device/bluetooth-headphone.jpg"
-                alt=""
-              />
-            </div>
-
-            <div class="all-details">
-              <div class="product-name">
-                Head Phone Sony High quality sounds
-              </div>
-
-              <div class="price" id="price">Rs 1000</div>
-
-              <div class="quantity">
-                <div class="group">
-                  <button class="sub-button" disabled>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-
-                  <input
-                    type="number"
-                    name=""
-                    class="quantity-number"
-                    value="1"
-                    readonly
-                  />
-
-                  <button class="add-button">
-                    <i class="fas fa-chevron-up"></i>
-                  </button>
-                </div>
-              </div>
-
-              <div class="price" id="totalPrice">
-                Rs
-                <input
-                  type="number"
-                  name=""
-                  id="product-price"
-                  value="100"
-                  readonly
-                />
-              </div>
-            </div>
-
-            <div class="delete">
-              <img src="./images/icon/close_big.svg" alt="" />
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="image">
-              <img
-                src="./images/electronic/device/bluetooth-headphone.jpg"
-                alt=""
-              />
-            </div>
-
-            <div class="all-details">
-              <div class="product-name">
-                Head Phone Sony High quality sounds
-              </div>
-
-              <div class="price" id="price">Rs 1000 /-</div>
-
-              <div class="quantity">
-                <div class="group">
-                  <button class="sub-button" disabled>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-
-                  <input
-                    type="number"
-                    name=""
-                    class="quantity-number"
-                    value="1"
-                    readonly
-                  />
-
-                  <button class="add-button">
-                    <i class="fas fa-chevron-up"></i>
-                  </button>
-                </div>
-              </div>
-
-              <div class="price" id="totalPrice">
-                Rs
-                <input
-                  type="number"
-                  name=""
-                  id="product-price"
-                  value="100"
-                  readonly
-                />
-              </div>
-            </div>
-
-            <div class="delete">
-              <img src="./images/icon/close_big.svg" alt="" />
-            </div>
-          </div>
-
           <div class="total-price-sec">
+            <div class="all-rounded">
+              <h6>
+                Total: Rs
+                <input type="number" id="total-price" value="0" readonly />
+              </h6>
+
+              <h6>
+                Shipping Fee:
+                <input type="number" value="24" id="shipping-price" readonly />
+              </h6>
+
+              <div class="total-price">
+                Grand Total:
+                <input type="number" id="grand-total" value="0" readonly />
+              </div>
+
+              <div class="continue-shopping">
+                <a href="#">
+                  <button>Checkout</button>
+                </a>
+              </div>
+            </div>
+
             <div class="continue-shopping">
               <a href="all-product.html">
                 <button>Continue Shopping</button>
               </a>
             </div>
-            <div class="total-price">
-              Total: Rs
-
-              <input type="number" id="total-price" value=" " readonly />
-
-              <h6>Shipping Fee: 24</h6>
-
-              <div class="continue-shopping">
-                <button id="total-price-submit">Checkout</button>
-              </div>
-            </div>
           </div>
 
           <div class="payment-section">
+            <div class="all-cart-product">
+              <div class="p-title">Your Product</div>
+
+              <div class="product-list">
+                <div class="product">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
+                    "
+                  >
+                    <!-- quantity -->
+                    <div class="qut">20</div>
+                  </div>
+                  <div class="details">
+                    <div class="name">Head Phone Sony High quality sounds</div>
+                    <div class="vendor">Shipping By: Pankaj Mahato</div>
+                    <div class="price">Rs <span>1000</span> /-</div>
+                  </div>
+                </div>
+
+                <div class="product">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
+                    "
+                  >
+                    <!-- quantity -->
+                    <div class="qut">20</div>
+                  </div>
+                  <div class="details">
+                    <div class="name">Head Phone Sony High quality sounds</div>
+                    <div class="price">Rs <span>1000</span> /-</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="all-price-from-checkout">
+                <div class="shipping-fee">
+                  <div class="total">Shepping Fee</div>
+                  <div class="price">NRS: 24 /-</div>
+                </div>
+
+                <div class="final-price">
+                  <div class="total">Total</div>
+                  <div class="price">NRS: 70000 /-</div>
+                </div>
+              </div>
+
+              <div class="payment-option">
+                <div class="p-title">Payment Option</div>
+
+                <form action="">
+                  <div class="input-groups">
+                    <div class="group-option">
+                      <input type="radio" name="payment" id="cod" checked />
+                      <label for="cod"
+                        ><div
+                          class="img"
+                          style="
+                            background-image: url(./images/cashondelivery1.jpg);
+                          "
+                        ></div
+                      ></label>
+                    </div>
+
+                    <div class="group-option">
+                      <input type="radio" name="payment" id="paypal" />
+                      <label for="paypal"
+                        ><div
+                          class="img"
+                          style="
+                            background-image: url(./images/icon/paypal.png);
+                          "
+                        ></div
+                      ></label>
+                    </div>
+
+                    <div class="group-option">
+                      <input type="radio" name="payment" id="visa" />
+                      <label for="visa">
+                        <div
+                          class="img"
+                          style="background-image: url(./images/icon/visa.png)"
+                        ></div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button>Confirm Order</button>
+                </form>
+              </div>
+            </div>
+
             <div class="payment-form">
-              <h2>Contact Informations</h2>
+              <div class="shipping-details">
+                <div class="name">Shipping Address</div>
+
+                <div class="shipping-list">
+                  <div class="datails">
+                    <div class="edit-btn">
+                      <i class="fas fa-edit"></i>
+                    </div>
+
+                    <div class="delete-btn">
+                      <i class="fas fa-trash"></i>
+                    </div>
+                    <h5 class="name">Pankaj Kushwaha</h5>
+                    <h5 class="locations">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Koteshowr, Kathmandu, 14400, Bagmati, Nepal
+                    </h5>
+
+                    <h5 class="mobile-number">
+                      <i class="fas fa-phone-alt"></i>+977-9845412777
+                    </h5>
+
+                    <h5 class="email">
+                      <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
+                    </h5>
+                  </div>
+
+                  <div class="datails">
+                    <div class="edit-btn">
+                      <i class="fas fa-edit"></i>
+                    </div>
+
+                    <div class="delete-btn">
+                      <i class="fas fa-trash"></i>
+                    </div>
+                    <h5 class="name">Pankaj Kushwaha</h5>
+                    <h5 class="locations">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Koteshowr, Kathmandu, 14400, Bagmati, Nepal
+                    </h5>
+
+                    <h5 class="mobile-number">
+                      <i class="fas fa-phone-alt"></i>+977-9845412777
+                    </h5>
+
+                    <h5 class="email">
+                      <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
+                    </h5>
+                  </div>
+
+                  <div class="datails">
+                    <div class="edit-btn">
+                      <i class="fas fa-edit"></i>
+                    </div>
+
+                    <div class="delete-btn">
+                      <i class="fas fa-trash"></i>
+                    </div>
+                    <h5 class="name">Pankaj Kushwaha</h5>
+                    <h5 class="locations">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Koteshowr, Kathmandu, 14400, Bagmati, Nepal
+                    </h5>
+
+                    <h5 class="mobile-number">
+                      <i class="fas fa-phone-alt"></i>+977-9845412777
+                    </h5>
+
+                    <h5 class="email">
+                      <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
+                    </h5>
+                  </div>
+                </div>
+              </div>
 
               <form action="">
-                <div class="name">Shipping Address</div>
+                <div class="name">Shipping Form</div>
                 <div class="form">
                   <div class="groups slide-page">
                     <div class="group">
@@ -905,95 +1202,6 @@
                 </div> -->
               </form>
             </div>
-
-            <div class="all-cart-product">
-              <div class="product-list">
-                <div class="product">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
-                    "
-                  >
-                    <!-- quantity -->
-                    <div class="qut">20</div>
-                  </div>
-                  <div class="details">
-                    <div class="name">Head Phone Sony High quality sounds</div>
-                    <div class="price">Rs <span>1000</span> /-</div>
-                  </div>
-                </div>
-
-                <div class="product">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
-                    "
-                  >
-                    <!-- quantity -->
-                    <div class="qut">20</div>
-                  </div>
-                  <div class="details">
-                    <div class="name">Head Phone Sony High quality sounds</div>
-                    <div class="price">Rs <span>1000</span> /-</div>
-                  </div>
-                </div>
-
-                <div class="product">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
-                    "
-                  >
-                    <!-- quantity -->
-                    <div class="qut">20</div>
-                  </div>
-                  <div class="details">
-                    <div class="name">Head Phone Sony High quality sounds</div>
-                    <div class="price">Rs <span>1000</span> /-</div>
-                  </div>
-                </div>
-
-                <div class="product">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
-                    "
-                  >
-                    <!-- quantity -->
-                    <div class="qut">20</div>
-                  </div>
-                  <div class="details">
-                    <div class="name">Head Phone Sony High quality sounds</div>
-                    <div class="price">Rs <span>1000</span> /-</div>
-                  </div>
-                </div>
-
-                <div class="product">
-                  <div
-                    class="image"
-                    style="
-                      background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
-                    "
-                  >
-                    <!-- quantity -->
-                    <div class="qut">20</div>
-                  </div>
-                  <div class="details">
-                    <div class="name">Head Phone Sony High quality sounds</div>
-                    <div class="price">Rs <span>1000</span> /-</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="final-price">
-                <div class="total">Total</div>
-                <div class="price">NRS: 70000 /-</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -1239,5 +1447,6 @@
     <script src="./js/nav.js"></script>
     <script src="./js/quantity.js"></script>
     <script src="./js/wizard-form.js"></script>
+    <script src="./js/popup-form.js"></script>
   </body>
 </html>

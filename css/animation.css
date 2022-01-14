@@ -161,4 +161,22 @@
     max-height: 100%;
   }
 }
+
+@-webkit-keyframes gradientColor {
+  0% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientColor {
+  0% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=animation.css.map */
