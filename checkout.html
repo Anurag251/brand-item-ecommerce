@@ -422,7 +422,11 @@
 
                   <td>
                     <div class="checkbox">
-                      <input type="checkbox" id="total-price-submit" />
+                      <input
+                        type="checkbox"
+                        id="total-price-submit"
+                        class="checked"
+                      />
                       <button
                         type="submit"
                         name=""
@@ -819,39 +823,57 @@
 
                 <form action="">
                   <div class="input-groups">
-                    <div class="group-option">
-                      <input type="radio" name="payment" id="cod" checked />
-                      <label for="cod"
-                        ><div
-                          class="img"
-                          style="
-                            background-image: url(./images/cashondelivery1.jpg);
-                          "
-                        ></div
-                      ></label>
+                    <input
+                      type="text"
+                      name="payment"
+                      id="paymentOption"
+                      hidden
+                    />
+
+                    <div class="group-option active" id="cod">
+                      <div
+                        class="img"
+                        style="background-image: url(./images/icon/cod.jpeg)"
+                      >
+                        <i class="fas fa-check"></i>
+                      </div>
                     </div>
 
-                    <div class="group-option">
-                      <input type="radio" name="payment" id="paypal" />
-                      <label for="paypal"
-                        ><div
-                          class="img"
-                          style="
-                            background-image: url(./images/icon/paypal.png);
-                          "
-                        ></div
-                      ></label>
+                    <!-- <div class="group-option" id="Esewa">
+                      <div
+                        class="img"
+                        style="background-image: url(./images/icon/esewa.png)"
+                      >
+                        <i class="fas fa-check"></i>
+                      </div>
                     </div>
 
-                    <div class="group-option">
-                      <input type="radio" name="payment" id="visa" />
-                      <label for="visa">
-                        <div
-                          class="img"
-                          style="background-image: url(./images/icon/visa.png)"
-                        ></div>
-                      </label>
+                    <div class="group-option" id="Khalti">
+                      <div
+                        class="img"
+                        style="background-image: url(./images/icon/khalit.png)"
+                      >
+                        <i class="fas fa-check"></i>
+                      </div>
                     </div>
+
+                    <div class="group-option" id="paypalCard">
+                      <div
+                        class="img"
+                        style="background-image: url(./images/icon/paypal.png)"
+                      >
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+
+                    <div class="group-option" id="visaCard">
+                      <div
+                        class="img"
+                        style="background-image: url(./images/icon/visa.png)"
+                      >
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div> -->
                   </div>
 
                   <button>Confirm Order</button>
@@ -863,76 +885,86 @@
               <div class="shipping-details">
                 <div class="name">Shipping Address</div>
 
-                <div class="shipping-list">
-                  <div class="datails">
-                    <div class="edit-btn">
-                      <i class="fas fa-edit"></i>
+                <form action="">
+                  <input type="text" id="shippingAddress" hidden />
+
+                  <div class="shipping-list">
+                    <div class="details" id="address1">
+                      <i class="fas fa-check"></i>
+
+                      <div class="edit-btn">
+                        <i class="fas fa-edit"></i>
+                      </div>
+
+                      <div class="delete-btn">
+                        <i class="fas fa-trash"></i>
+                      </div>
+                      <h5 class="name">Pankaj Kushwaha</h5>
+                      <h5 class="locations">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Koteshowr, Kathmandu, 14400, Bagmati, Nepal
+                      </h5>
+
+                      <h5 class="mobile-number">
+                        <i class="fas fa-phone-alt"></i>+977-9845412777
+                      </h5>
+
+                      <h5 class="email">
+                        <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
+                      </h5>
                     </div>
 
-                    <div class="delete-btn">
-                      <i class="fas fa-trash"></i>
+                    <div class="details" id="address2">
+                      <i class="fas fa-check"></i>
+
+                      <div class="edit-btn">
+                        <i class="fas fa-edit"></i>
+                      </div>
+
+                      <div class="delete-btn">
+                        <i class="fas fa-trash"></i>
+                      </div>
+                      <h5 class="name">Pankaj Kushwaha</h5>
+                      <h5 class="locations">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Koteshowr, Kathmandu, 14400, Bagmati, Nepal
+                      </h5>
+
+                      <h5 class="mobile-number">
+                        <i class="fas fa-phone-alt"></i>+977-9845412777
+                      </h5>
+
+                      <h5 class="email">
+                        <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
+                      </h5>
                     </div>
-                    <h5 class="name">Pankaj Kushwaha</h5>
-                    <h5 class="locations">
-                      <i class="fas fa-map-marker-alt"></i>
-                      Koteshowr, Kathmandu, 14400, Bagmati, Nepal
-                    </h5>
 
-                    <h5 class="mobile-number">
-                      <i class="fas fa-phone-alt"></i>+977-9845412777
-                    </h5>
+                    <div class="details" id="address3">
+                      <i class="fas fa-check"></i>
 
-                    <h5 class="email">
-                      <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
-                    </h5>
+                      <div class="edit-btn">
+                        <i class="fas fa-edit"></i>
+                      </div>
+
+                      <div class="delete-btn">
+                        <i class="fas fa-trash"></i>
+                      </div>
+                      <h5 class="name">Pankaj Kushwaha</h5>
+                      <h5 class="locations">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Koteshowr, Kathmandu, 14400, Bagmati, Nepal
+                      </h5>
+
+                      <h5 class="mobile-number">
+                        <i class="fas fa-phone-alt"></i>+977-9845412777
+                      </h5>
+
+                      <h5 class="email">
+                        <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
+                      </h5>
+                    </div>
                   </div>
-
-                  <div class="datails">
-                    <div class="edit-btn">
-                      <i class="fas fa-edit"></i>
-                    </div>
-
-                    <div class="delete-btn">
-                      <i class="fas fa-trash"></i>
-                    </div>
-                    <h5 class="name">Pankaj Kushwaha</h5>
-                    <h5 class="locations">
-                      <i class="fas fa-map-marker-alt"></i>
-                      Koteshowr, Kathmandu, 14400, Bagmati, Nepal
-                    </h5>
-
-                    <h5 class="mobile-number">
-                      <i class="fas fa-phone-alt"></i>+977-9845412777
-                    </h5>
-
-                    <h5 class="email">
-                      <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
-                    </h5>
-                  </div>
-
-                  <div class="datails">
-                    <div class="edit-btn">
-                      <i class="fas fa-edit"></i>
-                    </div>
-
-                    <div class="delete-btn">
-                      <i class="fas fa-trash"></i>
-                    </div>
-                    <h5 class="name">Pankaj Kushwaha</h5>
-                    <h5 class="locations">
-                      <i class="fas fa-map-marker-alt"></i>
-                      Koteshowr, Kathmandu, 14400, Bagmati, Nepal
-                    </h5>
-
-                    <h5 class="mobile-number">
-                      <i class="fas fa-phone-alt"></i>+977-9845412777
-                    </h5>
-
-                    <h5 class="email">
-                      <i class="fas fa-envelope"></i> pankaj.mahat@gmail.com
-                    </h5>
-                  </div>
-                </div>
+                </form>
               </div>
 
               <form action="">
@@ -1448,5 +1480,6 @@
     <script src="./js/quantity.js"></script>
     <script src="./js/wizard-form.js"></script>
     <script src="./js/popup-form.js"></script>
+    <script src="./js/checkout.js"></script>
   </body>
 </html>

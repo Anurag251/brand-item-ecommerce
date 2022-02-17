@@ -1,3 +1,11 @@
+@media only screen and (max-width: 1090px) {
+  /*************    user-profile-page     **************/
+  .user-profile-page {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .wrapper {
     max-width: 900px;
@@ -442,6 +450,11 @@
     height: 30px;
     width: 30px;
   }
+  /*************    user-profile-page     **************/
+  .user-profile-page {
+    -ms-grid-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -660,6 +673,11 @@
   .electronic-collections .item.large-image {
     height: 230px;
   }
+  /*************    user-profile-page     **************/
+  .user-profile-page {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -674,6 +692,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .serv .wrapper .item {
+    width: 100%;
   }
   .serv .wrapper .line {
     height: 1px;
@@ -820,6 +841,11 @@
   .electronic-product .list {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  /*************    user-profile-page     **************/
+  .user-profile-page {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 

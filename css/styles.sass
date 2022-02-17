@@ -67,6 +67,24 @@ body
   &:hover
     animation: gradientColor .7s alternate infinite
 
+@mixin checkBox()
+  content: ''
+  position: absolute
+  top: 5%
+  left: 5%
+  transform: translate(-50%, -50%)
+  height: 0
+  width: 0
+  border-radius: 50%
+  background-color: rgba($main, 1)
+  box-shadow: 0 0 10px rgba($dark, .2)
+  @include trans()
+  font-size: 11px
+  color: $light
+  @include flex($justify: center)
+  opacity: 0
+  z-index: 3
+
 @mixin rating()
   @include flex($justify: flex-start)
 
@@ -337,6 +355,9 @@ body
 section
   padding: 3rem 0
 
+  &.hide
+    display: none
+
   &.bg
     background-color: $bg
 
@@ -373,8 +394,8 @@ section
 
   i
     font-size: 20px
-    color: #fcfcfc
-    text-shadow: 0 0 6px rgba($dark, .2)
+    color: $light
+    text-shadow: 0 0 2px rgba($dark, 1)
 
   span
     position: absolute
@@ -937,14 +958,22 @@ header
       background-color: $sec
 
     .item
-      @include flex($justify: flex-start)
-      font-size: 20px
-      font-weight: 500
+      @include flex($justify: center)
+      flex-direction: column
+      font-size: 16px
+      font-weight: 600
+      width: 20%
+      text-align: center
+
+      p
+        font-size: 14px
+        margin-top: 10px
+        font-weight: 400
 
       .icon
-        height: 40px
-        width: 40px
-        margin-right: 1rem
+        height: 45px
+        width: 45px
+        margin-bottom: 1rem
 
         img
           width: 100%
@@ -1101,6 +1130,16 @@ header
   .title
     border-bottom: 1px solid $sec
     padding: 1rem 0
+    @include flex($justify: flex-start)
+    font-size: 28px
+
+    i
+      margin-left: .6rem
+      margin-right: .2rem
+      color: $red
+
+    #countdown-timer
+      color: $red
 
   .title-sec
     @include flex($justify: space-between)
@@ -1436,9 +1475,21 @@ footer
             margin-bottom: .5rem
             font-weight: 700
 
+          &.icon
+            img
+              height: 40px
+              width: 60px
+              object-fit: contain
+
     .footer-contact
       .logo
         margin-bottom: 1rem
+        height: 100px
+        width: 100px
+
+        img
+          width: 100%
+
         h1
           font-size: 40px
 
@@ -1450,6 +1501,21 @@ footer
 
         i
           margin-right: 8px
+
+      .social-icon
+        @include flex($justify: flex-start)
+
+        .icon
+          height: 30px
+          width: 30px
+          border-radius: 50%
+          border: 1px solid $main
+          @include flex($justify: center)
+          margin-right: 10px
+
+          i
+            font-size: 15px
+            color: $main
 
 /*************    quick-view-pop     **************/
 .quick-view-pop
@@ -2019,13 +2085,32 @@ footer
       .shipping-list
         display: grid
         grid-gap: 10px
+        padding-left: 25px
 
-      .datails
+      .details
         padding: 1rem
         @include gradient()
         color: $light
         border-radius: 20px
         position: relative
+        opacity: .3
+        @include trans()
+        cursor: pointer
+
+        &.active
+          opacity: 1
+
+          .fa-check
+            height: 30px
+            width: 30px
+            opacity: 1
+
+        .fa-check
+          @include checkBox()
+          top: 50%
+          left: -1%
+          color: $main
+          background-color: $light
 
         .edit-btn, .delete-btn
           transform: scale(.8)
@@ -2058,39 +2143,30 @@ footer
       flex-wrap: wrap
 
     .group-option
-      flex: 25%
-      @include flex($justify: center)
+      flex: 20%
+      padding: 1rem
 
-      label
-        height: 100px
-        width: 120px
+      &.active
+        .img
+          opacity: 1
+
+          .fa-check
+            height: 20px
+            width: 20px
+            opacity: 1
 
       .img
-        height: 100px
+        height: 70px
         max-width: 120px
         @include image()
         background-size: contain
-        opacity: .5
+        opacity: .2
         position: relative
-        overflow: hidden
+        @include trans()
+        cursor: pointer
 
-        &::after
-          content: ''
-          position: absolute
-          top: 50%
-          left: 50%
-          transform: translate(-50%, -50%)
-          height: 0
-          width: 0
-          border-radius: 50%
-          background-color: rgba($main, .4)
-
-        &.active
-          opacity: 1
-
-          &::after
-            height: 200px
-            width: 200px
+        .fa-check
+          @include checkBox()
 
     button
       @include button()
@@ -4031,6 +4107,7 @@ footer
             box-shadow: 0 0 0 0em $main inset
             color: $main
 
+/*************    add-item     **************/
 .add-item
   height: 100%
   width: 100%
@@ -4064,6 +4141,7 @@ footer
   .others-details
     text-align: center
 
+/*************    edit-btn, delete-btn     **************/
 .edit-btn, .delete-btn
   height: 40px
   width: 40px
@@ -4084,6 +4162,7 @@ footer
   @include gradient()
   right: 50px
 
+/*************    delete-confirmation     **************/
 .delete-confirm, #delete-confirm
   position: fixed
   left: 50%
@@ -4156,6 +4235,7 @@ footer
     font-size: 12px
     cursor: pointer
 
+/*************    popup-forms     **************/
 .popup-form-add-item, .popup-form-edit-item, .logo-image-upload, #popup-form-add-item, #popup-form-edit-item
   position: fixed
   top: 50%
@@ -4300,6 +4380,7 @@ footer
   100%
     transform: translate(-50%, -50%) scale(1)
 
+/*************    side-nav-bg     **************/
 .side-nav-bg
   position: fixed
   left: 0
@@ -4330,6 +4411,7 @@ footer
     opacity: 1
     pointer-events: auto
 
+/*************    comming-soon     **************/
 .comming-soon
   height: 100vh
   @include image()
@@ -4395,6 +4477,7 @@ footer
         color: $light
         font-size: 24px
 
+/*************    vendor-header     **************/
 .v-header
   padding: 1rem
   @include gradient()
@@ -4607,6 +4690,7 @@ footer
           font-size: 10px
           cursor: pointer
 
+/*************    ads     **************/
 .ads-banner-grid
   display: grid
   grid-gap: 20px
@@ -4630,6 +4714,7 @@ footer
     width: 100%
     object-fit: cover
 
+/*************    my-orders     **************/
 .my-ordes
   .orders-list
     margin-top: 1rem
@@ -4728,6 +4813,7 @@ footer
           &.process
             color: #00b11d
 
+/*************    orders-details     **************/
 .order-detail
   .head-sec
     padding: 1rem
@@ -4764,3 +4850,212 @@ footer
         margin-bottom: 1rem
         padding-bottom: 1rem
         border-bottom: 1px solid rgba($main, .8)
+
+/*************    user-profile-page     **************/
+.user-profile-page
+  display: grid
+  grid-template-columns: 1fr 2.5fr
+  grid-gap: 20px
+
+  .user-profile-info
+    border-radius: 20px
+    padding: 1.5rem
+    background-color: $light
+    box-shadow: 2px 2px 10px rgba($dark, .1)
+
+  .user-profile
+    @include flex($justify: center)
+    flex-direction: column
+    text-align: center
+
+    .user-image
+      height: 120px
+      width: 120px
+      object-fit: cover
+      border-radius: 50%
+
+    .user-details
+      margin-top: .4rem
+
+      .user-name
+        font-size: 24px
+        font-weight: 500
+
+      .user-email
+        font-size: 18px
+        font-weight: 400
+        color: rgba($dark, .6)
+
+    .btn-group
+      margin-top: 1rem
+
+      button
+        @include button()
+        padding: .5rem 1rem
+        font-size: 14px
+        margin-bottom: 5px
+
+  .user-other-infos
+    margin-top: 1.5rem
+
+    li
+      @include flex($justify: flex-start)
+      font-size: 14px
+      margin-bottom: 1rem
+
+      i
+        font-size: 18px
+        margin-right: 10px
+        height: 20px
+        width: 20px
+        text-align: center
+        @include flex($justify: center)
+
+      h3
+        font-weight: 400
+
+  .recently-order
+    padding: 1.5rem
+    background-color: $light
+    border-radius: 20px
+    box-shadow: 2px 2px 10px rgba($dark, .1)
+
+    .title
+      margin-bottom: 2rem
+      font-size: 24px
+
+    .product
+      margin-bottom: 1rem
+      @include flex($justify: flex-start)
+
+      &:nth-last-child(1)
+        margin-bottom: 0
+
+      .product-image
+        height: 100px
+        width: 100px
+        object-fit: contain
+        border-radius: 10px
+
+      .details
+        margin-left: 10px
+
+        .name
+          font-size: 18px
+          color: $dark
+          font-weight: 500
+
+        .qty
+          font-size: 14px
+          color: rgba($dark, .8)
+          margin: .2rem 0
+
+        .price
+          font-size: 14px
+          color: $red
+
+/*********************      about-page      ***********************/
+.about-page
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 20px
+  padding-bottom: 4rem
+
+  &:hover
+    .image
+      .img
+        transform: scale(1.1)
+        transition: transform 10s cubic-bezier(0.25, 0.45, 0.45, 0.95)
+
+  .image
+    height: 100%
+    width: 100%
+    overflow: hidden
+
+    .img
+      @include image()
+      width: 100%
+      height: 100%
+
+  .details
+    padding: 2rem 0
+
+    .title
+      text-align: left
+      margin-bottom: 1rem
+
+    p
+      font-size: 18px
+      line-height: 33px
+      color: rgba($dark, .7)
+      margin-bottom: 2rem
+      text-align: justify
+
+    h4
+      font-size: 24px
+
+    ul
+      li
+        font-size: 18px
+        line-height: 33px
+        color: rgba($dark, .7)
+        text-align: justify
+        list-style: disc
+        margin-left: 2rem
+        margin-bottom: 1rem
+
+.error-page
+  height: 100vh
+  width: 100vw
+  @include image()
+  @include flex($justify: center)
+  color: $light
+  position: relative
+  text-align: center
+  padding: 1rem .5rem
+
+  &::after
+    content: ''
+    @include dark()
+    background-color: rgba($dark, .6)
+    z-index: 1
+
+  .content
+    @include flex($justify: center)
+    flex-direction: column
+    position: relative
+    z-index: 2
+
+  .icon-image
+    height: 100px
+    width: 100px
+    object-fit: contain
+    margin-bottom: .5rem
+
+  .logo
+    font-weight: 600
+    margin-bottom: 2rem
+    font-size: 50px
+
+  h1
+    font-size: 70px
+    font-weight: 200
+    margin-bottom: 1rem
+
+  h2
+    font-size: 40px
+    margin-bottom: .5rem
+    font-weight: 400
+
+  p
+    font-size: 20px
+    margin-top: 2rem
+    font-weight: 400
+    margin-bottom: .5rem
+
+  button
+    @include button()
+
+    &:hover
+      background: $light
+      color: $main

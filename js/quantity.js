@@ -69,8 +69,9 @@ if (checkoutPage) {
       check(quantityNumber[idx], (index = idx));
     });
 
-    totalPriceSubmit[idx].addEventListener("click", () => {
-      forcedClicked[idx].click();
+    totalPriceSubmit[idx].addEventListener("click", (e) => {
+      // forcedClicked[idx].click();
+      console.log(totalPriceSubmit[idx].setAttribute());
     });
   });
 

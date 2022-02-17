@@ -167,7 +167,7 @@
 
                 <div class="sign-in-sign-up-dropdown">
                   <ul>
-                    <a href="#">
+                    <a href="user-profile.html">
                       <li><i class="fas fa-user"></i> Profile</li>
                     </a>
 
@@ -558,12 +558,20 @@
     <!-- menu-item-end -->
 
     <!-- deals-start -->
-    <section>
+    <section class="sectionDeals">
       <div class="wrapper">
         <div class="deals">
           <h1 class="title">
             Deals of the Day
-            <span><i class="far fa-clock"></i>9 : 19 : 01</span>
+            <input type="number" id="timer" value="10" hidden />
+
+            <i class="far fa-clock"></i>
+            <div id="countdown-timer">0:00</div>
+
+            <form action="">
+              <input type="text" id="setTimer" value="" />
+              <button type="submit" id="updateTimer"></button>
+            </form>
           </h1>
 
           <div class="swiper mySwiper">
@@ -631,27 +639,6 @@
                       <span></span>
                     </button>
                     <!-- </form> -->
-
-                    <form action="">
-                      <button class="add-to-cart-button">
-                        <div class="icon">
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M4.95092 12.6052C5.50382 12.6052 5.9568 13.0679 5.9568 13.6394C5.9568 14.204 5.50382 14.6667 4.95092 14.6667C4.39135 14.6667 3.93837 14.204 3.93837 13.6394C3.93837 13.0679 4.39135 12.6052 4.95092 12.6052ZM12.4451 12.6052C12.998 12.6052 13.451 13.0679 13.451 13.6394C13.451 14.204 12.998 14.6667 12.4451 14.6667C11.8855 14.6667 11.4325 14.204 11.4325 13.6394C11.4325 13.0679 11.8855 12.6052 12.4451 12.6052ZM1.85219 1.33342L1.92008 1.33917L3.50884 1.58341C3.73533 1.62491 3.90187 1.81473 3.92185 2.04604L4.04842 3.57C4.0684 3.78839 4.2416 3.95167 4.45477 3.95167H13.4511C13.8574 3.95167 14.1239 4.09454 14.3904 4.4075C14.6568 4.72046 14.7034 5.16948 14.6435 5.577L14.0107 10.04C13.8907 10.8979 13.1713 11.53 12.3253 11.53H5.05763C4.17166 11.53 3.43889 10.8367 3.36562 9.93866L2.75276 2.52228L1.74688 2.34539C1.48042 2.29777 1.2939 2.03243 1.34053 1.7603C1.38716 1.48204 1.64696 1.29767 1.92008 1.33917L1.85219 1.33342ZM11.2595 6.46825H9.41424C9.13446 6.46825 8.91463 6.69276 8.91463 6.9785C8.91463 7.25744 9.13446 7.48876 9.41424 7.48876H11.2595C11.5392 7.48876 11.7591 7.25744 11.7591 6.9785C11.7591 6.69276 11.5392 6.46825 11.2595 6.46825Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-
-                        <h6>Add To Cart</h6>
-                      </button>
-                    </form>
                   </div>
 
                   <div class="details">
@@ -1720,6 +1707,7 @@
     <script src="./js/quick-view.js"></script>
     <script src="./js/derss-size.js"></script>
     <script src="./js/wishlist-button.js"></script>
+    <script src="./js/countdown-timer.js"></script>
 
     <!-- swiper-js -->
     <script src="./js/swiper.min.js"></script>
