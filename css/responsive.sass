@@ -76,7 +76,7 @@ $star: #E28800
     top: 0
     height: 100%
     width: 100%
-    background-color: rgba($dark, .01)
+    background-color: rgba($dark, .6)
     pointer-events: none
     z-index: 24
     opacity: 0
@@ -417,7 +417,7 @@ $star: #E28800
 
     .product-list
       .list
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr
 
   /*************    checkout     *************/
   .checkout-page
@@ -590,7 +590,7 @@ $star: #E28800
           flex-direction: column
 
           .quantity
-            margin-bottom: 2rem
+            margin-top: 2rem
 
           .size
             ul
@@ -873,7 +873,7 @@ $star: #E28800
         flex-direction: column
 
         .quantity
-          margin-bottom: 2rem
+          margin-top: 2rem
 
   /*************    you-may-also-like     **************/
   .you-may-also-like
@@ -1041,7 +1041,7 @@ $star: #E28800
       .title
 
       .list
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr 1fr
 
         .item
           .image
@@ -1149,3 +1149,9 @@ $star: #E28800
 
       &:nth-last-child(1)
         height: 300px
+
+  /*************    all-product     **************/
+  .all-product
+    .product-list
+      .list
+        grid-template-columns: 1fr

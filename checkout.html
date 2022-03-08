@@ -21,6 +21,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+
     <title>Document</title>
   </head>
   <body>
@@ -467,7 +468,9 @@
                   </td>
 
                   <td>
-                    <div class="size">XXL</div>
+                    <div class="size" id="productSizeQuantity" data-value="10">
+                      XXL
+                    </div>
                   </td>
 
                   <td>
@@ -495,6 +498,7 @@
                   <td>
                     <div class="price">
                       Rs
+                      <div class="innerPrice">90</div>
 
                       <input
                         type="number"
@@ -502,6 +506,7 @@
                         id="product-price"
                         value="90"
                         readonly
+                        hidden
                       />
                     </div>
                   </td>
@@ -557,7 +562,9 @@
                   </td>
 
                   <td>
-                    <div class="size">XXL</div>
+                    <div class="size" id="productSizeQuantity" data-value="5">
+                      XXL
+                    </div>
                   </td>
 
                   <td>
@@ -586,12 +593,15 @@
                     <div class="price" id="totalPrice">
                       Rs
 
+                      <div class="innerPrice">1000</div>
+
                       <input
                         type="number"
                         name=""
                         id="product-price"
                         value="100"
                         readonly
+                        hidden
                       />
                     </div>
                   </td>
@@ -652,7 +662,9 @@
                   </td>
 
                   <td>
-                    <div class="size">XXL</div>
+                    <div class="size" id="productSizeQuantity" data-value="22">
+                      XXL
+                    </div>
                   </td>
 
                   <td>
@@ -681,12 +693,15 @@
                     <div class="price" id="totalPrice">
                       Rs
 
+                      <div class="innerPrice">200</div>
+
                       <input
                         type="number"
                         name=""
                         id="product-price"
                         value="100"
                         readonly
+                        hidden
                       />
                     </div>
                   </td>
@@ -755,7 +770,7 @@
 
               <div class="continue-shopping">
                 <a href="#">
-                  <button>Checkout</button>
+                  <button disabled>Checkout</button>
                 </a>
               </div>
             </div>
@@ -877,6 +892,11 @@
                   </div>
 
                   <button>Confirm Order</button>
+
+                  <h4 class="error">
+                    <i class="fas fa-exclamation-triangle"></i> Please set the
+                    location of your house
+                  </h4>
                 </form>
               </div>
             </div>
