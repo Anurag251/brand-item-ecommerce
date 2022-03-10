@@ -961,7 +961,7 @@
   }
   .banner .swiper-slide .button {
     padding: .7rem 2rem;
-    background-color: #000000;
+    background-color: var(--main);
     color: #ffffff;
     border-radius: 1px;
     cursor: pointer;
@@ -969,13 +969,13 @@
             box-shadow: 0 0 0 0em #ffffff inset;
     -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
     transition: 0.45s cubic-bezier(0, 0, 0, 1);
-    border: 1px solid #000000;
+    border: 1px solid var(--main);
     font-size: 16px;
   }
   .banner .swiper-slide .button:hover {
     -webkit-box-shadow: 0 0 0 3em #ffffff inset;
             box-shadow: 0 0 0 3em #ffffff inset;
-    color: #000000;
+    color: var(--main);
   }
   /*************    menu-item     *************/
   .menu-item {
@@ -1003,7 +1003,7 @@
   }
   .menu-item .item button {
     padding: .7rem 2rem;
-    background-color: #000000;
+    background-color: var(--main);
     color: #ffffff;
     border-radius: 1px;
     cursor: pointer;
@@ -1011,13 +1011,13 @@
             box-shadow: 0 0 0 0em #ffffff inset;
     -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
     transition: 0.45s cubic-bezier(0, 0, 0, 1);
-    border: 1px solid #000000;
+    border: 1px solid var(--main);
     font-size: 16px;
   }
   .menu-item .item button:hover {
     -webkit-box-shadow: 0 0 0 3em #ffffff inset;
             box-shadow: 0 0 0 3em #ffffff inset;
-    color: #000000;
+    color: var(--main);
   }
   /*************    deals     *************/
   .deals .title {

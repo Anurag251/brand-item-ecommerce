@@ -8,7 +8,6 @@
   border: none;
   background: none;
   list-style: none;
-  font-family: 'Lato', sans-serif;
   text-decoration: none;
 }
 
@@ -122,10 +121,10 @@ section.bg {
 }
 
 .wishlist-btn.active i {
-  color: #b30e8c;
+  color: var(--pri);
   -webkit-animation: size .4s ease-in-out;
           animation: size .4s ease-in-out;
-  text-shadow: 0 0 3px rgba(111, 66, 193, 0.5);
+  text-shadow: 0 0 3px rgba(var(--main), 0.5);
 }
 
 .wishlist-btn.active::after {
@@ -171,7 +170,7 @@ section.bg {
   width: 7px;
   border-radius: 10px;
   opacity: 0;
-  background-color: #b30e8c;
+  background-color: var(--pri);
 }
 
 .wishlist-btn span::before {
@@ -185,7 +184,7 @@ section.bg {
   width: 7px;
   border-radius: 10px;
   opacity: 0;
-  background-color: #b30e8c;
+  background-color: var(--pri);
 }
 
 .wishlist-btn::after {
@@ -199,7 +198,7 @@ section.bg {
   width: 7px;
   border-radius: 10px;
   opacity: 0;
-  background-color: #b30e8c;
+  background-color: var(--pri);
 }
 
 .wishlist-btn::before {
@@ -213,7 +212,7 @@ section.bg {
   width: 7px;
   border-radius: 10px;
   opacity: 0;
-  background-color: #b30e8c;
+  background-color: var(--pri);
 }
 
 .error-message {
@@ -279,6 +278,18 @@ header .menubar {
   grid-gap: 10px;
 }
 
+header .menubar .logo {
+  height: 60px;
+  width: 120px;
+}
+
+header .menubar .logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 header .menubar .other {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,7 +325,7 @@ header .menubar .other .wishlist .count {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,7 +386,7 @@ header .menubar .other .cart .shopping-cart-dropdown.show-cart-dropdown {
 
 header .menubar .other .cart .shopping-cart-dropdown button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -388,7 +399,7 @@ header .menubar .other .cart .shopping-cart-dropdown button {
   width: 100%;
   text-transform: uppercase;
   margin-top: 1rem;
-  border: 1.6px solid #6f42c1;
+  border: 1.6px solid var(--main);
 }
 
 header .menubar .other .cart .shopping-cart-dropdown button:hover {
@@ -574,7 +585,7 @@ header .menubar .search .group {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   /*style the arrow inside the select element:*/
   /*point the arrow upwards when the select box is open (active):*/
   /*style the items (options), including the selected item:*/
@@ -594,7 +605,7 @@ header .menubar .search .group .custom_select select {
 }
 
 header .menubar .search .group .select-selected {
-  background-image: #6f42c1;
+  background-image: var(--main);
   border-radius: 15px 0 0 15px;
   height: 100%;
 }
@@ -629,7 +640,7 @@ header .menubar .search .group .select-items div, header .menubar .search .group
 
 header .menubar .search .group .select-items {
   position: absolute;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   border-radius: 15px;
   top: 100%;
   left: 0;
@@ -656,7 +667,7 @@ header .menubar .search .group input {
 }
 
 header .menubar .search .group .search-btn {
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   position: absolute;
   right: 0;
   top: 0;
@@ -684,7 +695,7 @@ header .menubar .search .group .search-btn i {
 /*************    nav-bar     *************/
 .nav-bar {
   padding: .5rem 0;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   position: relative;
 }
 
@@ -747,7 +758,7 @@ header .menubar .search .group .search-btn i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   z-index: 10;
   border-radius: 15px;
   -webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
@@ -923,7 +934,7 @@ header .menubar .search .group .search-btn i {
 }
 
 .banner .edit-btn {
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   right: 60px;
 }
 
@@ -1129,7 +1140,7 @@ header .menubar .search .group .search-btn i {
 .banner .wrapper .button {
   margin-top: 3rem;
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -1211,7 +1222,7 @@ header .menubar .search .group .search-btn i {
 
 .banner .video-banner .details button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -1358,7 +1369,7 @@ header .menubar .search .group .search-btn i {
   position: relative;
   z-index: 2;
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -1488,14 +1499,14 @@ header .menubar .search .group .search-btn i {
 }
 
 .dealsn .item .image .others .icon:hover {
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
 }
 
 .dealsn .item .product-name {
   font-size: 18px;
   margin-top: .6rem;
-  color: #6f42c1;
+  color: var(--main);
   margin-bottom: 10px;
 }
 
@@ -1565,7 +1576,8 @@ header .menubar .search .group .search-btn i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .dealsn .item .price .new {
@@ -1580,18 +1592,18 @@ header .menubar .search .group .search-btn i {
 
 .dealsn .item .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 .dealsn .item .add-to-cart-btn {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -1604,7 +1616,7 @@ header .menubar .search .group .search-btn i {
   margin-top: 1rem;
   padding: .5rem 1rem;
   font-size: 14px;
-  border: 1.5px solid #6f42c1;
+  border: 1.5px solid var(--main);
 }
 
 .dealsn .item .add-to-cart-btn:hover {
@@ -1678,9 +1690,9 @@ header .menubar .search .group .search-btn i {
 }
 
 .deals .title-sec ul li.active, .electronic-product .title-sec ul li.active {
-  color: #6f42c1;
-  -webkit-box-shadow: 1px 1px 2px 2px rgba(111, 66, 193, 0.9);
-          box-shadow: 1px 1px 2px 2px rgba(111, 66, 193, 0.9);
+  color: var(--main);
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(var(--main), 0.9);
+          box-shadow: 1px 1px 2px 2px rgba(var(--main), 0.9);
 }
 
 .deals .title-sec span, .electronic-product .title-sec span {
@@ -1717,7 +1729,7 @@ header .menubar .search .group .search-btn i {
 
 .deals .swiper .swiper-slide.swiper-slide-active .item .image .add-to-cart-button, .electronic-product .swiper .swiper-slide.swiper-slide-active .item .image .add-to-cart-button {
   right: 0;
-  background-color: #b30e8c;
+  background-color: var(--pri);
 }
 
 .deals .swiper .swiper-slide.swiper-slide-active .item .image .quick-view, .electronic-product .swiper .swiper-slide.swiper-slide-active .item .image .quick-view {
@@ -1752,7 +1764,7 @@ header .menubar .search .group .search-btn i {
 
 .deals .item:hover .image .add-to-cart-button, .electronic-product .item:hover .image .add-to-cart-button {
   right: 0;
-  background-color: #b30e8c;
+  background-color: var(--pri);
 }
 
 .deals .item:hover .image .quick-view, .electronic-product .item:hover .image .quick-view {
@@ -1799,7 +1811,7 @@ header .menubar .search .group .search-btn i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
@@ -1846,7 +1858,7 @@ header .menubar .search .group .search-btn i {
 }
 
 .deals .item .add-to-cart-button .icon, .electronic-product .item .add-to-cart-button .icon {
-  background-color: #6f42c1;
+  background-color: var(--main);
   width: 30px;
   height: 100%;
   border-radius: 50%;
@@ -1891,7 +1903,7 @@ header .menubar .search .group .search-btn i {
 
 .deals .item .details .product-name, .electronic-product .item .details .product-name {
   font-size: 16px;
-  color: #b30e8c;
+  color: var(--pri);
   font-weight: 400;
   margin-bottom: .5rem;
   text-decoration: underline;
@@ -1907,7 +1919,8 @@ header .menubar .search .group .search-btn i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -1923,13 +1936,13 @@ header .menubar .search .group .search-btn i {
 
 .deals .item .details .price .old del, .electronic-product .item .details .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 /*************    top-categories     *************/
@@ -2031,7 +2044,7 @@ header .menubar .search .group .search-btn i {
 
 .collections .sections .section .image button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -2112,7 +2125,7 @@ footer .subscribe .group .send-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #6f42c1;
+  background-color: var(--main);
   border-radius: 0 15px 15px 0;
   cursor: pointer;
 }
@@ -2151,13 +2164,16 @@ footer .list .item ul li.icon img {
 }
 
 footer .list .footer-contact .logo {
-  margin-bottom: 1rem;
-  height: 100px;
-  width: 100px;
+  margin-bottom: 2rem;
+  height: 80px;
+  width: 160px;
 }
 
 footer .list .footer-contact .logo img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 footer .list .footer-contact .logo h1 {
@@ -2199,7 +2215,7 @@ footer .list .footer-contact .social-icon .icon {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  border: 1px solid #6f42c1;
+  border: 1px solid var(--main);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2214,7 +2230,7 @@ footer .list .footer-contact .social-icon .icon {
 
 footer .list .footer-contact .social-icon .icon i {
   font-size: 15px;
-  color: #6f42c1;
+  color: var(--main);
 }
 
 /*************    quick-view-pop     **************/
@@ -2340,7 +2356,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .quick-view-pop .details .item-details h3:hover {
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .quick-view-pop .details .item-details .rating {
@@ -2409,7 +2425,8 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .quick-view-pop .details .item-details .price .new {
@@ -2424,13 +2441,13 @@ footer .list .footer-contact .social-icon .icon i {
 
 .quick-view-pop .details .item-details .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 .quick-view-pop .details .item-details .price input {
@@ -2496,7 +2513,7 @@ footer .list .footer-contact .social-icon .icon i {
           transform: translate(-50%, -50%) scale(1.4);
   height: 70px;
   width: 70px;
-  border: 2px solid rgba(111, 66, 193, 0.7);
+  border: 2px solid var(--main);
   opacity: 0;
   pointer-events: none;
   z-index: 1;
@@ -2627,13 +2644,13 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .quick-view-pop .details .item-details .others .size ul li:hover {
-  background-color: rgba(111, 66, 193, 0.1);
+  background-color: rgba(var(--main), 0.1);
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
 }
 
 .quick-view-pop .details .item-details .others .size ul li.active {
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
 }
 
@@ -2659,7 +2676,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .quick-view-pop .details .item-details .button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -2671,7 +2688,7 @@ footer .list .footer-contact .social-icon .icon i {
   border-radius: 10px;
   width: 100%;
   margin-top: 2rem;
-  border: 1.6px solid #6f42c1;
+  border: 1.6px solid var(--main);
   text-transform: uppercase;
 }
 
@@ -2688,7 +2705,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .checkout-page .title-sec, .wishlist-page .title-sec {
-  background-color: #6f42c1;
+  background-color: var(--main);
   border-radius: 15px;
 }
 
@@ -2714,7 +2731,19 @@ footer .list .footer-contact .social-icon .icon i {
   border-radius: 15px;
   border: 1px solid #BFBFBF;
   margin-bottom: 2rem;
-  background-color: rgba(111, 66, 193, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.checkout-page .item:hover, .wishlist-page .item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.checkout-page .item:nth-child(even), .wishlist-page .item:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.checkout-page .item:nth-child(even):hover, .wishlist-page .item:nth-child(even):hover {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .checkout-page .item .checkbox, .wishlist-page .item .checkbox {
@@ -2835,7 +2864,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .checkout-page .item .price button, .wishlist-page .item .price button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -2957,7 +2986,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .checkout-page .total-price-sec .continue-shopping button, .wishlist-page .total-price-sec .continue-shopping button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -3087,7 +3116,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .checkout-page .payment-section .payment-form .btns button, .wishlist-page .payment-section .payment-form .btns button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -3097,7 +3126,7 @@ footer .list .footer-contact .social-icon .icon i {
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
   font-size: 16px;
   border-radius: 10px;
-  border: 1.5px solid #6f42c1;
+  border: 1.5px solid var(--main);
   width: 100%;
   font-size: 18px;
 }
@@ -3308,7 +3337,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .checkout-page .payment-section .shipping-details .details, .wishlist-page .payment-section .shipping-details .details {
   padding: 1rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 20px;
   position: relative;
@@ -3338,7 +3367,7 @@ footer .list .footer-contact .social-icon .icon i {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: #6f42c1;
+  background-color: var(--main);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
@@ -3358,7 +3387,7 @@ footer .list .footer-contact .social-icon .icon i {
   z-index: 3;
   top: 50%;
   left: -1%;
-  color: #6f42c1;
+  color: var(--main);
   background-color: #ffffff;
 }
 
@@ -3479,7 +3508,7 @@ footer .list .footer-contact .social-icon .icon i {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: #6f42c1;
+  background-color: var(--main);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
@@ -3501,7 +3530,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .checkout-page .payment-option button, .wishlist-page .payment-option button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -3632,7 +3661,8 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .product-details-page .item-details .price .new {
@@ -3647,13 +3677,13 @@ footer .list .footer-contact .social-icon .icon i {
 
 .product-details-page .item-details .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 .product-details-page .item-details .price input {
@@ -3719,7 +3749,7 @@ footer .list .footer-contact .social-icon .icon i {
           transform: translate(-50%, -50%) scale(1.4);
   height: 70px;
   width: 70px;
-  border: 2px solid rgba(111, 66, 193, 0.7);
+  border: 2px solid var(--main);
   opacity: 0;
   pointer-events: none;
   z-index: 1;
@@ -3854,13 +3884,13 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .product-details-page .item-details .others .size ul li:hover {
-  background-color: rgba(111, 66, 193, 0.1);
+  background-color: rgba(var(--main), 0.1);
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
 }
 
 .product-details-page .item-details .others .size ul li.active {
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
 }
 
@@ -3886,7 +3916,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .product-details-page .item-details .button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -3898,7 +3928,7 @@ footer .list .footer-contact .social-icon .icon i {
   border-radius: 10px;
   width: 100%;
   margin-top: 2rem;
-  border: 1.6px solid #6f42c1;
+  border: 1.6px solid var(--main);
   text-transform: uppercase;
 }
 
@@ -4008,14 +4038,14 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .you-may-also-like .item .image .others .icon:hover {
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
 }
 
 .you-may-also-like .item .product-name {
   font-size: 24px;
   margin-top: .6rem;
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .you-may-also-like .item .rating {
@@ -4084,7 +4114,8 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .you-may-also-like .item .price .new {
@@ -4099,18 +4130,18 @@ footer .list .footer-contact .social-icon .icon i {
 
 .you-may-also-like .item .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 .you-may-also-like .item button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -4123,7 +4154,7 @@ footer .list .footer-contact .social-icon .icon i {
   margin-top: 1rem;
   padding: .5rem 1rem;
   font-size: 14px;
-  border: 1.5px solid #6f42c1;
+  border: 1.5px solid var(--main);
 }
 
 .you-may-also-like .item button:hover {
@@ -4221,8 +4252,8 @@ footer .list .footer-contact .social-icon .icon i {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 2px;
-  color: #6f42c1;
-  border-bottom: 1px solid #6f42c1;
+  color: var(--main);
+  border-bottom: 1px solid var(--main);
   cursor: pointer;
 }
 
@@ -4260,7 +4291,7 @@ footer .list .footer-contact .social-icon .icon i {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
-  color: rgba(111, 66, 193, 0.6);
+  color: rgba(var(--main), 0.6);
   cursor: pointer;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
@@ -4273,7 +4304,7 @@ footer .list .footer-contact .social-icon .icon i {
   left: 0;
   height: 2px;
   width: 0;
-  background-color: rgba(111, 66, 193, 0.9);
+  background-color: rgba(var(--main), 0.9);
   z-index: 1;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
@@ -4281,7 +4312,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .our-dress ul li.active {
   position: relative;
-  color: rgba(111, 66, 193, 0.9);
+  color: rgba(var(--main), 0.9);
 }
 
 .our-dress ul li.active:after {
@@ -4306,6 +4337,12 @@ footer .list .footer-contact .social-icon .icon i {
   position: relative;
 }
 
+.our-dress .list .item:hover #otherColorImages {
+  pointer-events: auto;
+  opacity: 1;
+  bottom: 0;
+}
+
 .our-dress .list .item:hover .image .quick-view {
   height: 60px;
   width: 60px;
@@ -4323,9 +4360,50 @@ footer .list .footer-contact .social-icon .icon i {
   pointer-events: auto;
 }
 
-.our-dress .list .item:hover .image .img {
+.our-dress .list .item:hover .image img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.our-dress .list .item #otherColorImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  left: 0;
+  bottom: -70px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  padding: 5px;
+  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  overflow-x: auto;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.our-dress .list .item #otherColorImages img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 3px;
+  cursor: pointer;
 }
 
 .our-dress .list .item .image {
@@ -4335,12 +4413,11 @@ footer .list .footer-contact .social-icon .icon i {
   overflow: hidden;
 }
 
-.our-dress .list .item .image .img {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.our-dress .list .item .image img {
   height: 100%;
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
 }
@@ -4432,7 +4509,8 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4450,13 +4528,13 @@ footer .list .footer-contact .social-icon .icon i {
 
 .our-dress .list .item .details .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 /*************    new-fashion     **************/
@@ -4503,7 +4581,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .new-fashion .details button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -4515,8 +4593,8 @@ footer .list .footer-contact .social-icon .icon i {
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 3em #ffffff inset;
           box-shadow: 0 0 0 3em #ffffff inset;
-  color: #6f42c1;
-  background-color: #6f42c1;
+  color: var(--main);
+  background-color: var(--main);
 }
 
 .new-fashion .details button:hover {
@@ -4527,7 +4605,7 @@ footer .list .footer-contact .social-icon .icon i {
 .new-fashion .details button:hover {
   -webkit-box-shadow: 0 0 0 0em #ffffff inset;
           box-shadow: 0 0 0 0em #ffffff inset;
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
 }
 
@@ -4740,13 +4818,13 @@ footer .list .footer-contact .social-icon .icon i {
   left: 0;
   height: 1px;
   width: 0%;
-  background-color: #6f42c1;
+  background-color: var(--main);
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
 }
 
 .shoes-new-product .new-title ul li.active {
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .shoes-new-product .new-title ul li.active:after {
@@ -4790,7 +4868,7 @@ footer .list .footer-contact .social-icon .icon i {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4874,7 +4952,8 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4892,19 +4971,19 @@ footer .list .footer-contact .social-icon .icon i {
 
 .shoes-new-product .list .item .details .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 .shoes-new-product button {
   text-align: center;
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -4994,7 +5073,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .sale-off .details button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -5006,8 +5085,8 @@ footer .list .footer-contact .social-icon .icon i {
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 3em #ffffff inset;
           box-shadow: 0 0 0 3em #ffffff inset;
-  color: #6f42c1;
-  background-color: #6f42c1;
+  color: var(--main);
+  background-color: var(--main);
   border-radius: 0;
 }
 
@@ -5019,7 +5098,7 @@ footer .list .footer-contact .social-icon .icon i {
 .sale-off .details button:hover {
   -webkit-box-shadow: 0 0 0 0em #ffffff inset;
           box-shadow: 0 0 0 0em #ffffff inset;
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
 }
 
@@ -5044,13 +5123,17 @@ footer .list .footer-contact .social-icon .icon i {
   font-weight: 600;
 }
 
+.sign-in-form .remPass {
+  color: var(--main);
+}
+
 .sign-in-form h4 {
   margin-bottom: 2rem;
   font-weight: 400;
 }
 
 .sign-in-form h4 a {
-  color: #6f42c1;
+  color: var(--main);
   text-decoration: underline;
 }
 
@@ -5107,7 +5190,7 @@ footer .list .footer-contact .social-icon .icon i {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5175,7 +5258,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .sign-in-form .sign-in .button-group button, .sign-in-form .sign-up .button-group button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -5186,7 +5269,6 @@ footer .list .footer-contact .social-icon .icon i {
   font-size: 16px;
   border-radius: 10px;
   border-radius: 15px;
-  border: 1.6px solid #6f42c1;
   margin-top: 1rem;
 }
 
@@ -5199,15 +5281,16 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-shadow: 0 0 0 3rem #0071DA inset;
           box-shadow: 0 0 0 3rem #0071DA inset;
   background-color: #ffffff;
-  border: 2px solid #0071DA;
+  border: none;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .sign-in-form .sign-in .button-group button.sign-in-with-google:hover, .sign-in-form .sign-up .button-group button.sign-in-with-google:hover {
-  -webkit-box-shadow: 0 0 0 0em #0071DA inset;
-          box-shadow: 0 0 0 0em #0071DA inset;
+  -webkit-box-shadow: 0 0 0 3em #0062be inset;
+          box-shadow: 0 0 0 3em #0062be inset;
   background-color: #ffffff;
-  color: #0071DA;
+  color: #ffffff;
 }
 
 /*************    sign-up     **************/
@@ -5217,6 +5300,71 @@ footer .list .footer-contact .social-icon .icon i {
 
 .sign-up-form .wrapper .sign-up {
   overflow: hidden;
+}
+
+.sign-up-form .wrapper .sign-up .switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sign-up-form .wrapper .sign-up .switch li {
+  margin: 0 1rem;
+}
+
+.sign-up-form .wrapper .sign-up .switch button {
+  padding: .5rem 1rem;
+  border: 1px solid var(--main);
+  border-radius: 4px;
+  color: var(--main);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sign-up-form .wrapper .sign-up .switch button.active {
+  background-color: var(--main);
+  color: #ffffff;
+}
+
+.sign-up-form .wrapper .sign-up .vendor-page {
+  margin-top: 1rem;
+}
+
+.sign-up-form .wrapper .sign-up .vendor-page h1 {
+  margin-right: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sign-up-form .wrapper .sign-up .vendor-page button {
+  padding: .7rem 2rem;
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
+  color: #ffffff;
+  border-radius: 1px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 0em #ffffff inset;
+          box-shadow: 0 0 0 0em #ffffff inset;
+  -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  transition: 0.45s cubic-bezier(0, 0, 0, 1);
+  font-size: 16px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.sign-up-form .wrapper .sign-up .vendor-page button:hover {
+  -webkit-animation: gradientColor .7s alternate infinite;
+          animation: gradientColor .7s alternate infinite;
+}
+
+.sign-up-form .wrapper .sign-up .vendor-page button a {
+  color: #ffffff;
 }
 
 .sign-up-form .wrapper .sign-up h2 {
@@ -5232,7 +5380,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .sign-up-form .wrapper .sign-up h4 a {
-  color: #6f42c1;
+  color: var(--main);
   text-decoration: underline;
 }
 
@@ -5263,7 +5411,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .sign-up-form .wrapper .sign-up .btns button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -5273,7 +5421,7 @@ footer .list .footer-contact .social-icon .icon i {
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
   font-size: 16px;
   border-radius: 10px;
-  border: 1.5px solid #6f42c1;
+  border: 1.5px solid var(--main);
   width: 100%;
   font-size: 18px;
   border-radius: 15px;
@@ -5464,7 +5612,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .kitchen-new-product ul li:hover, .kitchen-new-product ul li.active, .bags-new-product ul li:hover, .bags-new-product ul li.active {
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .kitchen-new-product ul li:hover::before, .kitchen-new-product ul li.active::before, .bags-new-product ul li:hover::before, .bags-new-product ul li.active::before {
@@ -5490,7 +5638,7 @@ footer .list .footer-contact .social-icon .icon i {
   top: 0;
   width: 1px;
   height: 0;
-  background-color: #6f42c1;
+  background-color: var(--main);
   -webkit-transition-delay: .6s;
           transition-delay: .6s;
   -webkit-transition-duration: .2s;
@@ -5504,7 +5652,7 @@ footer .list .footer-contact .social-icon .icon i {
   right: 0;
   width: 0;
   height: 1px;
-  background-color: #6f42c1;
+  background-color: var(--main);
   -webkit-transition-delay: .4s;
           transition-delay: .4s;
   -webkit-transition-duration: .2s;
@@ -5518,7 +5666,7 @@ footer .list .footer-contact .social-icon .icon i {
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #6f42c1;
+  background-color: var(--main);
   -webkit-transition-duration: .2s;
           transition-duration: .2s;
 }
@@ -5530,7 +5678,7 @@ footer .list .footer-contact .social-icon .icon i {
   bottom: 0;
   width: 1px;
   height: 0;
-  background-color: #6f42c1;
+  background-color: var(--main);
   -webkit-transition-delay: .2s;
           transition-delay: .2s;
   -webkit-transition-duration: .2s;
@@ -5575,7 +5723,7 @@ footer .list .footer-contact .social-icon .icon i {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5664,7 +5812,8 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .kitchen-new-product .list .item .details .price .new, .bags-new-product .list .item .details .price .new {
@@ -5679,13 +5828,13 @@ footer .list .footer-contact .social-icon .icon i {
 
 .kitchen-new-product .list .item .details .price .old del, .bags-new-product .list .item .details .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 /*************    bags-collections     **************/
@@ -6032,14 +6181,14 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .flash-deals .item .image .others .icon:hover {
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
 }
 
 .flash-deals .item .product-name {
   font-size: 24px;
   margin-top: .6rem;
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .flash-deals .item .rating {
@@ -6108,7 +6257,8 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .flash-deals .item .price .new {
@@ -6123,18 +6273,18 @@ footer .list .footer-contact .social-icon .icon i {
 
 .flash-deals .item .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 .flash-deals .item button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -6147,7 +6297,7 @@ footer .list .footer-contact .social-icon .icon i {
   margin-top: 1rem;
   padding: .5rem 1rem;
   font-size: 14px;
-  border: 1.5px solid #6f42c1;
+  border: 1.5px solid var(--main);
   border-radius: 30px;
 }
 
@@ -6218,7 +6368,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .what-are-you-looking-for .details .group button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -6229,7 +6379,7 @@ footer .list .footer-contact .social-icon .icon i {
   font-size: 16px;
   border-radius: 10px;
   border-radius: 15px;
-  border: 1.6px solid #6f42c1;
+  border: 1.6px solid var(--main);
 }
 
 .what-are-you-looking-for .details .group button:hover {
@@ -6404,7 +6554,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .all-product .product-list .list .item:hover .image .add-to-cart-button {
   right: 0;
-  background-color: #b30e8c;
+  background-color: var(--pri);
 }
 
 .all-product .product-list .list .item:hover .image .quick-view {
@@ -6451,7 +6601,7 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
@@ -6498,7 +6648,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .all-product .product-list .list .item .add-to-cart-button .icon {
-  background-color: #6f42c1;
+  background-color: var(--main);
   width: 30px;
   height: 100%;
   border-radius: 50%;
@@ -6543,7 +6693,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .all-product .product-list .list .item .details .product-name {
   font-size: 16px;
-  color: #b30e8c;
+  color: var(--pri);
   font-weight: 400;
   margin-bottom: .5rem;
   text-decoration: underline;
@@ -6559,7 +6709,8 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -6575,13 +6726,13 @@ footer .list .footer-contact .social-icon .icon i {
 
 .all-product .product-list .list .item .details .price .old del {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #8D8D8D;
 }
 
 /*************    scroll-to-top     **************/
@@ -6593,10 +6744,10 @@ footer .list .footer-contact .social-icon .icon i {
   width: 40px;
   cursor: pointer;
   z-index: 10;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   border-radius: 50%;
-  -webkit-box-shadow: 1px 1px 10px rgba(111, 66, 193, 0.2);
-          box-shadow: 1px 1px 10px rgba(111, 66, 193, 0.2);
+  -webkit-box-shadow: 1px 1px 10px rgba(var(--main), 0.2);
+          box-shadow: 1px 1px 10px rgba(var(--main), 0.2);
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
   opacity: 0;
@@ -6674,7 +6825,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .contact-page .other .contact-form .form-group .submit-btn {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -6738,18 +6889,18 @@ footer .list .footer-contact .social-icon .icon i {
   border-radius: 50%;
   color: #ffffff;
   font-size: 16px;
-  -webkit-box-shadow: 0 0 0 3em #6f42c1 inset;
-          box-shadow: 0 0 0 3em #6f42c1 inset;
-  border: 1px solid #6f42c1;
+  -webkit-box-shadow: 0 0 0 3em var(--main) inset;
+          box-shadow: 0 0 0 3em var(--main) inset;
+  border: 1px solid var(--main);
   -webkit-transition: 0.45s cubic-bezier(0, 0, 0, 1);
   transition: 0.45s cubic-bezier(0, 0, 0, 1);
 }
 
 .contact-page .other .infos .social-media .icon:hover {
   background-color: #ffffff;
-  -webkit-box-shadow: 0 0 0 0em #6f42c1 inset;
-          box-shadow: 0 0 0 0em #6f42c1 inset;
-  color: #6f42c1;
+  -webkit-box-shadow: 0 0 0 0em var(--main) inset;
+          box-shadow: 0 0 0 0em var(--main) inset;
+  color: var(--main);
 }
 
 /*************    add-item     **************/
@@ -6823,7 +6974,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .edit-btn {
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   right: 50px;
 }
 
@@ -6930,8 +7081,8 @@ footer .list .footer-contact .social-icon .icon i {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  border: 1px solid #6f42c1;
-  color: #6f42c1;
+  border: 1px solid var(--main);
+  color: var(--main);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7012,9 +7163,9 @@ footer .list .footer-contact .social-icon .icon i {
       -ms-flex-align: center;
           align-items: center;
   font-size: 15px;
-  color: #6f42c1;
+  color: var(--main);
   border-radius: 50%;
-  border: 2px solid #6f42c1;
+  border: 2px solid var(--main);
   cursor: pointer;
 }
 
@@ -7176,6 +7327,7 @@ footer .list .footer-contact .social-icon .icon i {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: .5rem .6rem;
+  width: 100%;
 }
 
 .popup-form-add-item .form .groups .size-form li label input.checkbox, .popup-form-edit-item .form .groups .size-form li label input.checkbox, .logo-image-upload .form .groups .size-form li label input.checkbox, #popup-form-add-item .form .groups .size-form li label input.checkbox, #popup-form-edit-item .form .groups .size-form li label input.checkbox {
@@ -7193,7 +7345,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .popup-form-add-item .add-item-button, .popup-form-edit-item .add-item-button, .logo-image-upload .add-item-button, #popup-form-add-item .add-item-button, #popup-form-edit-item .add-item-button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -7299,7 +7451,7 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
 }
 
 .comming-soon::after {
@@ -7392,7 +7544,7 @@ footer .list .footer-contact .social-icon .icon i {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7409,7 +7561,7 @@ footer .list .footer-contact .social-icon .icon i {
 /*************    vendor-header     **************/
 .v-header {
   padding: 1rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   width: 100%;
 }
 
@@ -7567,7 +7719,7 @@ footer .list .footer-contact .social-icon .icon i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   z-index: 10;
   border-radius: 15px;
   -webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
@@ -7667,7 +7819,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .v-header .cart .shopping-cart-dropdown button, .v-header .wishlist .shopping-cart-dropdown button, .v-header .icon .shopping-cart-dropdown button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -7680,7 +7832,7 @@ footer .list .footer-contact .social-icon .icon i {
   width: 100%;
   text-transform: uppercase;
   margin-top: 1rem;
-  border: 1.6px solid #6f42c1;
+  border: 1.6px solid var(--main);
 }
 
 .v-header .cart .shopping-cart-dropdown button:hover, .v-header .wishlist .shopping-cart-dropdown button:hover, .v-header .icon .shopping-cart-dropdown button:hover {
@@ -7972,7 +8124,7 @@ footer .list .footer-contact .social-icon .icon i {
           transform: translateY(-50%);
   height: 25px;
   width: 25px;
-  background-color: #6f42c1;
+  background-color: var(--main);
   color: #ffffff;
   border-radius: 50%;
   font-size: 10px;
@@ -8022,7 +8174,7 @@ footer .list .footer-contact .social-icon .icon i {
 .my-ordes .orders-list .item {
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: rgba(111, 66, 193, 0.1);
+  background-color: rgba(var(--main), 0.1);
   border-radius: 20px;
 }
 
@@ -8041,7 +8193,7 @@ footer .list .footer-contact .social-icon .icon i {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(111, 66, 193, 0.8);
+  border-bottom: 1px solid rgba(var(--main), 0.8);
 }
 
 .my-ordes .orders-list .item .head-sec .order-number {
@@ -8049,7 +8201,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .my-ordes .orders-list .item .head-sec .order-number span {
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .my-ordes .orders-list .item .head-sec .date {
@@ -8059,7 +8211,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .my-ordes .orders-list .item .head-sec button {
   font-size: 15px;
-  color: #6f42c1;
+  color: var(--main);
   cursor: pointer;
   padding: .5rem 1rem;
   text-transform: uppercase;
@@ -8108,7 +8260,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .my-ordes .orders-list .item .product-sec .product:hover .p-name {
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .my-ordes .orders-list .item .product-sec .product .p-image {
@@ -8160,7 +8312,7 @@ footer .list .footer-contact .social-icon .icon i {
 /*************    orders-details     **************/
 .order-detail .head-sec {
   padding: 1rem;
-  background-color: rgba(111, 66, 193, 0.1);
+  background-color: rgba(var(--main), 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8180,7 +8332,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .order-detail .head-sec .order-number span {
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .order-detail .head-sec .date {
@@ -8189,7 +8341,7 @@ footer .list .footer-contact .social-icon .icon i {
 }
 
 .order-detail .head-sec .date span {
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .order-detail .head-sec .total-price {
@@ -8205,7 +8357,7 @@ footer .list .footer-contact .social-icon .icon i {
 .order-detail .orders-list .item .head-sec {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(111, 66, 193, 0.8);
+  border-bottom: 1px solid rgba(var(--main), 0.8);
 }
 
 /*************    user-profile-page     **************/
@@ -8271,7 +8423,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .user-profile-page .user-profile .btn-group button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -8538,7 +8690,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .error-page button {
   padding: .7rem 2rem;
-  background-image: linear-gradient(30deg, #b30e8c, #6f42c1, #0571b9);
+  background-image: linear-gradient(30deg, var(--pri), var(--main), var(--sec));
   color: #ffffff;
   border-radius: 1px;
   cursor: pointer;
@@ -8557,7 +8709,7 @@ footer .list .footer-contact .social-icon .icon i {
 
 .error-page button:hover {
   background: #ffffff;
-  color: #6f42c1;
+  color: var(--main);
 }
 
 .details-page-image-popup {

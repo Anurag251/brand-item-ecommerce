@@ -1,10 +1,11 @@
-$main: #000000
-$pri: #ffffff
+$main: var(--main)
+$blue: var(--sec)
+$pri: var(--pri)
 $sec: #666666
 $bg: #F1F1F1
 $dark: #000000
 $light: #ffffff
-$red: #AF0000
+$red: #cb0c0c
 $star: #E28800
 
 @mixin trans()
@@ -865,6 +866,20 @@ $star: #E28800
 
   /*************    product-details-page     *************/
   .product-details-page
+    // .images
+    //   .mySwiper2
+    //     .zoomImg
+    //       height: 0 !important
+    //       width: 0 !important
+    //       display: none !important
+    //       pointer-events: none !important
+    //       cursor: none
+    //       position: absolute !important
+    //       top: -100px !important
+    //       left: -100px !important
+    //       opacity: 0 !important
+    //       z-index: -100 !important
+
     .item-details
       h3
         font-size: 18px

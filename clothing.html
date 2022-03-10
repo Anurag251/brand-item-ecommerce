@@ -24,8 +24,22 @@
       href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <div id="fontUrlHere"></div>
     <title>Document</title>
   </head>
+
+  <div
+    id="syncColor"
+    main-color="#6f42c3"
+    pri-color="#b30e8c"
+    sec-color="#0571b9"
+    font-family="Roboto"
+    font-url="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  ></div>
+
   <body>
     <div class="loading">
       <div
@@ -1510,17 +1524,213 @@
               <!-- edit delete sec -->
 
               <div class="image">
-                <div
-                  class="img"
-                  style="
-                    background-image: url(./images/clothing/collections/img-11.jpg);
-                  "
-                ></div>
+                <img
+                  id="colorImageSet"
+                  src="./images/clothing/collections/img-11.jpg"
+                />
+
+                <div class="quick-view">
+                  <i class="fas fa-search"></i>
+                </div>
+                <div id="otherColorImages">
+                  <img
+                    src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./images/clothing/derss/DRE27_02__52917.1629091267.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./images/clothing/derss/DRE27_03__68006.1629091267.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./images/clothing/derss/GFworking1_01__31648.1629091267.jpg"
+                    alt=""
+                  />
+
+                  <img
+                    src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                    alt=""
+                  />
+
+                  <img
+                    src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                    alt=""
+                  />
+
+                  <img
+                    src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./images/clothing/derss/DRE27_02__52917.1629091267.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./images/clothing/derss/DRE27_03__68006.1629091267.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./images/clothing/derss/GFworking1_01__31648.1629091267.jpg"
+                    alt=""
+                  />
+
+                  <img
+                    src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                    alt=""
+                  />
+
+                  <img
+                    src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="details">
+                <a href="product-details.html">
+                  <div class="name">Fashion Tops</div>
+                </a>
+                <div class="price">
+                  <div class="new">$20</div>
+                  <div class="old">$50 <del></del></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item box-item data-new-arrive">
+              <!-- edit delete sec -->
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </div>
+
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+              <!-- edit delete sec -->
+
+              <div class="image">
+                <img
+                  id="colorImageSet"
+                  src="./images/clothing/collections/img-11.jpg"
+                />
+
                 <div class="quick-view">
                   <i class="fas fa-search"></i>
                 </div>
                 <div class="add-to-cart">Add To Cart</div>
               </div>
+
+              <div id="otherColorImages">
+                <img
+                  src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                  alt=""
+                />
+                <img
+                  src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                  alt=""
+                />
+                <img
+                  src="./images/clothing/derss/DRE27_02__52917.1629091267.jpg"
+                  alt=""
+                />
+                <img
+                  src="./images/clothing/derss/DRE27_03__68006.1629091267.jpg"
+                  alt=""
+                />
+                <img
+                  src="./images/clothing/derss/GFworking1_01__31648.1629091267.jpg"
+                  alt=""
+                />
+
+                <img
+                  src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                  alt=""
+                />
+
+                <img
+                  src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="details">
+                <a href="product-details.html">
+                  <div class="name">Fashion Tops</div>
+                </a>
+                <div class="price">
+                  <div class="new">$20</div>
+                  <div class="old">$50 <del></del></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item box-item data-new-arrive">
+              <!-- edit delete sec -->
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </div>
+
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+              <!-- edit delete sec -->
+
+              <div class="image">
+                <img
+                  id="colorImageSet"
+                  src="./images/clothing/collections/img-11.jpg"
+                />
+
+                <div class="quick-view">
+                  <i class="fas fa-search"></i>
+                </div>
+                <div class="add-to-cart">Add To Cart</div>
+              </div>
+
+              <div id="otherColorImages">
+                <img
+                  src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                  alt=""
+                />
+                <img
+                  src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                  alt=""
+                />
+                <img
+                  src="./images/clothing/derss/DRE27_02__52917.1629091267.jpg"
+                  alt=""
+                />
+                <img
+                  src="./images/clothing/derss/DRE27_03__68006.1629091267.jpg"
+                  alt=""
+                />
+                <img
+                  src="./images/clothing/derss/GFworking1_01__31648.1629091267.jpg"
+                  alt=""
+                />
+
+                <img
+                  src="./images/clothing/derss/DRE27_01__10625.1629091267.jpg"
+                  alt=""
+                />
+
+                <img
+                  src="./images/clothing/derss/A13I0399__58224.1629091267.jpg"
+                  alt=""
+                />
+              </div>
+
               <div class="details">
                 <a href="product-details.html">
                   <div class="name">Fashion Tops</div>
@@ -2558,6 +2768,7 @@
     <script src="./js/derss-size.js"></script>
     <script src="./js/popup-form.js"></script>
     <script src="./js/vendor-header.js"></script>
+    <script src="./js/product-color-change.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <!-- swiper-js -->

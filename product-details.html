@@ -24,8 +24,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <div id="fontUrlHere"></div>
     <title>Document</title>
   </head>
+
+  <div
+    id="syncColor"
+    main-color="#6f42c3"
+    pri-color="#b30e8c"
+    sec-color="#0571b9"
+    font-family="Lato"
+    font-url="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+  ></div>
+
   <body>
     <div class="loading">
       <div
@@ -1461,6 +1475,18 @@
     </div>
     <!-- scroll-to-top-end -->
 
+    <script>
+      const getSize = document.querySelector(".image-size");
+
+      // getSize.addEventListener("change", (e) => {
+      //   file = e.target.files;
+
+      //   console.log(file[0].size);
+      // });
+
+      // image-magnify
+    </script>
+
     <!-- js -->
     <script src="./js/nav.js"></script>
     <script src="./js/quantity.js"></script>
@@ -1473,23 +1499,6 @@
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
     <!-- <input class="image-size" type="file" /> -->
-
-    <script>
-      const getSize = document.querySelector(".image-size");
-
-      // getSize.addEventListener("change", (e) => {
-      //   file = e.target.files;
-
-      //   console.log(file[0].size);
-      // });
-
-      // image-magnify
-      const zooms = document.querySelectorAll("#zoom");
-
-      zooms.forEach((zoom) => {
-        $(zoom).zoom({ on: "mouseover" });
-      });
-    </script>
 
     <script>
       // product-details-page
@@ -1645,7 +1654,5 @@
           allStars[0] + allStars[1] + allStars[2] + allStars[3] + allStars[4];
       });
     </script>
-
-    <script src="./js/test.js"></script>
   </body>
 </html>

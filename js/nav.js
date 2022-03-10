@@ -15,11 +15,13 @@ $(brandDropdownBtn).hover(() => {
 });
 
 // drop-down
-const dropDown = document.querySelector(".drop-down");
-const drop = document.querySelector(".drop");
+const dropDown = document.querySelectorAll(".drop-down");
+const drop = document.querySelectorAll(".drop");
 
-$(dropDown).hover(() => {
-  drop.classList.toggle("active");
+dropDown.forEach((dd, idx) => {
+  $(dd).hover(() => {
+    drop[idx].classList.toggle("active");
+  });
 });
 
 // loading
@@ -203,3 +205,33 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
   then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+const syncColor = document.querySelector("#syncColor");
+const fontUrlHere = document.querySelector("#fontUrlHere");
+
+const mainColor = syncColor.getAttribute("main-color");
+const priColor = syncColor.getAttribute("pri-color");
+const secColor = syncColor.getAttribute("sec-color");
+const fontFamily = syncColor.getAttribute("font-family");
+const fontUrl = syncColor.getAttribute("font-url");
+
+const setColor = `
+<style>
+  :root {
+    --main: ${mainColor};
+    --pri: ${priColor};
+    --sec: ${secColor};
+  }
+
+  * {
+    font-family: ${fontFamily} 
+  }
+</style>
+`;
+
+const linkTag = `
+<link href="${fontUrl}" rel="stylesheet">
+`;
+
+syncColor.innerHTML = setColor;
+fontUrlHere.innerHTML = linkTag;

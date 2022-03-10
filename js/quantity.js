@@ -424,4 +424,23 @@ if (detailsPageImagePopupImg) {
 
     sideNavBg.classList.remove("active");
   });
+
+  const zooms = document.querySelectorAll("#zoom");
+
+  let windowCurrentWidth = window.innerWidth;
+
+  const checkWindowWidth = () => {
+    zooms.forEach((zoom) => {
+      if (windowCurrentWidth >= 500) {
+        $(zoom).zoom({ on: "mouseover" });
+      }
+    });
+  };
+
+  window.addEventListener("resize", (e) => {
+    let widowWidth = e.target.innerWidth;
+
+    windowCurrentWidth = widowWidth;
+    checkWindowWidth();
+  });
 }

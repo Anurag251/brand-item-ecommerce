@@ -8,16 +8,15 @@
   border: none
   background: none
   list-style: none
-  font-family: 'Lato', sans-serif
   text-decoration: none
 
 select
   -webkit-appearance: none
   background: url(data:image/svg+xmlbase64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%
 
-$main: #6f42c1
-$blue: #0571b9
-$pri: #b30e8c
+$main: var(--main)
+$blue: var(--sec)
+$pri: var(--pri)
 $sec: #666666
 $bg: #F1F1F1
 $dark: #000000
@@ -76,7 +75,7 @@ body
   height: 0
   width: 0
   border-radius: 50%
-  background-color: rgba($main, 1)
+  background-color: $main
   box-shadow: 0 0 10px rgba($dark, .2)
   @include trans()
   font-size: 11px
@@ -139,7 +138,8 @@ body
 
 @mixin price()
   @include flex($justify: flex-start)
-  font-size: 16px
+  font-size: 22px
+  font-weight: 400
 
   .new
     color: $red
@@ -151,12 +151,12 @@ body
 
     del
       position: absolute
-      top: 50%
+      top: 53%
       left: 50%
       transform: translate(-50%, -50%)
-      height: 1px
+      height: 2px
       width: 100%
-      background-color: #000000
+      background-color: #8D8D8D
 
 @mixin cart()
   position: relative
@@ -491,6 +491,15 @@ header
     display: grid
     grid-template-columns: 1fr 3fr 1fr
     grid-gap: 10px
+
+    .logo
+      height: 60px
+      width: 120px
+
+      img
+        height: 100%
+        width: 100%
+        object-fit: contain
 
     .other
       @include flex($justify: flex-end)
@@ -1483,12 +1492,14 @@ footer
 
     .footer-contact
       .logo
-        margin-bottom: 1rem
-        height: 100px
-        width: 100px
+        margin-bottom: 2rem
+        height: 80px
+        width: 160px
 
         img
           width: 100%
+          height: 100%
+          object-fit: contain
 
         h1
           font-size: 40px
@@ -1653,7 +1664,7 @@ footer
               transform: translate(-50%, -50%) scale(1.4)
               height: 70px
               width: 70px
-              border: 2px solid rgba($main, .7)
+              border: 2px solid $main
               opacity: 0
 
               pointer-events: none
@@ -1795,7 +1806,16 @@ footer
     border-radius: 15px
     border: 1px solid #BFBFBF
     margin-bottom: 2rem
-    background-color: rgba($main, .1)
+    background-color: rgba($dark, .05)
+
+    &:hover
+      background-color: rgba($dark, .2)
+
+    &:nth-child(even)
+      background-color: rgba($dark, .1)
+
+      &:hover
+        background-color: rgba($dark, .15)
 
     .checkbox
       @include flex($justify: center)
@@ -2345,7 +2365,7 @@ footer
             transform: translate(-50%, -50%) scale(1.4)
             height: 70px
             width: 70px
-            border: 2px solid rgba($main, .7)
+            border: 2px solid $main
             opacity: 0
 
             pointer-events: none
@@ -2432,6 +2452,7 @@ footer
             margin-right: 5px
             cursor: pointer
             @include trans()
+
             &:hover
               background-color: rgba($main, .1)
               transform: translateY(-1px)
@@ -2681,6 +2702,11 @@ footer
       position: relative
 
       &:hover
+        #otherColorImages
+          pointer-events: auto
+          opacity: 1
+          bottom: 0
+
         .image
           .quick-view
             height: 60px
@@ -2696,8 +2722,32 @@ footer
             opacity: 1
             pointer-events: auto
 
-          .img
+          img
             transform: scale(1.1)
+
+      #otherColorImages
+        @include flex($justify: flex-start)
+        flex-direction: row
+        position: absolute
+        left: 0
+        bottom: -70px
+        opacity: 0
+        pointer-events: none
+        z-index: 2
+        padding: 5px
+        @include trans()
+        overflow-x: auto
+        width: 100%
+        background-color: rgba($light, .2)
+        backdrop-filter: blur(10px)
+        box-shadow: 0 4px 10px rgba($dark, .1)
+
+        img
+          height: 50px
+          width: 50px
+          object-fit: cover
+          margin: 3px
+          cursor: pointer
 
       .image
         height: 400px
@@ -2705,10 +2755,10 @@ footer
         position: relative
         overflow: hidden
 
-        .img
-          @include image()
+        img
           height: 100%
           width: 100%
+          object-fit: contain
           @include trans()
 
         .quick-view
@@ -3137,6 +3187,9 @@ footer
     text-transform: uppercase
     font-weight: 600
 
+  .remPass
+    color: $main
+
   h4
     margin-bottom: 2rem
     font-weight: 400
@@ -3232,19 +3285,19 @@ footer
       button
         @include button()
         border-radius: 15px
-        border: 1.6px solid $main
         margin-top: 1rem
 
         &.sign-in-with-google
           box-shadow: 0 0 0 3rem #0071DA inset
           background-color: $light
-          border: 2px solid #0071DA
+          border: none
           font-weight: 600
+          color: $light
 
           &:hover
-            box-shadow: 0 0 0 0em #0071DA inset
+            box-shadow: 0 0 0 3em #0062be inset
             background-color: $light
-            color: #0071DA
+            color: $light
 
 /*************    sign-up     **************/
 .sign-up-form
@@ -3253,6 +3306,40 @@ footer
 
     .sign-up
       overflow: hidden
+
+      .switch
+        @include flex($justify: center)
+        margin-bottom: 1rem
+
+        li
+          margin: 0 1rem
+
+        button
+          padding: .5rem 1rem
+          border: 1px solid $main
+          border-radius: 4px
+          color: $main
+          font-size: 18px
+          cursor: pointer
+
+          &.active
+            background-color: $main
+            color: $light
+
+      .vendor-page
+        margin-top: 1rem
+
+        h1
+          margin-right: 10px
+          font-size: 20px
+          margin-bottom: 10px
+
+        button
+          @include button()
+          font-size: 16px
+
+          a
+            color: $light
 
       h2
         margin-bottom: 1rem
@@ -4610,6 +4697,7 @@ footer
               border: 1px solid rgba($dark, .2)
               border-radius: 10px
               padding: .5rem .6rem
+              width: 100%
 
               &.checkbox
                 height: 20px
