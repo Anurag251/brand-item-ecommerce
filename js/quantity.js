@@ -240,6 +240,7 @@ if (imageBtn) {
   let quantityNumber = document.querySelectorAll(".quantity-number");
   let fixQuantity = document.querySelector("#fixQuantity");
   let resetFixQty = document.querySelectorAll(".quick-view");
+  let images = document.querySelectorAll(".product-details-page .images");
 
   imageBtn.forEach((btn, index) => {
     btn.addEventListener("click", (e) => {
@@ -248,8 +249,6 @@ if (imageBtn) {
       let value = e.target.getAttribute("data-filter");
 
       let sizeData = e.target.getAttribute("data-size");
-
-      // console.log(sizeData);
 
       let imageId = parseInt(e.target.getAttribute("data-id"));
 
@@ -270,6 +269,16 @@ if (imageBtn) {
             qn.value = 0;
           });
         });
+      });
+
+      images.forEach((image) => {
+        imageId = image.getAttribute("id");
+
+        if (imageId === value) {
+          image.classList.add("active");
+        } else {
+          image.classList.remove("active");
+        }
       });
 
       if (sizeData === "true") {

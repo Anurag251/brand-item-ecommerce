@@ -361,6 +361,10 @@ section
   &.bg
     background-color: $bg
 
+  &.mTop
+    padding: 0
+    padding-top: 3rem
+
 .wishlist-btn
   position: absolute
   right: 5px
@@ -716,14 +720,14 @@ header
     border-radius: 15px
     box-shadow:
     z-index: 10
-    max-width: 900px
+    max-width: 800px
     width: 100%
     padding: 1rem
     max-height: 70vh
     overflow-y: auto
 
     display: grid
-    grid-template-columns: 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr
     grid-gap: 20px
 
     box-shadow: 0px 1px 15px rgba($dark, 0.19)
@@ -738,7 +742,7 @@ header
       pointer-events: auto
 
     .item
-      height: 250px
+      height: 150px
       position: relative
       border-radius: 10px
       overflow: hidden
@@ -769,7 +773,7 @@ header
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-        font-size: 24px
+        font-size: 16px
         font-weight: 300
         color: $light
         text-transform: uppercase
@@ -858,6 +862,7 @@ header
       z-index: 1
 
     &.swiper-slide-active
+
       .wrapper
         h1
           transform: translateY(0)
@@ -1429,7 +1434,6 @@ header
             color: $sec
 
 /*************    footer     *************/
-
 footer
   .subscribe
     text-align: center
@@ -2277,9 +2281,19 @@ footer
   .images
     overflow-x: hidden
     display: none
+    // position: fixed
+    // opacity: 0
+    // pointer-events: none
+    // transform: translateX(-10px)
+    // @include trans()
 
     &.active
       display: block
+      // position: relative
+      // pointer-events: auto
+      // opacity: 1
+      // transform: scale(1)
+      // transform: translateX(0)
 
     .mySwiper, .mySwiper2
 
@@ -3740,7 +3754,6 @@ footer
       @include image()
 
 /*************    electronic-collections     **************/
-
 .electronic-collections
   display: grid
   grid-template-areas: 'item1 item1 item2 item2 item3 item3' 'item4 item4 item4 item5 item5 item5'
@@ -3816,7 +3829,6 @@ footer
         letter-spacing: 4px
 
 /*************    flash-deals     **************/
-
 .flash-deals
   .title
     border-bottom: 1px solid $sec

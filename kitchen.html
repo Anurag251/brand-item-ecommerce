@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- animation -->
+    <link rel="stylesheet" href="./css/animation.css" />
     <!-- responsive -->
     <link rel="stylesheet" href="./css/responsive.css" />
     <!-- swiper -->
@@ -19,8 +21,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <!-- select2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <div id="fontUrlHere"></div>
     <title>Document</title>
   </head>
+
+  <div
+    id="syncColor"
+    main-color="#6f42c3"
+    pri-color="#b30e8c"
+    sec-color="#0571b9"
+    font-family="Lato"
+    font-url="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+  ></div>
+
   <body>
     <div class="loading">
       <div
@@ -28,52 +49,138 @@
         style="background-image: url(./images/shopping-loader.gif)"
       ></div>
     </div>
-    <div class="desktop-nav sticky-nav">
-      <!-- header-start -->
-      <header>
-        <div class="menubar wrapper">
-          <a href="index.html">
-            <div class="logo">
-              <h1>LOGO</h1>
-            </div>
-          </a>
 
-          <div class="search">
-            <form action="">
-              <div class="group">
-                <select name="" id="">
-                  <option value="">All Categories</option>
-                  <option value="">Electronic</option>
-                  <option value="">Clothing</option>
-                  <option value="">Kitchen</option>
-                  <option value="">Shooes</option>
-                  <option value="">Brands</option>
+    <!-- popup-form-add-item-start -->
+    <div class="" id="popup-form-add-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Upload Logo</h3>
+          <div class="add-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="">Select</label>
+
+              <div class="select">
+                <select>
+                  <option value="">-----</option>
+                  <option value="">Ractangle [250 X 200]</option>
+                  <option value="">Square [200 X 200]</option>
+                  <option value="">Circle [200 X 200]</option>
                 </select>
-                <input
-                  type="search"
-                  class="input"
-                  placeholder="Search..."
-                  required
-                />
-                <button class="search-btn">
-                  <i class="fas fa-search"></i>
-                </button>
               </div>
-            </form>
+            </div>
+
+            <div class="group">
+              <label for="bannerImage">Banner Image</label>
+              <input type="file" id="bannerImage" />
+            </div>
           </div>
 
-          <div class="other">
-            <a href="wishlist.html">
-              <div class="wishlist">
-                <img src="./images/icon/Heart.svg" alt="heart" />
-                <div class="count">75</div>
+          <button class="add-item-button">Add Banner</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-add-item-end -->
+
+    <div class="desktop-nav sticky-nav">
+      <div class="v-header">
+        <div class="wrapper">
+          <div></div>
+
+          <div class="logo rectangle-shape">
+            <div class="image">
+              <div
+                class="logo-image"
+                style="background-image: url(./images/vendor-logo-header.png)"
+              ></div>
+            </div>
+
+            <button class="edit-logo" id="addItem">
+              <img src="./images/icon/Camera.svg" alt="" />
+            </button>
+          </div>
+
+          <ul>
+            <li>
+              <a href="#">
+                <button>Home</button>
+              </a>
+            </li>
+
+            <li class="drop-down">
+              <button>Shop <i class="fas fa-chevron-down"></i></button>
+              <ul class="drop">
+                <li>
+                  <a href="#">
+                    <button>Clothing</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>Electronic</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>Sneakers</button>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">
+                <button>About</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button>Blog</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button>Contact</button>
+              </a>
+            </li>
+          </ul>
+
+          <div class="others">
+            <div class="v-search-section" id="v-search-field">
+              <div class="inner">
+                <button class="v-search-btn">
+                  <div class="icon-group">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-times"></i>
+                  </div>
+                </button>
+
+                <form action="">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    id="v-search-input"
+                  />
+                  <button>
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
               </div>
-            </a>
+            </div>
 
             <div class="cart">
               <img
                 class="bag-image"
-                src="./images/icon/shopping-bag.svg"
+                src="./images/icon/shopping-bag-light.svg"
                 alt="bag"
               />
               <div class="count">49</div>
@@ -153,181 +260,45 @@
               </div>
             </div>
 
-            <a href="login-signup.html">
+            <a href="sign-in.html">
               <div class="login-signup">
                 <div class="icon">
-                  <img src="./images/icon/Profile.svg" alt="profile" />
+                  <img src="./images/icon/Profile-light.svg" alt="profile" />
                 </div>
-                <div class="text">
-                  <span>Login</span>
-                  <span>Register</span>
+
+                <div class="sign-in-sign-up-dropdown">
+                  <ul>
+                    <a href="#">
+                      <li><i class="fas fa-user"></i> Profile</li>
+                    </a>
+
+                    <a href="#">
+                      <li><i class="fas fa-cog"></i> Setting</li>
+                    </a>
+
+                    <a href="wishlist.html">
+                      <li><i class="fas fa-heart"></i> Wishlist</li>
+                    </a>
+
+                    <a href="#">
+                      <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+                    </a>
+                  </ul>
+
+                  <!-- <ul>
+                    <a href="sign-up.html">
+                      <li>SignUp <i class="fas fa-user"></i></li>
+                    </a>
+                    <a href="sign-in.html">
+                      <li>Login <i class="fas fa-cog"></i></li>
+                    </a>
+                  </ul> -->
                 </div>
               </div>
             </a>
           </div>
         </div>
-      </header>
-      <!-- header-end -->
-
-      <!-- nav-bar-start -->
-      <div class="nav-bar">
-        <ul class="wrapper">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-
-          <li class="drop-down">
-            Shop <i class="fas fa-chevron-down"></i>
-            <ul class="drop">
-              <li>
-                <a href="clothing.html"> Chothings </a>
-              </li>
-
-              <li>
-                <a href="electronic.html"> Electronic </a>
-              </li>
-
-              <li>
-                <a href="sneakers.html"> Shoes </a>
-              </li>
-
-              <li>
-                <a href="kitchen.html"> Kitchen </a>
-              </li>
-
-              <li>
-                <a href="bags.html"> Bags </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="drop-down-brand">
-            Brands <i class="fas fa-chevron-down"></i>
-            <div class="drop-brand">
-              <div class="list">
-                <h3>Puma</h3>
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/shoes/NMD_R1_Shoes_White_GX0999_01_standard.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Sneakers</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/shoes/OZWEEGO_Shoes_Grey_GY1346_01_standard.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Sport</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/shoes/shoe19.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Boot</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="list">
-                <h3>Adidas</h3>
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/shoes/Ultraboost_DNA_Shoes_Black_GZ3292_01_standard.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Sneakers</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="list">
-                <h3>Sony</h3>
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/electronic/device/tv.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">UHD 4K Tv</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">
-                        High Quality Wireless HeadSet
-                      </div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/electronic/bn-cate1-2.jpg);
-                      "
-                    ></div>
-                    <div class="details">
-                      <div class="product-name">Home Threater</div>
-                      <div class="product-price">$28.31</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
       </div>
-      <!-- nav-bar-end -->
     </div>
 
     <div class="mobile-logo">
@@ -337,7 +308,7 @@
     </div>
 
     <!-- popup-form-add-item-start -->
-    <div class="popup-form-add-item">
+    <div class="" id="popup-form-add-item">
       <div class="inner">
         <div class="add-item-form-title">
           <h3>Banner Form</h3>
@@ -359,6 +330,19 @@
             </div>
 
             <div class="group">
+              <label for="">Select</label>
+
+              <div class="select">
+                <select class="js-example-responsive" style="width: 100%">
+                  <option value="">-----</option>
+                  <option value="">Hello</option>
+                  <option value="">Hello</option>
+                  <option value="">Hello</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="group">
               <label for="bannerImage">Banner Image</label>
               <input type="file" id="bannerImage" />
             </div>
@@ -376,7 +360,7 @@
     <!-- popup-form-add-item-end -->
 
     <!-- popup-form-edit-item-start -->
-    <div class="popup-form-edit-item">
+    <div class="" id="popup-form-edit-item">
       <div class="inner">
         <div class="add-item-form-title">
           <h3>Banner Form</h3>
@@ -427,7 +411,7 @@
     <!-- popup-form-edit-item-end -->
 
     <!-- delete-confirm-start -->
-    <div class="delete-confirm">
+    <div class="" id="delete-confirm">
       <div class="inner">
         <h4>Are you sure you want to delete</h4>
 
@@ -446,7 +430,7 @@
 
     <!-- banner-start -->
     <div class="banner others-page-banner">
-      <div class="add-item">
+      <div class="add-item" id="addItem">
         <button class="icon">
           <svg
             width="16"
@@ -461,9 +445,6 @@
             />
           </svg>
         </button>
-        <div class="others-details">
-          <h3>Add your banner</h3>
-        </div>
       </div>
 
       <div class="swiper mySwiper">
@@ -571,10 +552,10 @@
     <!-- serv-end -->
 
     <!-- popup-form-add-item-start -->
-    <div class="popup-form-add-item">
+    <div class="" id="popup-form-add-item">
       <div class="inner">
         <div class="add-item-form-title">
-          <h3>Add Collection Form</h3>
+          <h3>Collection Form</h3>
           <div class="add-item-close-btn">
             <i class="fas fa-times"></i>
           </div>
@@ -585,11 +566,6 @@
             <div class="group">
               <label for="collectionName">Collection Name</label>
               <input type="text" id="collectionName" />
-            </div>
-
-            <div class="group">
-              <label for="collectionLink">Collection Link</label>
-              <input type="text" id="collectionLink" />
             </div>
 
             <div class="group">
@@ -605,10 +581,10 @@
     <!-- popup-form-add-item-end -->
 
     <!-- popup-form-edit-item-start -->
-    <div class="popup-form-edit-item">
+    <div class="" id="popup-form-edit-item">
       <div class="inner">
         <div class="add-item-form-title">
-          <h3>Banner Form</h3>
+          <h3>Collection Form</h3>
           <div class="edit-item-close-btn">
             <i class="fas fa-times"></i>
           </div>
@@ -617,46 +593,283 @@
         <form action="">
           <div class="form">
             <div class="group">
-              <label for="bannerName">Banner Name</label>
-              <input type="text" id="bannerName" value="Hello World" />
-            </div>
-
-            <p class="error-message-text success">invalid NAme</p>
-
-            <div class="group">
-              <label for="bannerLink">Banner Link</label>
-              <input type="text" id="bannerLink" value="njaksndcjkans" />
+              <label for="collectionName">Collection Name</label>
+              <input
+                type="text"
+                id="collectionName"
+                value="Spring Collection"
+              />
             </div>
 
             <div class="group">
-              <label for="bannerImage">Banner Image</label>
-              <input type="file" id="bannerImage" />
-            </div>
-
-            <div class="image">
-              <img src="./images/banner/banner1.jpg" alt="" />
-            </div>
-
-            <div class="group">
-              <label for="bannerDesc">Banner Descriptions</label>
-              <textarea
-                name=""
-                id="bannerDesc"
-                cols="30"
-                rows="10"
-                value="Lorem"
-              ></textarea>
+              <label for="collectionImage">Collection Image</label>
+              <input type="file" id="collectionImage" />
             </div>
           </div>
 
-          <button class="add-item-button">Add Banner</button>
+          <button class="add-item-button">Add Collection</button>
         </form>
       </div>
     </div>
     <!-- popup-form-edit-item-end -->
 
     <!-- delete-confirm-start -->
-    <div class="delete-confirm">
+    <div class="" id="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="" id="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Collection Form</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="collectionName">Collection Name</label>
+              <input
+                type="text"
+                id="collectionName"
+                value="Spring Collection"
+              />
+            </div>
+
+            <div class="group">
+              <label for="collectionImage">Collection Image</label>
+              <input type="file" id="collectionImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Collection</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="" id="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="" id="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Collection Form</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="collectionName">Collection Name</label>
+              <input
+                type="text"
+                id="collectionName"
+                value="Spring Collection"
+              />
+            </div>
+
+            <div class="group">
+              <label for="collectionImage">Collection Image</label>
+              <input type="file" id="collectionImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Collection</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="" id="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="" id="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Collection Form</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="collectionName">Collection Name</label>
+              <input
+                type="text"
+                id="collectionName"
+                value="Spring Collection"
+              />
+            </div>
+
+            <div class="group">
+              <label for="collectionImage">Collection Image</label>
+              <input type="file" id="collectionImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Collection</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="" id="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="" id="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Collection Form</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="collectionName">Collection Name</label>
+              <input
+                type="text"
+                id="collectionName"
+                value="Spring Collection"
+              />
+            </div>
+
+            <div class="group">
+              <label for="collectionImage">Collection Image</label>
+              <input type="file" id="collectionImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Collection</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="" id="delete-confirm">
+      <div class="inner">
+        <h4>Are you sure you want to delete</h4>
+
+        <div class="btn-group">
+          <button class="popup-delete-close" id="delete-confirm-close">
+            Cancel
+          </button>
+
+          <form action="">
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- delete-confirm-end -->
+
+    <!-- popup-form-edit-item-start -->
+    <div class="" id="popup-form-edit-item">
+      <div class="inner">
+        <div class="add-item-form-title">
+          <h3>Collection Form</h3>
+          <div class="edit-item-close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="form">
+            <div class="group">
+              <label for="collectionName">Collection Name</label>
+              <input
+                type="text"
+                id="collectionName"
+                value="Spring Collection"
+              />
+            </div>
+
+            <div class="group">
+              <label for="collectionImage">Collection Image</label>
+              <input type="file" id="collectionImage" />
+            </div>
+          </div>
+
+          <button class="add-item-button">Add Collection</button>
+        </form>
+      </div>
+    </div>
+    <!-- popup-form-edit-item-end -->
+
+    <!-- delete-confirm-start -->
+    <div class="" id="delete-confirm">
       <div class="inner">
         <h4>Are you sure you want to delete</h4>
 
@@ -676,8 +889,8 @@
     <!-- kitchen-collections-start -->
     <section>
       <div class="wrapper">
-        <div class="add-item add-item-collection">
-          <div class="icon">
+        <div class="add-item add-item-collection" id="addItem">
+          <button class="icon">
             <svg
               width="16"
               height="16"
@@ -690,15 +903,25 @@
                 fill="black"
               />
             </svg>
-          </div>
+          </button>
           <div class="others-details">
-            <h3>Add your Collections</h3>
+            <h3>Add your collection</h3>
           </div>
         </div>
 
         <div class="kitchen-collections">
           <div class="list">
             <div class="item">
+              <!-- edit delete sec -->
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </div>
+
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+              <!-- edit delete sec -->
+
               <div
                 class="image"
                 style="
@@ -735,6 +958,16 @@
             </div>
 
             <div class="item">
+              <!-- edit delete sec -->
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </div>
+
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+              <!-- edit delete sec -->
+
               <div
                 class="image"
                 style="
@@ -748,6 +981,16 @@
             </div>
 
             <div class="item">
+              <!-- edit delete sec -->
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </div>
+
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+              <!-- edit delete sec -->
+
               <div
                 class="image"
                 style="
@@ -761,6 +1004,16 @@
             </div>
 
             <div class="item">
+              <!-- edit delete sec -->
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </div>
+
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+              <!-- edit delete sec -->
+
               <div
                 class="image"
                 style="
@@ -774,6 +1027,16 @@
             </div>
 
             <div class="item">
+              <!-- edit delete sec -->
+              <div class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </div>
+
+              <div class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </div>
+              <!-- edit delete sec -->
+
               <div
                 class="image"
                 style="
@@ -792,10 +1055,10 @@
     <!-- kitchen-collections-end -->
 
     <!-- popup-form-add-item-start -->
-    <div class="popup-form-add-item">
+    <div class="" id="popup-form-add-item">
       <div class="inner">
         <div class="add-item-form-title">
-          <h3>Add Products Form</h3>
+          <h3>Product Form</h3>
           <div class="add-item-close-btn">
             <i class="fas fa-times"></i>
           </div>
@@ -804,32 +1067,109 @@
         <form action="">
           <div class="form">
             <div class="group">
-              <label for="ProductsName">Products Name</label>
-              <input type="text" id="ProductsName" />
+              <label for="productName">Product Name</label>
+              <input type="text" id="productName" />
             </div>
 
             <div class="group">
-              <label for="ProductsLink">Products Link</label>
-              <input type="text" id="ProductsLink" />
+              <label for="productImage">Product Image</label>
+              <input type="file" id="productImage" />
             </div>
 
             <div class="group">
-              <label for="ProductsImage">Products Image</label>
-              <input type="file" id="ProductsImage" />
+              <label for="productImage">Product Image</label>
+              <input type="file" id="productImage" />
+            </div>
+
+            <div class="group">
+              <label for="productImage">Product Image</label>
+              <input type="file" id="productImage" />
+            </div>
+
+            <div class="group">
+              <label for="productPrice">Price</label>
+              <input type="number" id="productPrice" />
+            </div>
+
+            <div class="groups">
+              <h3>Size</h3>
+              <ul class="size-form">
+                <li>
+                  <label for="xxxs">
+                    <input type="checkbox" id="xxxs" class="checkbox" />
+
+                    <span>XXXS</span>
+                  </label>
+
+                  <div class="line"></div>
+
+                  <label>
+                    <span>Quantity:</span>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="quantityInput"
+                    />
+                  </label>
+                </li>
+
+                <li>
+                  <label for="xxxs">
+                    <input type="checkbox" id="xxxs" class="checkbox" />
+
+                    <span>XXXS</span>
+                  </label>
+
+                  <div class="line"></div>
+
+                  <label>
+                    <span>Quantity:</span>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="quantityInput"
+                    />
+                  </label>
+                </li>
+
+                <li>
+                  <label for="xxxs">
+                    <input type="checkbox" id="xxxs" class="checkbox" />
+
+                    <span>XXXS</span>
+                  </label>
+
+                  <div class="line"></div>
+
+                  <label>
+                    <span>Quantity:</span>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="quantityInput"
+                    />
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="group">
+              <label for="discountPrice">Discount Price</label>
+              <input type="number" id="productPrice" />
             </div>
           </div>
 
-          <button class="add-item-button">Add Products</button>
+          <button class="add-item-button">Add Product</button>
         </form>
       </div>
     </div>
     <!-- popup-form-add-item-end -->
 
     <!-- popup-form-edit-item-start -->
-    <div class="popup-form-edit-item">
+    <div class="" id="popup-form-edit-item">
       <div class="inner">
         <div class="add-item-form-title">
-          <h3>Products Form</h3>
+          <h3>Banner Form</h3>
           <div class="edit-item-close-btn">
             <i class="fas fa-times"></i>
           </div>
@@ -838,42 +1178,38 @@
         <form action="">
           <div class="form">
             <div class="group">
-              <label for="ProductsName">Products Name</label>
-              <input type="text" id="ProductsName" value="Hello World" />
-            </div>
-
-            <p class="error-message-text success">Invalid Name</p>
-
-            <div class="group">
-              <label for="ProductsLink">Products Link</label>
-              <input type="text" id="ProductsLink" value="njaksndcjkans" />
+              <label for="productName">Product Name</label>
+              <input
+                type="text"
+                id="productName"
+                value="Bluetooth Head Phone"
+              />
             </div>
 
             <div class="group">
-              <label for="ProductsImage">Products Image</label>
-              <input type="file" id="ProductsImage" />
-            </div>
-
-            <div class="image">
-              <img src="./images/banner/banner1.jpg" alt="" />
+              <label for="productImage">Product Image</label>
+              <input type="file" id="productImage" />
             </div>
 
             <div class="group">
-              <label for="ProductsDesc">Products Descriptions</label>
-              <textarea name="" id="ProductsDesc" cols="30" rows="10">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur officiis voluptatem dignissimos deserunt harum in minus labore consequuntur, debitis tempora quasi molestias placeat rem! Nihil itaque voluptatem inventore.</textarea
-              >
+              <label for="productPrice">Price</label>
+              <input type="number" id="productPrice" value="1200" />
+            </div>
+
+            <div class="group">
+              <label for="discountPrice">Discount Price</label>
+              <input type="number" id="productPrice" value="2000" />
             </div>
           </div>
 
-          <button class="add-item-button">Add Products</button>
+          <button class="add-item-button">Add Product</button>
         </form>
       </div>
     </div>
     <!-- popup-form-edit-item-end -->
 
     <!-- delete-confirm-start -->
-    <div class="delete-confirm">
+    <div class="" id="delete-confirm">
       <div class="inner">
         <h4>Are you sure you want to delete</h4>
 
@@ -910,7 +1246,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
 
           <div class="list">
             <div class="item">
-              <div class="add-item">
+              <div class="add-item" id="addItem">
                 <button class="icon">
                   <svg
                     width="16"
@@ -1537,10 +1873,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
     <!-- kitchen-new-product-end -->
 
     <!-- popup-form-add-item-start -->
-    <div class="popup-form-add-item">
+    <div class="" id="popup-form-add-item">
       <div class="inner">
         <div class="add-item-form-title">
-          <h3>Banner Form</h3>
+          <h3>Fashion Form Add</h3>
           <div class="add-item-close-btn">
             <i class="fas fa-times"></i>
           </div>
@@ -1554,8 +1890,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
             </div>
 
             <div class="group">
-              <label for="bannerLink">Banner Link</label>
-              <input type="text" id="bannerLink" />
+              <label for="bannerName">Banner Link</label>
+              <input type="text" id="bannerName" />
             </div>
 
             <div class="group">
@@ -1576,10 +1912,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
     <!-- popup-form-add-item-end -->
 
     <!-- popup-form-edit-item-start -->
-    <div class="popup-form-edit-item">
+    <div class="" id="popup-form-edit-item">
       <div class="inner">
         <div class="add-item-form-title">
-          <h3>Banner Form</h3>
+          <h3>Fashion Form Edit</h3>
           <div class="edit-item-close-btn">
             <i class="fas fa-times"></i>
           </div>
@@ -1589,14 +1925,12 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
           <div class="form">
             <div class="group">
               <label for="bannerName">Banner Name</label>
-              <input type="text" id="bannerName" value="Hello World" />
+              <input type="text" id="bannerName" />
             </div>
 
-            <p class="error-message-text success">invalid NAme</p>
-
             <div class="group">
-              <label for="bannerLink">Banner Link</label>
-              <input type="text" id="bannerLink" value="njaksndcjkans" />
+              <label for="bannerName">Banner Link</label>
+              <input type="text" id="bannerName" />
             </div>
 
             <div class="group">
@@ -1604,19 +1938,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
               <input type="file" id="bannerImage" />
             </div>
 
-            <div class="image">
-              <img src="./images/banner/banner1.jpg" alt="" />
-            </div>
-
             <div class="group">
-              <label for="bannerDesc">Banner Descriptions</label>
-              <textarea
-                name=""
-                id="bannerDesc"
-                cols="30"
-                rows="10"
-                value="Lorem"
-              ></textarea>
+              <label for="bannerDesc">Banner Name</label>
+              <textarea name="" id="bannerDesc" cols="30" rows="10"></textarea>
             </div>
           </div>
 
@@ -1627,7 +1951,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
     <!-- popup-form-edit-item-end -->
 
     <!-- delete-confirm-start -->
-    <div class="delete-confirm">
+    <div class="" id="delete-confirm">
       <div class="inner">
         <h4>Are you sure you want to delete</h4>
 
@@ -1645,7 +1969,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
     <!-- delete-confirm-end -->
 
     <!-- sale-off-start -->
-    <section class="bottom0">
+    <section class="mTop">
       <div
         class="sale-off"
         style="background-image: url(./images/shoes/banner-1.jpg)"
@@ -1713,48 +2037,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
           </div>
 
           <div class="list">
-            <div class="item">
-              <ul>
-                <li class="heading">CATEGORIES</li>
-                <li>Appliances</li>
-                <li>Computers & Laptops</li>
-                <li>Cameras</li>
-                <li>Mobile Phones & Tablets</li>
-                <li>Televisions</li>
-                <li>Video Games & Systems</li>
-                <li>Weekly Deals</li>
-              </ul>
-            </div>
-
-            <div class="item">
-              <ul>
-                <li class="heading">FURTHER INFO.</li>
-                <li>About us</li>
-                <li>Gift Certificates</li>
-                <li>Theme Styles</li>
-                <li>Contact us</li>
-                <li>Blog</li>
-                <li>Brands</li>
-                <li>Sitemap</li>
-              </ul>
-            </div>
-
-            <div class="item">
-              <ul>
-                <li class="heading">CUSTOMER SERVICE</li>
-                <li>Help & FAQs</li>
-                <li>Terms of Conditions</li>
-                <li>Privacy Policy</li>
-                <li>Online Returns Policy</li>
-                <li>Rewards Program</li>
-                <li>Rebate Center</li>
-                <li>Partners</li>
-              </ul>
-            </div>
-
             <div class="footer-contact">
               <div class="logo">
-                <h1>LOGO</h1>
+                <img src="./images/vendor-logo.png" alt="logo" />
               </div>
               <h4>
                 <i class="fas fa-map-marker-alt"></i> 685 Market Street San
@@ -1764,6 +2049,75 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
                 <i class="fas fa-phone-alt"></i> Call us at (415) 555-5555
               </h4>
               <h4><i class="fas fa-envelope"></i> Email: example@domain.com</h4>
+
+              <div class="social-icon">
+                <a href="#">
+                  <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="icon">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="icon">
+                    <i class="fab fa-google"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="item">
+              <ul>
+                <li class="heading">About Us</li>
+                <li>About Lukla Outdoor</li>
+                <li>Career</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <ul>
+                <li class="heading">Information</li>
+                <li>FAQ</li>
+                <li>Returns and Refund policy</li>
+                <li>Privacy policy</li>
+                <li>Terms and Condition</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <ul>
+                <li class="heading">Payment Methods</li>
+                <li class="icon">
+                  <img src="./images/icon/paypal.png" alt="" />
+                </li>
+
+                <li class="icon">
+                  <img src="./images/icon/esewa.png" alt="" />
+                </li>
+
+                <li class="icon">
+                  <img src="./images/icon/master.png" alt="" />
+                </li>
+
+                <li class="icon">
+                  <img src="./images/icon/khalit.png" alt="" />
+                </li>
+
+                <li class="icon">
+                  <img src="./images/icon/visa.png" alt="" />
+                </li>
+              </ul>
             </div>
           </div>
         </footer>
@@ -1772,7 +2126,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
     <!-- footer-end -->
 
     <!-- quick-view-pop-start -->
-    <div class="quick-view-pop">
+    <div class="quick-view-pop" id="product-details">
       <div class="pop-bg"></div>
       <div class="details">
         <div class="quick-view-close">
@@ -1820,13 +2174,26 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
         </div>
 
         <div class="item-details">
-          <h3>RUFFLE NECK TIERED MAXI DRESS WITH PIN TUCKS IN RUST MULTI</h3>
+          <a href="product-details.html">
+            <h3>RUFFLE NECK TIERED MAXI DRESS WITH PIN TUCKS IN RUST MULTI</h3>
+          </a>
           <div class="rating">
             <div class="stars" data-value="2"></div>
           </div>
 
           <div class="price">
-            <div class="new">$<span id="total-price">110</span></div>
+            <div class="new">
+              <div id="product-price-text">Rs <span>100</span></div>
+              <input
+                type="number"
+                name=""
+                id="product-price"
+                value="120"
+                readonly
+                hidden
+              />
+              <!-- <div class="text-price">0</div> -->
+            </div>
             <div class="old"><del></del>$120.32</div>
           </div>
 
@@ -1840,36 +2207,136 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
             </p>
           </div>
 
-          <div class="others">
-            <div class="quantity">
-              <h4>Quantity:</h4>
-              <div class="group">
-                <button class="sub-button">
-                  <i class="fas fa-chevron-down"></i>
-                </button>
-                <input type="number" class="quantity-number" />
-                <button class="add-button">
-                  <i class="fas fa-chevron-up"></i>
-                </button>
-              </div>
-            </div>
+          <div class="product-varient">
+            <h4>Choose Product:</h4>
 
-            <div class="size">
-              <h4>Size:</h4>
-              <ul>
-                <li class="not">xxs</li>
-                <li>xs</li>
-                <li>s</li>
-                <li>m</li>
-                <li class="not">l</li>
-                <li>xl</li>
-                <li class="not">2xl</li>
-                <li>3xl</li>
-                <li>4xl</li>
-              </ul>
+            <div class="inner">
+              <input type="hidden" id="imageData" />
+
+              <div
+                class="img"
+                id="imageBtn"
+                data-id="2"
+                data-filter="size1"
+                data-size="true"
+                style="
+                  background-image: url(./images/clothing/derss/A13I0399__58224.1629091267.jpg);
+                "
+                alt="product-image"
+              ></div>
+
+              <div
+                class="img"
+                id="imageBtn"
+                data-id="2"
+                data-filter="size2"
+                data-size="true"
+                style="
+                  background-image: url(./images/electronic/device/bluetooth-headphone.jpg);
+                "
+                alt="product-image"
+              ></div>
+
+              <div
+                class="img"
+                id="imageBtn"
+                data-id="2"
+                data-filter="size3"
+                data-size="true"
+                style="background-image: url(./images/furniture/bn-cate5-1.jpg)"
+                alt="product-image"
+              ></div>
+              <div
+                class="img"
+                id="imageBtn"
+                data-id="2"
+                data-filter="size4"
+                data-size="true"
+                style="
+                  background-image: url(./images/kitchen/product/herringbone-cutting-board.jpg);
+                "
+                alt="product-image"
+              ></div>
             </div>
           </div>
-          <button class="button">Add To Cart</button>
+
+          <form action="">
+            <div class="others">
+              <div id="allSizes">
+                <div class="size clothSizes" id="size1">
+                  <h4>Size:</h4>
+                  <ul id="all-size">
+                    <input type="hidden" name="" id="sizeInput" />
+                    <input type="hidden" name="" id="sizesQuantity" />
+                    <li data-value="2">s</li>
+                    <li data-value="6">m</li>
+                    <li data-value="10">xl</li>
+                    <li data-value="8">4xl</li>
+                  </ul>
+                </div>
+
+                <div class="size clothSizes" id="size2">
+                  <h4>Size:</h4>
+                  <ul id="all-size">
+                    <input type="hidden" name="" id="sizeInput" />
+                    <input type="hidden" name="" id="sizesQuantity" />
+                    <li data-value="9">xs</li>
+                    <li data-value="2">s</li>
+                    <li data-value="6">m</li>
+                    <li data-value="17">xl</li>
+                    <li data-value="4">3xl</li>
+                    <li data-value="8">4xl</li>
+                  </ul>
+                </div>
+
+                <div class="size clothSizes" id="size3">
+                  <h4>Size:</h4>
+                  <ul id="all-size">
+                    <input type="hidden" name="" id="sizeInput" />
+                    <input type="hidden" name="" id="sizesQuantity" />
+                    <li data-value="9">xs</li>
+                    <li data-value="2">s</li>
+                    <li data-value="6">m</li>
+                    <li data-value="4">3xl</li>
+                    <li data-value="8">4xl</li>
+                  </ul>
+                </div>
+
+                <div class="size clothSizes" id="size4">
+                  <h4>Size:</h4>
+                  <ul id="all-size">
+                    <input type="hidden" name="" id="sizeInput" />
+                    <input type="hidden" name="" id="sizesQuantity" />
+                    <li data-value="17">xl</li>
+                    <li data-value="4">3xl</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="quantity">
+                <input type="number" id="fixQuantity" hidden />
+                <h4>Quantity:</h4>
+                <div class="group">
+                  <button class="sub-button">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+
+                  <input
+                    type="number"
+                    name=""
+                    class="quantity-number"
+                    value="1"
+                    readonly
+                  />
+
+                  <button class="add-button">
+                    <i class="fas fa-chevron-up"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="button">Add To Cart</button>
+          </form>
         </div>
       </div>
     </div>
@@ -2037,6 +2504,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque consectetur
     <script src="./js/quick-view.js"></script>
     <script src="./js/derss-size.js"></script>
     <script src="./js/popup-form.js"></script>
+    <script src="./js/vendor-header.js"></script>
+    <script src="./js/wishlist-button.js"></script>
+    <script src="./js/product-color-change.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- swiper-js -->
     <script src="./js/swiper.min.js"></script>
 
