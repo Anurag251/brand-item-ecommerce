@@ -824,17 +824,24 @@ header .menubar .search .group .search-btn i {
   left: 10px;
   background-color: #ffffff;
   border-radius: 15px;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
-  max-width: 800px;
-  width: 100%;
-  padding: 1rem;
+  max-width: 740px;
+  padding: 10px;
   max-height: 70vh;
   overflow-y: auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.19);
           box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.19);
   pointer-events: none;
@@ -865,9 +872,11 @@ header .menubar .search .group .search-btn i {
 
 .nav-bar .drop-brand .item {
   height: 150px;
+  width: 170px;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  margin: 5px;
 }
 
 .nav-bar .drop-brand .item:hover::after {
@@ -2331,6 +2340,11 @@ footer .list .footer-contact .social-icon .icon i {
 
 .quick-view-pop .details .images {
   overflow-x: hidden;
+  display: none;
+}
+
+.quick-view-pop .details .images.active {
+  display: block;
 }
 
 .quick-view-pop .details .images .swiper-slide {
