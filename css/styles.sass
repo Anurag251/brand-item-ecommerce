@@ -1541,8 +1541,11 @@ footer
 .quick-view-pop
   position: relative
   z-index: 30
+  pointer-events: none
 
   &.show-quick-view
+    pointer-events: auto
+
     .pop-bg
       pointer-events: auto
       opacity: 1

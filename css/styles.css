@@ -2251,6 +2251,11 @@ footer .list .footer-contact .social-icon .icon i {
 .quick-view-pop {
   position: relative;
   z-index: 30;
+  pointer-events: none;
+}
+
+.quick-view-pop.show-quick-view {
+  pointer-events: auto;
 }
 
 .quick-view-pop.show-quick-view .pop-bg {
