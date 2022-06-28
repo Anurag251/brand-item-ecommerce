@@ -363,30 +363,30 @@
             <div class="product-side-bar">
               <ul class="our-categories-list">
                 <li class="heading">Categories</li>
-                <li>
-                  <input type="checkbox" id="all" />
-                  <label for="all">All</label>
+                <li>All</li>
+
+                <li class="cat-drop">
+                  <div class="more-drop">
+                    <span
+                      >Electronic Electronic Electronic
+                      <i class="fas fa-chevron-down"></i
+                    ></span>
+
+                    <ul class="more">
+                      <li><i class="fas fa-chevron-right"></i> More</li>
+                      <li><i class="fas fa-chevron-right"></i> More</li>
+                      <li><i class="fas fa-chevron-right"></i> More</li>
+                    </ul>
+                  </div>
                 </li>
-                <li>
-                  <input type="checkbox" id="Electronic" />
-                  <label for="Electronic">Electronic</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="Clothing" />
-                  <label for="Clothing">Clothing</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="Shoes" />
-                  <label for="Shoes">Shoes</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="Kitchen" />
-                  <label for="Kitchen">Kitchen</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="Bags" />
-                  <label for="Bags">Bags</label>
-                </li>
+
+                <li>Clothing</li>
+
+                <li>Shoes</li>
+
+                <li>Kitchen</li>
+
+                <li>Bags</li>
               </ul>
 
               <ul class="our-brand-list">
@@ -452,6 +452,20 @@
                   <label for="300000">200k to 300k</label>
                 </li>
               </ul>
+
+              <div class="filter-by-price">
+                <h3 class="heading">Filter By Price</h3>
+
+                <form action="">
+                  <div class="group">
+                    <input type="number" placeholder="min" required />
+
+                    <input type="number" placeholder="max" required />
+                  </div>
+
+                  <button>Filter</button>
+                </form>
+              </div>
             </div>
             <button type="submit" id="submitCategories" hidden></button>
           </form>
@@ -1750,7 +1764,7 @@
     <!-- all-product-end -->
 
     <!-- footer-start -->
-    <section class="bg">
+    <section class="footer-bg">
       <div class="wrapper">
         <footer>
           <div class="subscribe">
@@ -2699,7 +2713,7 @@
 
     <!-- scroll-to-top-start -->
     <div class="scroll-to-top">
-      <img src="./images/icon/chevron_up.svg" alt="" />
+      <img src="./images/icon/chevron_up_light.svg" alt="" />
     </div>
     <!-- scroll-to-top-end -->
 

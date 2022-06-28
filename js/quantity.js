@@ -412,7 +412,7 @@ if (detailsPageImagePopupImg) {
     document.querySelector(".close-image-popup");
 
   const detailsPageImage = document.querySelectorAll(
-    ".mySwiper2 .swiper-slide #img"
+    ".product-details-page .images-list #img"
   );
 
   detailsPageImage.forEach((imageBtn) => {

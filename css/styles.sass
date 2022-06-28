@@ -353,7 +353,11 @@ body
   z-index: 5
 
 section
+  background-color: $light
   padding: 3rem 0
+
+  &.footer-bg
+    background-color: $main
 
   &.hide
     display: none
@@ -967,6 +971,7 @@ header
 
 /*************    serv     *************/
 .serv
+  background-color: $light
   .wrapper
     @include flex($justify: space-between)
     padding: 1rem 20px
@@ -1443,6 +1448,7 @@ footer
   .subscribe
     text-align: center
     margin-bottom: 5rem
+    color: $light
 
     h1
       font-size: 30px
@@ -1467,7 +1473,7 @@ footer
         height: 100%
         width: 50px
         @include flex($justify: center)
-        background-color: $main
+        background-color: $pri
         border-radius: 0 15px 15px 0
         cursor: pointer
 
@@ -1484,19 +1490,25 @@ footer
         li
           font-size: 18px
           font-weight: 400
-          color: $sec
+          color: rgba($light, .7)
           line-height: 2.5rem
+
+          &:hover
+            color: $light
 
           &.heading
             font-size: 22px
-            color: $dark
+            color: $light
             margin-bottom: .5rem
             font-weight: 700
 
           &.icon
             img
-              height: 40px
-              width: 60px
+              background-color: #fff
+              border-radius: 10px
+              padding: 0 .4rem
+              height: 50px
+              width: 80px
               object-fit: contain
 
     .footer-contact
@@ -1504,6 +1516,7 @@ footer
         margin-bottom: 2rem
         height: 80px
         width: 160px
+        border: 2px solid $light
 
         img
           width: 100%
@@ -1515,7 +1528,8 @@ footer
 
       h4
         font-size: 16px
-        color: $sec
+        color: rgba($light, .7)
+        font-weight: 400
         margin-bottom: 1rem
         @include flex($justify: flex-start)
 
@@ -1529,13 +1543,13 @@ footer
           height: 30px
           width: 30px
           border-radius: 50%
-          border: 1px solid $main
+          border: 1px solid $pri
           @include flex($justify: center)
           margin-right: 10px
 
           i
             font-size: 15px
-            color: $main
+            color: $pri
 
 /*************    quick-view-pop     **************/
 .quick-view-pop
@@ -1606,17 +1620,25 @@ footer
       color: $dark
 
     .images
-      overflow-x: hidden
       display: none
+      height: 500px
+      overflow-y: auto
 
       &.active
         display: block
 
-      .swiper-slide
+      .images-list
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 0
+
+      .item
+        padding: 0 10px 10px
         @include flex($justify: center)
 
         img
           height: 280px
+          width: 100%
           object-fit: contain
           cursor: zoom-in
 
@@ -2291,50 +2313,27 @@ footer
     font-size: 18px
 
   .images
-    overflow-x: hidden
     display: none
-    // position: fixed
-    // opacity: 0
-    // pointer-events: none
-    // transform: translateX(-10px)
-    // @include trans()
+    height: 500px
+    overflow-y: auto
 
     &.active
       display: block
-      // position: relative
-      // pointer-events: auto
-      // opacity: 1
-      // transform: scale(1)
-      // transform: translateX(0)
 
-    .mySwiper, .mySwiper2
+    .images-list
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 0
+
+    .item
+      padding: 0 10px 10px
+      @include flex($justify: center)
 
       img
-        height: 100px
+        height: 280px
         width: 100%
         object-fit: contain
-
-    .mySwiper2
-
-      .zoomImg
-        pointer-events: none
-
-      img
-        height: 300px
-        object-fit: contain
         cursor: zoom-in
-
-    // .mySwiper2
-    //   margin-bottom: 5px
-
-    //   .swiper-slide
-    //     height: 380px
-    //     width: 100%
-    //     @include image()
-
-    //     img
-    //       width: 100%
-    //       cursor: zoom-in
 
   .item-details
     h3
@@ -4029,6 +4028,12 @@ footer
       li
         line-height: 2rem
         @include flex($justify: flex-start)
+        align-items: flex-start
+        cursor: pointer
+        color: $sec
+
+        &:hover
+          color: $dark
 
         &.heading
           font-size: 20px
@@ -4037,13 +4042,81 @@ footer
           margin-bottom: .5rem
           padding-bottom: .5rem
 
+        .more-drop
+          position: relative
+          width: 100%
+
+          span
+            @include flex($justify: space-between)
+
+            i
+              font-size: 14px
+
+          &:hover
+            .more
+              opacity: 1
+              height: auto
+              margin-bottom: 1rem
+              margin-left: .2rem
+              pointer-events: auto
+
+          .more
+            background-color: #fff
+            margin: 0
+            padding: 0
+            height: 0
+            opacity: 0
+            border: none
+            pointer-events: none
+
+            li
+              @include flex($justify: flex-start)
+
+              i
+                margin-right: 5px
+                font-size: 12px
+
         input
           margin-right: 7px
           cursor: pointer
 
         label
-          cursor: pointer
-          color: $sec
+
+    .filter-by-price
+      margin-bottom: 1rem
+      border: 1px solid #bfbfbf
+      width: 100%
+      border-radius: 15px
+      padding: 1rem
+
+      .heading
+        font-size: 20px
+        font-weight: 600
+        border-bottom: 1px solid #bfbfbf
+        margin-bottom: .5rem
+        padding-bottom: .5rem
+        color: $sec
+
+      .group
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 10px
+        margin-top: 1rem
+
+        input
+          width: 100%
+          border: 1px solid #bfbfbf
+          padding: .5rem
+          border-radius: 10px
+          font-size: 16px
+
+          &:focus
+            border-color: $main
+
+      button
+        @include button()
+        margin-top: 1rem
+        padding: .5rem .9rem
 
   .product-list
     .title
@@ -4846,30 +4919,44 @@ footer
         font-size: 24px
 
 /*************    vendor-header     **************/
+.header-top-sec
+  background-color: #141414
+  color: rgba($light, .6)
+  font-size: 14px
+  padding: .4rem 0
+
+  .wrapper
+    @include flex($justify: flex-end)
+
+  a
+    color: rgba($light, .9)
+    margin-left: 6px
+
 .v-header
   padding: 1rem
-  @include gradient()
+  background-color: $main
   width: 100%
 
   .wrapper
     width: 100%
-    display: grid
-    grid-template-columns: 1fr 2fr 1fr
+    @include flex($justify: space-between)
+
     position: relative
+
+  .logo-section
+    @include flex($justify: flex-start)
 
   .logo
     width: 80px
-    height: 80px
+    height: 50px
     @include flex($justify: center)
-    position: absolute
     border-radius: 50%
-    border: 3px solid $light
-    top: -.5rem
-    left: 0
+    border: 2px solid $light
     box-shadow: 0 4px 10px rgba($dark, .2)
+    position: relative
 
     &.rectangle-shape
-      width: 150px
+      width: 100px
       border-radius: 0
 
       .image
@@ -4895,7 +4982,7 @@ footer
       cursor: pointer
 
       img
-        width: 80%
+        width: 70%
 
     .image
       overflow: hidden
@@ -4911,6 +4998,7 @@ footer
 
   ul
     @include flex($justify: center)
+    margin-left: 1rem
 
     li
       button
@@ -4925,8 +5013,10 @@ footer
 
       &.drop-down
         position: relative
-        @include flex($justify: flex-start)
         color: $light
+
+        button
+          @include flex($justify: flex-start)
 
         i
           font-size: 12px
@@ -4940,7 +5030,7 @@ footer
           top: 80px
           @include flex($justify: center)
           flex-direction: column
-          @include gradient()
+          background-color: $main
           z-index: 10
           border-radius: 15px
           box-shadow: 1px 0 10px rgba($dark, .2)

@@ -1217,5 +1217,12 @@
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .quick-view-pop .details .images {
+    height: 350px;
+  }
+  .quick-view-pop .details .images .images-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=responsive.css.map */
