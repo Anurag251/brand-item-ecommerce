@@ -412,7 +412,7 @@ if (detailsPageImagePopupImg) {
     document.querySelector(".close-image-popup");
 
   const detailsPageImage = document.querySelectorAll(
-    ".product-details-page .images-list #img"
+    ".product-details-page .image-preview #img"
   );
 
   detailsPageImage.forEach((imageBtn) => {
