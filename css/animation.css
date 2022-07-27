@@ -1,33 +1,25 @@
 @-webkit-keyframes size {
   0% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    transform: scale(0.6);
   }
   50% {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
+    transform: scale(1.4);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
 @keyframes size {
   0% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    transform: scale(0.6);
   }
   50% {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
+    transform: scale(1.4);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
 @-webkit-keyframes fade1 {
   0% {
     top: 14px;
@@ -40,7 +32,6 @@
     left: -20px;
   }
 }
-
 @keyframes fade1 {
   0% {
     top: 14px;
@@ -53,7 +44,6 @@
     left: -20px;
   }
 }
-
 @-webkit-keyframes fade2 {
   0% {
     top: 14px;
@@ -66,7 +56,6 @@
     right: -20px;
   }
 }
-
 @keyframes fade2 {
   0% {
     top: 14px;
@@ -79,7 +68,6 @@
     right: -20px;
   }
 }
-
 @-webkit-keyframes fade3 {
   0% {
     bottom: 14px;
@@ -92,7 +80,6 @@
     left: -20px;
   }
 }
-
 @keyframes fade3 {
   0% {
     bottom: 14px;
@@ -105,7 +92,6 @@
     left: -20px;
   }
 }
-
 @-webkit-keyframes fade4 {
   0% {
     bottom: 14px;
@@ -118,7 +104,6 @@
     right: -20px;
   }
 }
-
 @keyframes fade4 {
   0% {
     bottom: 14px;
@@ -131,7 +116,6 @@
     right: -20px;
   }
 }
-
 @-webkit-keyframes cover {
   0% {
     max-width: 30%;
@@ -146,7 +130,6 @@
     max-height: 100%;
   }
 }
-
 @keyframes cover {
   0% {
     max-width: 30%;
@@ -161,22 +144,19 @@
     max-height: 100%;
   }
 }
-
 @-webkit-keyframes gradientColor {
   0% {
-    opacity: .7;
+    opacity: 0.7;
   }
   100% {
     opacity: 1;
   }
 }
-
 @keyframes gradientColor {
   0% {
-    opacity: .7;
+    opacity: 0.7;
   }
   100% {
     opacity: 1;
   }
-}
-/*# sourceMappingURL=animation.css.map */
+}/*# sourceMappingURL=animation.css.map */
