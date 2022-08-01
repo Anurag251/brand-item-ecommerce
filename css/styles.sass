@@ -1397,6 +1397,9 @@ header
           color: $sec
           line-height: 2.5rem
 
+          a
+            color: $sec
+
           &.heading
             font-size: 18px
             margin-bottom: 1rem
@@ -1438,10 +1441,19 @@ header
           padding: 1rem
           text-align: center
 
+          h3
+            color: $dark
+
+            a
+              color: $dark
+
           h6
             font-size: 15px
             margin-top: .7rem
             color: $sec
+
+            a
+              color: $sec
 
 /*************    footer     *************/
 footer
@@ -1492,6 +1504,12 @@ footer
           font-weight: 400
           color: rgba($light, .7)
           line-height: 2.5rem
+
+          a
+            color: rgba($light, .7)
+
+            &:hover
+              color: $light
 
           &:hover
             color: $light

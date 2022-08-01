@@ -2032,6 +2032,10 @@ header .menubar .search .group .search-btn i {
   line-height: 2.5rem;
 }
 
+.collections .sections .section ul li a {
+  color: #666666;
+}
+
 .collections .sections .section ul li.heading {
   font-size: 18px;
   margin-bottom: 1rem;
@@ -2102,9 +2106,21 @@ header .menubar .search .group .search-btn i {
   text-align: center;
 }
 
+.collections .sections .section .list .item h3 {
+  color: #000000;
+}
+
+.collections .sections .section .list .item h3 a {
+  color: #000000;
+}
+
 .collections .sections .section .list .item h6 {
   font-size: 15px;
   margin-top: .7rem;
+  color: #666666;
+}
+
+.collections .sections .section .list .item h6 a {
   color: #666666;
 }
 
@@ -2171,6 +2187,14 @@ footer .list .item ul li {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   line-height: 2.5rem;
+}
+
+footer .list .item ul li a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer .list .item ul li a:hover {
+  color: #ffffff;
 }
 
 footer .list .item ul li:hover {
