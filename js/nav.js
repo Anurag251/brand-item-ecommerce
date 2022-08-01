@@ -10,7 +10,7 @@ cart.addEventListener("click", () => {
 const brandDropdown = document.querySelector(".drop-brand");
 const brandDropdownBtn = document.querySelector(".drop-down-brand");
 
-$(brandDropdownBtn).hover(() => {
+$(brandDropdownBtn).click(() => {
   brandDropdown.classList.toggle("active");
 });
 

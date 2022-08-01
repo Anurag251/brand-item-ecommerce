@@ -603,6 +603,10 @@ header .menubar .search .group {
   /*hide the items when the select box is closed:*/
 }
 
+header .menubar .search .group .selectCat select {
+  color: #ffffff;
+}
+
 header .menubar .search .group .custom_select {
   position: relative;
   height: 100%;
@@ -826,7 +830,7 @@ header .menubar .search .group .search-btn i {
 .nav-bar .drop-brand {
   position: absolute;
   top: 100px;
-  left: 10px;
+  left: 120px;
   background-color: #ffffff;
   border-radius: 15px;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
