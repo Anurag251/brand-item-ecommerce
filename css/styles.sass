@@ -564,8 +564,15 @@ header
         //   cursor: pointer
 
         .selectCat
+          padding: 0
+
           select
+            padding: .1rem .5rem
+            padding-right: 1rem
             color: $light
+
+            option
+              color: $dark
 
         .custom_select
           position: relative
@@ -1699,6 +1706,21 @@ footer
           font-size: 16px
           color: $sec
           line-height: 1.5rem
+          max-height: 100px
+          overflow-y: auto
+          text-align: justify
+          padding-right: 1rem
+
+        ::-webkit-scrollbar
+          width: 5px
+
+        ::-webkit-scrollbar-track
+          border: none
+          background-color: #e2e2e2
+
+        ::-webkit-scrollbar-thumb
+          background-color: $main
+          border-radius: 10px
 
       .product-varient
         margin-top: 1rem
@@ -2397,6 +2419,21 @@ footer
         font-size: 16px
         color: $sec
         line-height: 1.5rem
+        max-height: 100px
+        overflow-y: auto
+        text-align: justify
+        padding-right: 1rem
+
+      ::-webkit-scrollbar
+        width: 5px
+
+      ::-webkit-scrollbar-track
+        border: none
+        background-color: #e2e2e2
+
+      ::-webkit-scrollbar-thumb
+        background-color: $main
+        border-radius: 10px
 
     .product-varient
       margin-top: 1rem
@@ -5616,3 +5653,219 @@ footer
     object-fit: contain
     transform: scale(1.2)
     @include trans()
+
+/*************    product-more-details     **************/
+.product-more-details
+  .title
+    text-align: center
+    margin-bottom: 1rem
+
+  .button-group
+    @include flex($justify: center)
+    width: 100%
+    border-bottom: 2px solid rgba($dark, .2)
+    margin-bottom: 1rem
+
+    li
+      padding: 1rem
+      font-size: 16px
+      font-weight: 400
+      cursor: pointer
+      border-bottom: 1px solid none
+
+      &.active
+        color: $pri
+        font-weight: 700
+        border-bottom: 2px solid $pri
+        transform: translateY(2px)
+
+  .product-decription-details
+    .brand-details
+      padding: 2rem 0
+      padding-top: 0
+      background-color: $light
+      padding: 1.5rem
+      margin-bottom: 1rem
+      border-radius: 10px
+
+      h3
+        margin-top: 0
+        font-size: 18px
+
+      p
+        font-size: 16px
+        color: rgba($dark, .8)
+        line-height: 1.5rem
+
+    h3
+      margin-bottom: 1rem
+      font-size: 18px
+
+    .brand-description
+      background-color: $light
+      padding: 1.5rem
+      border-radius: 10px
+
+      .groups
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 20px
+
+      h4
+        margin-bottom: .4rem
+        font-size: 17px
+
+      ul
+        li
+          margin-bottom: .3rem
+          font-size: 14px
+
+  .product-review
+    .rating-area
+      margin-top: 1rem
+
+      .review-form .input-rating .star-area
+        display: inline-block
+        vertical-align: top
+        margin-top: .5rem
+
+      .review-form .input-rating .star-area input[type="radio"]
+        display: none
+
+      .review-form .input-rating .star-area > label
+        float: right
+        cursor: pointer
+        padding: 2px 3px
+        margin: 0px
+        -webkit-transition: 0.3s all
+        transition: 0.3s all
+        margin-right: 5px
+
+      .review-form .input-rating .star-area > label:hover,
+      .review-form .input-rating .star-area > label:hover ~ label
+        -webkit-transform: scale(1.5)
+        -ms-transform: scale(1.5)
+        transform: scale(1.5)
+
+      .review-form .input-rating .star-area > label:before
+        content: "\f006"
+        font-family: FontAwesome
+        font-style: normal
+        font-weight: normal
+        color: #8D8D8D
+        font-size: 30px
+        -webkit-transition: 0.3s all
+        transition: 0.3s all
+
+      .review-form .input-rating .star-area > label:hover:before,
+      .review-form .input-rating .star-area > label:hover ~ label:before
+        content: "\f005"
+        color: #E28700
+
+      .review-form .input-rating .star-area > input:checked label:before,
+      .review-form .input-rating .star-area > input:checked ~ label:before
+        content: "\f005"
+        color: #E28700
+
+    .submit
+      @include button()
+      margin-top: 1rem
+
+    .group
+      margin-top: 1rem
+      label
+        font-size: 16px
+        margin-left: 10px
+
+      textarea
+        margin-top: 5px
+        width: 100%
+        background-color: rgba($dark, .05)
+        font-size: 18px
+        padding: 1rem
+        border-radius: 10px
+
+      select
+        width: 100%
+        padding: 1rem
+        font-size: 16px
+        background-color: rgba($dark, .05)
+        border-radius: 10px
+
+  .product-comment
+    .customer-review
+      h2
+        font-size: 24px
+        margin-bottom: 5px
+
+      .stars-area
+        @include flex($justify: flex-start)
+        margin-bottom: 10px
+
+        .rating
+          margin-right: 10px
+
+          svg
+            height: 24px
+            width: 26px
+
+        h4
+          font-size: 18px
+          color: rgba($dark, .8)
+
+      p
+        margin-bottom: 1.5rem
+        font-size: 18px
+        font-weight: 400
+        color: rgba($dark, .6)
+
+    .btn
+      @include flex($justify: center)
+      margin-top: 1rem
+
+    .load-more-btn
+      @include button()
+      text-align: center
+
+    .item
+      border-bottom: 1px solid rgba($dark, .2)
+      padding: 2rem 0
+      opacity: 0
+      position: fixed
+      top: 100px
+      pointer-events: none
+      transition: .4s cubic-bezier(0,1,0,1)
+
+      &.active
+        top: 0
+        opacity: 1
+        pointer-events: auto
+        position: relative
+
+      &:nth-last-child(1)
+        border-bottom: none
+        padding-bottom: 0
+
+      h4
+        font-size: 18px
+
+      p
+        font-size: 16px
+        line-height: 1.5rem
+        color: rgba($dark, .7)
+        max-height: 100px
+        overflow-y: auto
+        margin-top: .5rem
+        text-align: justify
+        padding-right: 1rem
+
+      ::-webkit-scrollbar
+        width: 5px
+
+      ::-webkit-scrollbar-track
+        border: none
+        background-color: #e2e2e2
+
+      ::-webkit-scrollbar-thumb
+        background-color: $main
+        border-radius: 10px

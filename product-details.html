@@ -25,6 +25,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <div id="fontUrlHere"></div>
@@ -39,6 +48,8 @@
     font-family="Lato"
     font-url="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
   ></div>
+
+  <style></style>
 
   <body>
     <div class="loading">
@@ -509,7 +520,18 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptates, a perspiciatis est culpa corporis ex molestias sequi
                 iure impedit aliquid, explicabo laborum delectus necessitatibus
-                repellendus maxime odio, ut quasi officia!
+                repellendus maxime odio, ut quasi officia! Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Voluptates, a perspiciatis
+                est culpa corporis ex molestias sequi iure impedit aliquid,
+                explicabo laborum delectus necessitatibus repellendus maxime
+                odio, ut quasi officia! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Voluptates, a perspiciatis est culpa corporis
+                ex molestias sequi iure impedit aliquid, explicabo laborum
+                delectus necessitatibus repellendus maxime odio, ut quasi
+                officia! Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Voluptates, a perspiciatis est culpa corporis ex molestias
+                sequi iure impedit aliquid, explicabo laborum delectus
+                necessitatibus repellendus maxime odio, ut quasi officia!
               </p>
             </div>
 
@@ -649,6 +671,239 @@
       </div>
     </section>
     <!-- product-details-end -->
+
+    <!-- product-more-details-start -->
+    <section class="bg">
+      <div class="wrapper">
+        <div class="product-more-details">
+          <div class="title">About this item</div>
+
+          <ul class="button-group">
+            <li class="active" data-filters="data-description">
+              Product Description
+            </li>
+            <li data-filters="data-review">Product Review</li>
+            <li data-filters="data-comments">Product Comments</li>
+          </ul>
+
+          <div class="product-decription-details boxItem data-description">
+            <div class="brand-details">
+              <h3>
+                Product details of Trackon Micro Plus Waterproof GPS Tracker for
+                Car, Bike, Bus, Truck, etc. with SIM Card and 12 Months Data
+              </h3>
+
+              <p>
+                Trackon Micro Plus is a waterproof GPS tracking and security
+                device that helps you monitor your vehicle and makes it
+                ultra-secure.Main Highlights: 1. LOCK/UNLOCK your vehicle engine
+                from anywhere using a mobile app. 2. SMS/Notification Alert on
+                an attempt of vehicle theft, unauthorized ignition/device
+                removal. 3. Widest network coverage even in the most remote
+                areas with unstable networks. 4. Encrypted data transmission
+                between an app and the device.
+              </p>
+            </div>
+
+            <div class="brand-description">
+              <h3>Dell Gaming Laptop 15</h3>
+
+              <div class="groups">
+                <div class="group">
+                  <h4>Specifications:</h4>
+                  <ul>
+                    <li><strong> Processor: </strong> intel i7 11Gen</li>
+                    <li><strong> Graphic Card: </strong> GTX 1060 TI</li>
+                    <li><strong> RAM: </strong> 16GB</li>
+                    <li><strong> Storage: </strong> 256 SSd, 1TB HDD</li>
+                    <li><strong> OS: </strong> Windows 11 Home</li>
+                  </ul>
+                </div>
+
+                <!-- <div class="group">
+                  <h4>Brand Details</h4>
+                  <ul>
+                    <li><strong> Brand: </strong> DELL</li>
+                    <li><strong> SUK: </strong> 108848354_NP-1029414655</li>
+                    <li><strong> Services: </strong> product with services</li>
+                    <li><strong> Model: </strong> Dell15insp</li>
+                  </ul>
+                </div>
+
+                <div class="group">
+                  <h4>Brand Details</h4>
+                  <ul>
+                    <li><strong> Brand: </strong> DELL</li>
+                    <li><strong> SUK: </strong> 108848354_NP-1029414655</li>
+                    <li><strong> Services: </strong> product with services</li>
+                    <li><strong> Model: </strong> Dell15insp</li>
+                  </ul>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="product-review boxItem data-review">
+            <h3>Product Review</h3>
+
+            <div class="rating-area">
+              <form
+                class="review-form"
+                action="{% url 'product-detail' product.slug|safe %}"
+                method="post"
+                id="review-form"
+              >
+                <div class="form-group">
+                  <div class="input-rating">
+                    <strong class="text-uppercase">Your Rating: </strong><br />
+                    <div class="star-area">
+                      <input
+                        type="radio"
+                        class="rateStar"
+                        id="star5"
+                        name="rate"
+                        value="5"
+                      /><label for="star5"></label>
+                      <input
+                        type="radio"
+                        class="rateStar"
+                        id="star4"
+                        name="rate"
+                        value="4"
+                      /><label for="star4"></label>
+                      <input
+                        type="radio"
+                        class="rateStar"
+                        id="star3"
+                        name="rate"
+                        value="3"
+                      /><label for="star3"></label>
+                      <input
+                        type="radio"
+                        class="rateStar"
+                        id="star2"
+                        name="rate"
+                        value="2"
+                      /><label for="star2"></label>
+                      <input
+                        type="radio"
+                        class="rateStar"
+                        id="star1"
+                        name="rate"
+                        value="1"
+                      /><label for="star1"></label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="group">
+                  <textarea
+                    class="form-control comment"
+                    name="comment"
+                    id="reviewPost"
+                    rows="5"
+                    placeholder="Write Your Comment"
+                    required
+                  ></textarea>
+                </div>
+
+                <button class="submit">Submit</button>
+                You must be logged in to post a review.
+              </form>
+            </div>
+          </div>
+
+          <div class="product-comment boxItem data-comments">
+            <div class="customer-review">
+              <h2>Customer Review</h2>
+
+              <div class="stars-area">
+                <div class="rating">
+                  <div class="stars" data-value="3"></div>
+                </div>
+
+                <h4>3.6 out of 5</h4>
+              </div>
+
+              <p>200 global rating</p>
+            </div>
+
+            <div class="item">
+              <h4 class="name">Sukhi Sharma</h4>
+              <div class="rating">
+                <div class="stars" data-value="3"></div>
+              </div>
+
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deserunt esse quisquam nemo reprehenderit facilis laborum autem
+                ipsam, repudiandae expedita necessitatibus quaerat cum eius
+                alias perspiciatis, temporibus aut fuga dolor optio? Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Deserunt esse
+                quisquam nemo reprehenderit facilis laborum autem ipsam,
+                repudiandae expedita necessitatibus quaerat cum eius alias
+                perspiciatis, temporibus aut fuga dolor optio? Lorem ipsum dolor
+                sit amet consectetur, adipisicing elit. Deserunt esse quisquam
+                nemo reprehenderit facilis laborum autem ipsam, repudiandae
+                expedita necessitatibus quaerat cum eius alias perspiciatis,
+                temporibus aut fuga dolor optio? Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Deserunt esse quisquam nemo
+                reprehenderit facilis laborum autem ipsam, repudiandae expedita
+                necessitatibus quaerat cum eius alias perspiciatis, temporibus
+                aut fuga dolor optio?
+              </p>
+            </div>
+
+            <div class="item">
+              <h4 class="name">Sukhi Sharma</h4>
+              <div class="rating">
+                <div class="stars" data-value="2"></div>
+              </div>
+
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deserunt esse quisquam nemo reprehenderit facilis laborum autem
+                ipsam, repudiandae expedita necessitatibus quaerat cum eius
+                alias perspiciatis, temporibus aut fuga dolor optio?
+              </p>
+            </div>
+
+            <div class="item">
+              <h4 class="name">Sukhi Sharma</h4>
+              <div class="rating">
+                <div class="stars" data-value="5"></div>
+              </div>
+
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deserunt esse quisquam nemo reprehenderit facilis laborum autem
+                ipsam, repudiandae expedita necessitatibus quaerat cum eius
+                alias perspiciatis, temporibus aut fuga dolor optio?
+              </p>
+            </div>
+
+            <div class="item">
+              <h4 class="name">Sukhi Sharma</h4>
+              <div class="rating">
+                <div class="stars" data-value="5"></div>
+              </div>
+
+              <p class="desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deserunt esse quisquam nemo reprehenderit facilis laborum autem
+                ipsam, repudiandae expedita necessitatibus quaerat cum eius
+                alias perspiciatis, temporibus aut fuga dolor optio?
+              </p>
+            </div>
+
+            <div class="btn">
+              <button class="load-more-btn">Load More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- product-more-details-end -->
 
     <!-- you-may-also-like-start -->
     <section>
@@ -1017,224 +1272,6 @@
     </section>
     <!-- you-may-also-like-end -->
 
-    <!-- you-may-also-like-start -->
-    <!-- <section>
-      <div class="wrapper">
-        <div class="you-may-also-like">
-          <div class="title">You may also like</div>
-
-          <div class="list">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/furniture/bn-cate5-3.jpg);
-                      "
-                    >
-                      <div class="ribbon-tag">
-                        <div class="tag">Sale</div>
-                      </div>
-
-                      <div class="others">
-                        <div class="quick-view icon">
-                          <i class="fas fa-search"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="far fa-heart"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="fas fa-shopping-cart"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-name">Chair</div>
-                    <div class="rating">
-                      <div class="stars" data-value="2"></div>
-                    </div>
-                    <div class="price">
-                      <div class="new">$200.00</div>
-                      <div class="old"><del></del>$250.00</div>
-                    </div>
-                    <a href="#">
-                      <button>Add To Cart</button>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/kitchen/bn-cate2-2.jpg);
-                      "
-                    >
-                      <div class="ribbon-tag">
-                        <div class="tag">Sale</div>
-                      </div>
-
-                      <div class="others">
-                        <div class="quick-view icon">
-                          <i class="fas fa-search"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="far fa-heart"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="fas fa-shopping-cart"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-name">Guarden Tools</div>
-                    <div class="rating">
-                      <div class="stars" data-value="2"></div>
-                    </div>
-                    <div class="price">
-                      <div class="new">$200.00</div>
-                      <div class="old"><del></del>$250.00</div>
-                    </div>
-                    <a href="#">
-                      <button>Add To Cart</button>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/shoes/shoe19.jpg);
-                      "
-                    >
-                      <div class="ribbon-tag">
-                        <div class="tag">Sale</div>
-                      </div>
-
-                      <div class="others">
-                        <div class="quick-view icon">
-                          <i class="fas fa-search"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="far fa-heart"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="fas fa-shopping-cart"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-name">Adidas boot</div>
-                    <div class="rating">
-                      <div class="stars" data-value="2"></div>
-                    </div>
-                    <div class="price">
-                      <div class="new">$200.00</div>
-                      <div class="old"><del></del>$250.00</div>
-                    </div>
-                    <a href="#">
-                      <button>Add To Cart</button>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/bags/07-270x270.jpg);
-                      "
-                    >
-                      <div class="ribbon-tag">
-                        <div class="tag">Sale</div>
-                      </div>
-
-                      <div class="others">
-                        <div class="quick-view icon">
-                          <i class="fas fa-search"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="far fa-heart"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="fas fa-shopping-cart"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-name">Laptop Bag</div>
-                    <div class="rating">
-                      <div class="stars" data-value="3"></div>
-                    </div>
-                    <div class="price">
-                      <div class="new">$200.00</div>
-                      <div class="old"><del></del>$250.00</div>
-                    </div>
-                    <a href="#">
-                      <button>Add To Cart</button>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <div
-                      class="image"
-                      style="
-                        background-image: url(./images/clothing/bags/product-17.jpg);
-                      "
-                    >
-                      <div class="ribbon-tag">
-                        <div class="tag">Sale</div>
-                      </div>
-
-                      <div class="others">
-                        <div class="quick-view icon">
-                          <i class="fas fa-search"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="far fa-heart"></i>
-                        </div>
-
-                        <div class="icon">
-                          <i class="fas fa-shopping-cart"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-name">Female Bag</div>
-                    <div class="rating">
-                      <div class="stars" data-value="2"></div>
-                    </div>
-                    <div class="price">
-                      <div class="new">$200.00</div>
-                      <div class="old"><del></del>$250.00</div>
-                    </div>
-                    <a href="#">
-                      <button>Add To Cart</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- you-may-also-like-end -->
-
     <!-- footer-start -->
     <section class="bg">
       <div class="wrapper">
@@ -1497,6 +1534,7 @@
     <script src="./js/derss-size.js"></script>
     <script src="./js/wishlist-button.js"></script>
     <script src="./js/product-color-change.js"></script>
+    <script src="./js/rating.js"></script>
     <!-- <script src="./js/product-quantity.js"></script> -->
     <!-- swiper-js -->
     <script src="./js/swiper.min.js"></script>
@@ -1656,6 +1694,27 @@
 
         stars[index].innerHTML =
           allStars[0] + allStars[1] + allStars[2] + allStars[3] + allStars[4];
+      });
+
+      // our-dress
+      $(document).ready(function () {
+        $(".boxItem").not(".data-description").hide("1000");
+      });
+
+      $(document).ready(function () {
+        $(".product-more-details ul li").click(function () {
+          const value = $(this).attr("data-filters");
+          $(".boxItem")
+            .not("." + value)
+            .hide("1000");
+          $(".boxItem")
+            .filter("." + value)
+            .show("1000");
+        });
+
+        $(".product-more-details ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
       });
     </script>
   </body>
